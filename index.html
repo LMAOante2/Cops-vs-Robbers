@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cops vs Robbers Balkan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 180px 20px 100px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons .btn {
+            padding: 15px 35px;
+            margin: 10px;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: background 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .blue-btn {
+            background: rgba(0, 153, 255, 0.9);
+        }
+
+        .blue-btn:hover {
+            background: rgba(0, 123, 255, 1);
+        }
+
+        .red-btn {
+            background: rgba(255, 51, 51, 0.9);
+        }
+
+        .red-btn:hover {
+            background: rgba(255, 0, 0, 1);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .feature {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            color: #aaa;
+        }
+
+        footer .socials a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Cops vs Robbers</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="rules.html">Pravila</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="stats.html">Statistike</a></li>
+                <li><a href="contact.html">Pridruži nam se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Prvi Balkan Cops vs Robbers FiveM Server</h1>
+        <p>Postani policajac ili kriminalac. Tvoja odluka!</p>
+        <div class="hero-buttons">
+            <a href="https://discord.gg/YOUR_DISCORD_LINK" class="btn blue-btn">Pridruži se Discordu</a>
+            <a href="fivem://connect/YOUR_SERVER_IP" class="btn red-btn">Spoji se na server</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Realistična Igra</h3>
+            <p>Utrke, pljačke i akcija kao u stvarnom životu.</p>
+        </div>
+        <div class="feature">
+            <h3>Balkanska Zajednica</h3>
+            <p>Pridruži se igračima iz cijele regije.</p>
+        </div>
+        <div class="feature">
+            <h3>Unikatna Ekonomija</h3>
+            <p>Zaradi, troši i kontroliraj grad!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cops vs Robbers Balkan. Sva prava pridržana.</p>
+        <div class="socials">
+            <a href="#">Discord</a> | <a href="#">TikTok</a> | <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
