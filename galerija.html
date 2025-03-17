@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravila | Cops vs Robbers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.png'); /* Same background */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            margin-bottom: 30px;
+            border-radius: 12px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 38px;
+        }
+        .rules-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Distribute items across the row */
+            max-width: fit-content;
+            margin: 5px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+        }
+        .rule {
+            flex: 1; /* Each rule gets equal width */
+            margin: 0 15px;
+            align-self: center;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.7;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .rule h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+            nav a {
+                font-size: 16px;
+            }
+            .rule {
+                font-size: 16px;
+                margin: 10px 0; /* Stack the rules vertically on smaller screens */
+                width: 150px;
+                size: 50px;
+            }
+            .rules-container {
+                flex-direction: column; /* Stack the sections vertically on smaller screens */
+            }
+            .div img{
+                width: 300px;
+            }
+        }
+        .div{
+            background: fixed;
+        }
+        .div img {
+            width: 500px;
+        }
+        img{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="pravila.html">Pravila</a>
+    <a href="https://cfx.re/join/g9k35o" target="_blank">Spoji se</a>
+    <a href="https://discord.gg/YOUR_INVITE_CODE" target="_blank">Discord</a>
+    <a href="https://www.tiktok.com/@cops_vs_robbers_balkan" target="_blank">Tik Tok</a>
+</nav>
+
+<img src="Ucopsvsrobbers.png" alt="Ucopsvsrobbers">
+
+<div class="rules-container">
+    <div class="div">
+        <img class="rule" src="inventory.png" alt="inventory">
+    </div>
+
+</div>
+<div class="rules-container">
+    <div class="div">
+        <img class="rule" src="mapa.png" alt="mapa">
+    </div>
+
+</div>
+<div class="rules-container">
+    <div class="div">
+        <img class="rule" src="puske.png" alt="puske">
+    </div>
+
+</div>
+<div class="rules-container">
+    <div class="div">
+        <img class="rule" src="pause.png" alt="pause">
+    </div>
+
+</div>
+<div class="rules-container">
+    <div class="div">
+        <img class="rule" src="loading.png" alt="loading">
+    </div>
+
+</div>
+
+
+</body>
+</html>

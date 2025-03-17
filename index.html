@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cops vs Robbers Balkan</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+
+        body {
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo { font-size: 22px; font-weight: bold; }
+
+        nav ul { list-style: none; display: flex; gap: 15px; }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: #ff3333; }
+
+        .hero {
+            text-align: center;
+            padding: 180px 20px 120px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+
+        .hero p { font-size: 1.3rem; margin-bottom: 30px; }
+
+        .hero img { width: 150px; margin-top: 0;}
+
+        .hero-buttons .btn {
+            padding: 15px 35px;
+            margin: 10px;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: background 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .blue-btn { background: rgba(0, 153, 255, 0.9); }
+        .blue-btn:hover { background: rgba(0, 123, 255, 1); }
+
+        .red-btn { background: rgba(255, 51, 51, 0.9); }
+        .red-btn:hover { background: rgba(255, 0, 0, 1); }
+        
+        .green-btn { background: green; }
+        .green-btn:hover { background: rgb(1, 165, 1); }
+
+        .stat-box {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            margin: 20px auto;
+            border-radius: 15px;
+            max-width: 400px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .discord-widget {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 10px; }
+            .hero h1 { font-size: 1.9rem; }
+            .hero p { font-size: 1rem; }
+            .hero-buttons .btn { padding: 12px 25px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Cops vs Robbers</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="pravila.html">Pravila</a></li>
+            <li><a href="galerija.html">Slike</a></li>
+            <li><a href="#">Pridruži se</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="Ucopsvsrobbers.png" alt="Ucopsvsrobbers">
+    <h1>Prvi Balkan Cops vs Robbers Server</h1>
+    <p>Postani Policajac ili Kriminalac</p>
+    <div class="hero-buttons">
+        <a href="https://www.tiktok.com/@cops_vs_robbers_balkan" class="btn green-btn">Tik Tok</a>
+        <a href="https://discord.gg/SwRUSfrG" class="btn blue-btn">Discord</a>
+        <a href="fivem://connect/cfx.re/join/g9k35o" class="btn red-btn">Spoji se</a>
+    </div>
+</section>
+
+<!-- LIVE STATS -->
+<div class="stat-box">
+    <strong>Cops Vs Robbers</strong><br>
+    <h5>- Prvi ovakav Fivem server na balkanu 🎈</h5>
+    <h5>- 48/48 svaki dan🔥</h5>
+    <h5>- Stariji i aktivan staff team🌟</h5>
+    <h5>- Odlicna zabava🎭</h5>
+    <h5>- Optimizovane skripte ⌨️</h5>
+</div>
+
+<!-- DISCORD -->
+<section class="discord-widget">
+    <h2>Naš Discord</h2>
+    <iframe src="https://discord.com/widget?id=discord&theme=dark"
+        width="350" height="500"
+        allowtransparency="true" frameborder="0"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+    </iframe>
+</section>
+
+<script>
+async function updatePlayerCount() {
+     try {
+         const response = await fetch('http://185.195.237.241:20031/players.json');
+         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+         const players = await response.json();
+         document.getElementById('player-count').innerText = `${players.length}/48`; // Update as per max slots
+     } catch (error) {
+         console.error('Greška:', error);
+         document.getElementById('player-count').innerText = 'Offline';
+     }
+ }
+
+    setInterval(updatePlayerCount, 10000); // Auto-refresh every 10 seconds
+    window.onload = updatePlayerCount; // Initial fetch on load
+</script>
+
+</body>
+</html>
