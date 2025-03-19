@@ -65,6 +65,7 @@
             font-size: 1.1rem;
             display: inline-block;
             transition: background 0.3s ease;
+            transition: all ease-in-out 0.2s;
             box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         }
 
@@ -72,10 +73,10 @@
         .blue-btn:hover { background: rgba(0, 123, 255, 1); }
 
         .red-btn { background: rgba(255, 51, 51, 0.9); }
-        .red-btn:hover { background: rgba(255, 0, 0, 1); }
+        .red-btn:hover { background: rgba(255, 0, 0, 1); background-color: rgba(255, 0, 0, 1); }
         
         .green-btn { background: green; }
-        .green-btn:hover { background: rgb(1, 165, 1); }
+        .green-btn:hover { background: rgb(1, 165, 1);}
 
         .stat-box {
             padding: 20px;
@@ -115,6 +116,7 @@
         <ul>
             <li class="Pocetna"><h4 class="Pocetna">Početna</h4></li>
             <li><a href="pravila.html">Pravila</a></li>
+            <li><a href="donacije.html">Donacije</a></li>
             <li><a href="galerija.html">Slike</a></li>
         </ul>
     </nav>
@@ -127,7 +129,7 @@
     <div class="hero-buttons">
         <a href="https://www.tiktok.com/@cops_vs_robbers_balkan" class="btn green-btn">Tik Tok</a>
         <a href="https://discord.gg/SwRUSfrG" class="btn blue-btn">Discord</a>
-        <a href="fivem://connect/cfx.re/join/g9k35o" class="btn red-btn">Igraj</a>
+        <a href="fivem://connect/cfx.re/join/g9k35o" class="btn red-btn" title="Igraj Cops Vs Robbers">Igraj</a>
     </div>
 </section>
 
@@ -144,7 +146,7 @@
 <!-- DISCORD -->
 <section class="discord-widget">
     <h2>Naš Discord</h2>
-    <iframe src="https://discord.com/widget?id=&theme=dark"
+    <iframe src="https://discord.com/widget?id=1084108590668845197&theme=dark"
         width="350" height="500"
         allowtransparency="true" frameborder="0"
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
