@@ -13,9 +13,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
 
         body {
-            background: url('background.png') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
+             background: url('background.png') no-repeat center center;
+             background-size: cover;
+             background-attachment: scroll;
+             color: white;
         }
 
         header {
@@ -156,7 +157,7 @@
 <script>
 async function updatePlayerCount() {
      try {
-         const response = await fetch('http://185.195.237.241:20031/players.json');
+         const response = await fetch('//185.195.237.241:20031/players.json', { mode: 'cors' });
          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
          const players = await response.json();
          document.getElementById('player-count').innerText = `${players.length}/48`; // Update as per max slots
