@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prvi Cops Vs Robbers Fivem Server Na Balkanu">
+    <meta name="keywords" content="Fivem First Balkan Cops Vs Robbers">
+    <meta name="author" content="Cops Vs Robbers">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="HGvKcQ3b0bT5SE0yGNMlDwvYMaLh_PgTC2DnKvqywRo" />
+    <title>Pravila | Cops vs Robbers</title>
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="android-chrome-192x192.png" sizes="96x96" type="image/png">
+    <style>
+        /* Include your existing styles here */
+    </style>
+</head>
+<body>
+
+    <!-- Add your header and navigation here -->
+
+    <h1 style="color: white;">Pravila Servera</h1>
+
+    <div class="rules-container" id="rules-container">
+        <!-- Rules will be dynamically loaded here -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch the rules from the JSON file on GitHub
+            fetch('https://raw.githubusercontent.com/yourusername/yourrepo/main/rules.json') // Replace with your GitHub raw URL
+                .then(response => response.json())
+                .then(data => {
+                    const rulesContainer = document.getElementById('rules-container');
+                    data.rules.forEach(ruleCategory => {
+                        // Create a div for each category
+                        const categoryDiv = document.createElement('div');
+                        categoryDiv.classList.add('rule');
+                        
+                        const categoryTitle = document.createElement('h2');
+                        categoryTitle.textContent = ruleCategory.category;
+                        categoryDiv.appendChild(categoryTitle);
+                        
+                        const ruleList = document.createElement('ul');
+                        ruleCategory.items.forEach(item => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = item;
+                            ruleList.appendChild(listItem);
+                        });
+
+                        categoryDiv.appendChild(ruleList);
+                        rulesContainer.appendChild(categoryDiv);
+                    });
+                })
+                .catch(error => console.error('Error loading rules:', error));
+        });
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prvi Cops Vs Robbers Fivem Server Na Balkanu">
+    <meta name="keywords" content="Fivem First Balkan Cops Vs Robbers">
+    <meta name="author" content="Cops Vs Robbers">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="HGvKcQ3b0bT5SE0yGNMlDwvYMaLh_PgTC2DnKvqywRo" />
+    <title>Pravila | Cops vs Robbers</title>
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="android-chrome-192x192.png" sizes="96x96" type="image/png">
+    <style>
+        /* Include your existing styles here */
+    </style>
+</head>
+<body>
+
+    <!-- Add your header and navigation here -->
+
+    <h1 style="color: white;">Pravila Servera</h1>
+
+    <div class="rules-container" id="rules-container">
+        <!-- Rules will be dynamically loaded here -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch the rules from the JSON file on GitHub
+            fetch('https://raw.githubusercontent.com/yourusername/yourrepo/main/rules.json') // Replace with your GitHub raw URL
+                .then(response => response.json())
+                .then(data => {
+                    const rulesContainer = document.getElementById('rules-container');
+                    data.rules.forEach(ruleCategory => {
+                        // Create a div for each category
+                        const categoryDiv = document.createElement('div');
+                        categoryDiv.classList.add('rule');
+                        
+                        const categoryTitle = document.createElement('h2');
+                        categoryTitle.textContent = ruleCategory.category;
+                        categoryDiv.appendChild(categoryTitle);
+                        
+                        const ruleList = document.createElement('ul');
+                        ruleCategory.items.forEach(item => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = item;
+                            ruleList.appendChild(listItem);
+                        });
+
+                        categoryDiv.appendChild(ruleList);
+                        rulesContainer.appendChild(categoryDiv);
+                    });
+                })
+                .catch(error => console.error('Error loading rules:', error));
+        });
+    </script>
+
+</body>
+</html>

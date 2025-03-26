@@ -1,0 +1,43 @@
+{
+    "rules": [
+      {
+        "category": "Pd (Policija)",
+        "items": [
+          "Heli se dize samo na pljacku zlatare i glavne banke",
+          "Zabranjeno prodavanje/davanje stvari iz pda",
+          "Zabranjen dolazak na teritorije",
+          "Morate ispuniti sve realne uslove robbera",
+          "Ne pucate bez razloga",
+          "Zabranjeno respawnanje dok se pljacka ne zavrsi",
+          "Kad se pljacka zavrsi, ne tejzajte, ne ubijajte pljackasa dok pljacka bankomat!",
+          "Kada neko radi hajst pljacke auta on kada preda auto pd ga ne smije uhapsit",
+          "Pd ne smije uzimati novac iz inventorya igraca!"
+        ]
+      },
+      {
+        "category": "Pljackas",
+        "items": [
+          "Tokom potjere zabranjeno je open fire prvih pola sata, nakon pola sata dozvoljen",
+          "Zabranjeno pucanje u svim garazama, trgovinama, mjestima za presvlacenje, autosalonu, apartmanima, ...",
+          "Ako open fire pljacka traje vise od 30 minuta morate se predati",
+          "Zabranjeno respawnanje dok se pljacka ne zavrsi",
+          "Zabranjena krada PD auta",
+          "Zabranjeno kempanje na lokacijama",
+          "Zabranjen RDM, VDM, RANDOM LOOT, VEZIVANJE PD-A"
+        ]
+      },
+      {
+        "category": "Opcenito",
+        "items": [
+          "Obavezan mikrofon",
+          "Zabranjeno puhanje u mikrofon",
+          "Strogo zabranjeno psovanje familije, psovanja po nacionalnoj ili vjerskoj osnovi",
+          "Zabranjeno Q peak, Radio peak, ...",
+          "Zabranjena toxicnost",
+          "Strogo zabranjeno iskoristavanje bugova i uzimanje aviona, helikoptera, tenkova, itd iz vojnih baza ili aerodroma",
+          "Zabranjeno izlazenje sa servera dok pljackate ili bjezite od policije (LTA)"
+        ]
+      }
+    ]
+  }
+  
