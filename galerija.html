@@ -224,6 +224,29 @@
             text-underline-offset: 5px;
             cursor: pointer;
         }
+                .custom-cars-container {
+            margin-top: 20px;
+        }
+        .custom-cars-images {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .custom-cars-images img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
+        }
+        .show-button {
+            background: #ff9900;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -292,6 +315,15 @@
     </div>
 
 </div>
+        <h1>Custom Auta</h1>
+    <div class="custom-cars-container">
+        <button class="show-button" onclick="toggleCars()">Pokazi Custom Auta</button>
+        <div class="custom-cars-images" id="carImages">
+            <img src="#" alt="Custom Auto 1">
+            <img src="#" alt="Custom Auto 2">
+            <img src="#" alt="Custom Auto 3">
+        </div>
+    </div>
 <script>
         document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.querySelector(".menu-toggle");
@@ -312,6 +344,14 @@
             }
         });
     });
+            function toggleCars() {
+            const carImages = document.getElementById("carImages");
+            if (carImages.style.display === "none" || carImages.style.display === "") {
+                carImages.style.display = "flex";
+            } else {
+                carImages.style.display = "none";
+            }
+        }
 </script>
 
 
