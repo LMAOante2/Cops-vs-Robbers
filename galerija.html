@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prvi Cops Vs Robbers Fivem Server Na Balkanu">
+    <meta name="keywords" content="Fivem First Balkan Cops Vs Robbers">
+    <meta name="author" content="Cops Vs Robbers">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="HGvKcQ3b0bT5SE0yGNMlDwvYMaLh_PgTC2DnKvqywRo" />
+    <title>Slike | Cops vs Robbers</title>
+    <head>
+        <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="android-chrome-192x192.png" sizes="96x96" type="image/png">
+     </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo { 
+            font-size: 22px; 
+            font-weight: bold; 
+            color: white;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding-top: 60px;
+            transition: left 0.4s ease-in-out;
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav li {
+            padding: 15px 20px;
+            text-align: left;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9900;
+        }
+
+        .menu-toggle {
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .desktop-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .desktop-nav li {
+            padding: 0;
+            list-style: none;
+        }
+
+        .desktop-nav a {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .desktop-nav a:hover {
+            color: #ff9900;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 38px;
+        }
+        .rules-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: fit-content;
+            margin: 5px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+        }
+        .rule {
+            flex: 1;
+            margin: 0 15px;
+            align-self: center;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.7;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .rule h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+            nav a {
+                font-size: 16px;
+            }
+            .rule {
+                font-size: 16px;
+                margin: 10px 0;
+                width: 350px;
+                size: 50px;
+            }
+            .rules-container {
+                flex-direction: column;
+            }
+
+           
+        }
+        @media (max-width: 486px) {
+            h1 {
+                font-size: 30px;
+            }
+            nav a {
+                font-size: 16px;
+            }
+            .rule {
+                font-size: 16px;
+                margin: 10px 0;
+                width: 200px;
+                size: 50px;
+            }
+            .rules-container {
+                flex-direction: column;
+            }
+
+           
+        }
+        
+        .div{
+            background: fixed;
+        }
+        div img {
+            width: 500px;
+        }
+        img{
+            width: 150px;
+        }
+        .Pocetna {
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 153, 255, 0.9);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h4 style="color: rgb(43, 113, 106); -webkit-text-stroke: 2px; -webkit-text-stroke-color: rgb(66, 125, 117);">Cops vs Robbers</h4>
+            <button class="menu-toggle">☰</button>
+        </div>
+        <nav class="side-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li class="Pocetna"><h4 class="Pocetna">Slike</h4></li>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="donacije.html">Donacije</a></li>
+                <li><a href="serverstatus.html">Status</a></li>
+                <li><a href="pravila.html">Pravila</a></li>
+                <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    
+        <ul class="desktop-nav">
+            <li class="Pocetna"><h4 class="Pocetna">Slike</h4></li>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="donacije.html">Donacije</a></li>
+            <li><a href="serverstatus.html">Status</a></li>
+            <li><a href="pravila.html">Pravila</a></li>
+            <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+        </ul>
+    </header>
+
+<img src="Ucopsvsrobbers.png" alt="Ucopsvsrobbers">
+
+<div class="rules-container">
+    <div class="div">
+        <h4>Inventory</h4>
+        <img class="rule" src="inventory.png" alt="inventory">
+    </div>
+
+</div>
+<div class="rules-container">
+    <div class="div">
+        <h4>Mapa</h4>
+        <img class="rule" src="mapa.png" alt="mapa">
+    </div>
+
+</div>
+<div class="rules-container">
+    <div class="div">
+        <h4>Gun Shop</h4>
+        <img class="rule" src="puske.png" alt="puske">
+    </div>
+
+</div>
+<div class="rules-container">
+    <div class="div">
+        <h4>Pause Menu</h4>
+        <img class="rule" src="pause.png" alt="pause">
+    </div>
+
+</div>
+<div class="rules-container">
+    <div class="div">
+        <h4>Loading Screen</h4>
+        <img class="rule" src="loading.png" alt="loading">
+    </div>
+
+</div>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const closeMenu = document.querySelector(".close-menu");
+        const sideMenu = document.querySelector(".side-menu");
+
+        menuToggle.addEventListener("click", function () {
+            sideMenu.classList.add("active");
+        });
+
+        closeMenu.addEventListener("click", function () {
+            sideMenu.classList.remove("active");
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                sideMenu.classList.remove("active");
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>

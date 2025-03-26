@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prvi Cops Vs Robbers Fivem Server Na Balkanu">
+    <meta name="keywords" content="Fivem First Balkan Cops Vs Robbers">
+    <meta name="author" content="Cops Vs Robbers">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="HGvKcQ3b0bT5SE0yGNMlDwvYMaLh_PgTC2DnKvqywRo" />
+    <title>Pravila | Cops vs Robbers</title>
+    <head>
+        <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="android-chrome-192x192.png" sizes="96x96" type="image/png">
+     </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo { 
+            font-size: 22px; 
+            font-weight: bold; 
+            color: white;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding-top: 60px;
+            transition: left 0.4s ease-in-out;
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav li {
+            padding: 15px 20px;
+            text-align: left;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9900;
+        }
+
+        .menu-toggle {
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .desktop-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .desktop-nav li {
+            padding: 0;
+            list-style: none;
+        }
+
+        .desktop-nav a {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .desktop-nav a:hover {
+            color: #ff9900;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 38px;
+            color: rgb(0, 0, 0);
+        }
+        .rules-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+        }
+        .rule {
+            flex: 1;
+            margin: 0 15px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.7;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .rule h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+            .rule {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+            .rules-container {
+                flex-direction: column;
+            }
+        }
+        .img{
+            width: 150px;
+        }
+        .Pravila{
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 153, 255, 0.9);;
+        }
+
+        .Pocetna {
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 153, 255, 0.9);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h4 style="color: rgb(43, 113, 106); -webkit-text-stroke: 2px; -webkit-text-stroke-color: rgb(66, 125, 117);">Cops vs Robbers</h4>
+            <button class="menu-toggle">☰</button>
+        </div>
+        <nav class="side-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li class="Pocetna"><h4 class="Pocetna">Pravila</h4></li>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="donacije.html">Donacije</a></li>
+                <li><a href="serverstatus.html">Status</a></li>
+                <li><a href="galerija.html">Slike</a></li>
+                <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    
+        <ul class="desktop-nav">
+            <li class="Pocetna"><h4 class="Pocetna">Pravila</h4></li>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="donacije.html">Donacije</a></li>
+            <li><a href="serverstatus.html">Status</a></li>
+            <li><a href="galerija.html">Slike</a></li>
+            <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+        </ul>
+    </header>
+
+<img class="img" src="Ucopsvsrobbers.png" alt="Ucopsvsrobbers">
+
+<h1 style="color: white;">Pravila Servera</h1>
+
+<div class="rules-container">
+    <div class="rule">
+        <div style="text-align: center;"><h2>Pd (Policija)</h2></div>
+        <p>1. Heli se dize samo na pljacku zlatare i glavne banke</p>
+        <p>2. Zabranjeno prodavanje/davanje stvari iz pda</p>
+        <p>3. Zabranjen dolazak na teritorije</p>
+        <p>4. Morate ispuniti sve realne uslove robbera</p>
+        <p>5. Ne pucate bez razloga</p>
+        <p>6. Zabranjeno respavnaje dok se pljacka ne zavrsi</p>
+        <p>7. Kad se pljacka zavrsi, ne tejzajte, ne ubijajte pljackasa dok pljacka bankomat!</p>
+        <p>8. Kada neko radi hajst pljacke auta on kada preda auto pd ga ne smije uhapsit</p>
+        <p>9. Pd ne smije uzimati novac iz inventorya igraca!</p>
+    </div>
+
+    <div class="rule">
+        <div style="text-align: center;"><h2>Pljackas</h2></div>
+        <p>1. Tokom potjere zabranjeno je open fire prvih pola sata, nakon pola sata dozvoljen</p>
+        <p>2. Zabranjeno pucanje u svim garazama, trgovinama, mjestima za presvlacenje, autosalonu, apartmanima, ...</p>
+        <p>3. Ako open fire pljacka traje vise od 30 minuta morate se predati</p>
+        <p>4. Zabranjeno respawnanje dok se pljacka ne zavrsi</p>
+        <p>5. Zabranjena krada PD auta</p>
+        <p>6. Zabranjeno kempanje na lokacijama</p>
+        <p>7. Zabranjen RDM, VDM, RANDOM LOOT, VEZIVANJE PD-A</p>
+    </div>
+
+    <div class="rule">
+        <div style="text-align: center;"><h2>Opcenito</h2></div>
+        <p>1. Obavezan mikrofon</p>
+        <p>2. Zabranjeno puhanje u mikrofon</p>
+        <p>3. Strogo zabranjeno psovanje familije, psovanja po nacionalnoj ili vjerskoj osnovi</p>
+        <p>4. Zabranjeno Q peak, Radio peak, ...</p>
+        <p>5. Zabranjena toxicnost</p>
+        <p>6. Strogo zabranjeno iskoristavanje bugova i uzimanje aviona, helikoptera, tenkova, itd iz vojnih baza ili aerodroma</p>
+        <p>7. Zabranjeno izlazenje sa servera dok pljackate ili bjezite od policije (LTA)</p>
+    </div>
+</div>
+<div class="rule" style="background-color: rgba(44, 44, 44, 0.904);">
+    <div style="text-align: center;"><h2>Krsenjem ovih pravila slijede sankcije ovisi sto ste uradili!</h2></div>
+</div>
+</div>
+
+
+</body>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const closeMenu = document.querySelector(".close-menu");
+        const sideMenu = document.querySelector(".side-menu");
+
+        menuToggle.addEventListener("click", function () {
+            sideMenu.classList.add("active");
+        });
+
+        closeMenu.addEventListener("click", function () {
+            sideMenu.classList.remove("active");
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                sideMenu.classList.remove("active");
+            }
+        });
+    });
+</script>
+</html>   

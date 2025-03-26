@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prvi Cops Vs Robbers Fivem Server Na Balkanu">
+    <meta name="keywords" content="Fivem First Balkan Cops Vs Robbers">
+    <meta name="author" content="Cops Vs Robbers">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="HGvKcQ3b0bT5SE0yGNMlDwvYMaLh_PgTC2DnKvqywRo" />
+    <title>Donacije | Cops vs Robbers</title>
+    <head>
+        <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="android-chrome-192x192.png" sizes="96x96" type="image/png">
+     </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo { 
+            font-size: 22px; 
+            font-weight: bold; 
+            color: white;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding-top: 60px;
+            transition: left 0.4s ease-in-out;
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav li {
+            padding: 15px 20px;
+            text-align: left;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9900;
+        }
+
+        .menu-toggle {
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .desktop-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .desktop-nav li {
+            padding: 0;
+            list-style: none;
+        }
+
+        .desktop-nav a {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .desktop-nav a:hover {
+            color: #ff9900;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 38px;
+            color: rgb(0, 0, 0);
+        }
+        .rules-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+        }
+        .rule {
+            flex: 1;
+            margin: 0 15px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.7;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .rule h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            .rule {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+            .rules-container {
+                flex-direction: column;
+            }
+        }
+        .img{
+            width: 150px;
+        }
+        .Pravila{
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 153, 255, 0.9);;
+        }
+        p{
+            font-size: medium;
+        }
+        .Pocetna {
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 153, 255, 0.9);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h4 style="color: rgb(43, 113, 106); -webkit-text-stroke: 2px; -webkit-text-stroke-color: rgb(66, 125, 117);">Cops vs Robbers</h4>
+            <button class="menu-toggle">☰</button>
+        </div>
+        <nav class="side-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li class="Pocetna"><h4 class="Pocetna">Donacije</h4></li>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="pravila.html">Pravila</a></li>
+                <li><a href="serverstatus.html">Status</a></li>
+                <li><a href="galerija.html">Slike</a></li>
+                <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    
+        <ul class="desktop-nav">
+            <li class="Pocetna"><h4 class="Pocetna">Donacije</h4></li>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="pravila.html">Pravila</a></li>
+            <li><a href="serverstatus.html">Status</a></li>
+            <li><a href="galerija.html">Slike</a></li>
+            <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+        </ul>
+    </header>
+
+<img class="img" src="Ucopsvsrobbers.png" alt="Ucopsvsrobbers">
+
+<h1 style="color: white;">Donacije</h1>
+
+<div class="rules-container"><div class="rule"><h2 style="text-align: center; color: white; ">Nacini Placanja su: Aircash, Paysafe, Paypal i Uplata Na Racun (Samo Za Hrvatsku)</h2></div></div>
+
+<div class="rules-container">
+    <div class="rule">
+        <div style="text-align: center;"><h2>Organizacije</h2></div>
+        <p>- Organizacija lvl.1 (sef, custom ime, bez interijera i auta po našem odabiru) - €5 </p>
+        <p>‎ </p>
+        <p>- Organizacija lvl.2 (interijer, sef, i auta po vašoj želji, custom ime) - €10 </p>
+        <p>‎</p>
+        <p>- Organizacija lvl.3 (Custom ime, napunjen sef, Interijer, custom auta po vasoj želji (koji nije na serveru),helikopter) - €25</p>
+        <p>(bez helikoptera €20)</p>
+        <p>(fulltune svih auta u org) - €30 </p>
+    </div>
+
+    <div class="rule">
+        <div style="text-align: center;"><h2>Tx i Staff</h2></div>
+        <p>- tx low - €5 </p>
+        <p>- tx mid - €10 </p>
+        <p>- tx full - €15 </p>
+        <p>‎</p>
+        <p>- Staff Ivl.1 - €5 </p>
+        <p>- Staff Ivl.2 - €10 </p>
+        <p>- Staff Ivl.3 - €30 </p>
+    </div>
+
+    <div class="rule">
+        <div style="text-align: center;"><h2>Automobili</h2></div>
+        <p style="font-size: medium;">- Auto da se ubaci na server i da vama - €10 </p>
+        <p>- Bilo koji auto iz salona - €7 </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</div>
+<div class="rules-container">
+    <div class="rule">
+        <div style="text-align: center;"><h2>Novac</h2></div>
+        <p>- Sliver kutija - €5 </p>
+        <p>- Gold kutija - €10 </p>
+        <p>- Diamond kutija - €15 </p>
+        <p>- Novac 100k - €5 </p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <div class="rule">
+        <div style="text-align: center;"><h2>Priority</h2></div>
+        <p>- Priority Ivl.1 - €10 </p>
+        <p>- Priority Ivl.2 - €20</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</div>
+
+<div class="rules-container">
+    <div class="rule">
+        <h1 style="color: white;">Ako Zelite Podrzati Server Otvorite Tiket Na Nasem Discordu</h1>
+    </div>
+    
+</div>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const closeMenu = document.querySelector(".close-menu");
+        const sideMenu = document.querySelector(".side-menu");
+
+        menuToggle.addEventListener("click", function () {
+            sideMenu.classList.add("active");
+        });
+
+        closeMenu.addEventListener("click", function () {
+            sideMenu.classList.remove("active");
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                sideMenu.classList.remove("active");
+            }
+        });
+    });
+
+</script>
+
+
+</body>
+</html>
