@@ -19,25 +19,28 @@
       {
         "category": "Pljackas",
         "items": [
-          "Tokom potjere zabranjeno je open fire prvih pola sata, nakon pola sata dozvoljen",
-          "Zabranjeno pucanje u svim garazama, trgovinama, mjestima za presvlacenje, autosalonu, apartmanima, ...",
-          "Ako open fire pljacka traje vise od 30 minuta morate se predati",
-          "Zabranjeno respawnanje dok se pljacka ne zavrsi",
-          "Zabranjena krada PD auta",
-          "Zabranjeno kempanje na lokacijama",
-          "Zabranjen RDM, VDM, RANDOM LOOT, VEZIVANJE PD-A"
+          "1. Tokom potjere zabranjeno je open fire prvih pola sata!",
+          "2. Zabranjeno pucanje/krađa auta u safe zonama",
+          "3. Ako open fire pljacka traje vise od 30 minuta morate se predati",
+          "4. Zabranjen respawn dok traje pljacka",
+          "5. Zabranjena krađa PD auta",
+          "6. Strogo zabranjeno kempanje na lokacijama",
+          "7. Zabranjen RDM, VDM, RANDOM LOOT itd",
+          "8. Bilo kakva vrsta SK-a nije dozvoljena"
         ]
       },
       {
         "category": "Opcenito",
         "items": [
-          "Obavezan mikrofon",
-          "Zabranjeno puhanje u mikrofon",
-          "Strogo zabranjeno psovanje familije, psovanja po nacionalnoj ili vjerskoj osnovi",
-          "Zabranjeno Q peak, Radio peak, ...",
-          "Zabranjena toxicnost",
-          "Strogo zabranjeno iskoristavanje bugova i uzimanje aviona, helikoptera, tenkova, itd iz vojnih baza ili aerodroma",
-          "Zabranjeno izlazenje sa servera dok pljackate ili bjezite od policije (LTA)"
+          "1. Obavezan mikrofon",
+          "2. Zabranjeno puhanje u mikrofon",
+          "3. Strogo zabranjeno vrijeđanje na vjerskoj, nacionalnoj osnovi te vrijeđanje familije",
+          "4. Zabranjeni su Q/radio peakovi...",
+          "5. Zabranjen bilo kakav oblil BA",
+          "6. Zabranjeno ulazenje u vojne baze, aerodrome itd",
+          "7. Zabranjeno izlazenje sa servera dok se u nekoj pljacki ili potjeri",
+          "8. Safe zone su:  a) Sve garaze;  b) Svi legalni shopovi;  c) mjesta za presvlacenje;  d) autosalon;  e) apartmani",
+          "9. Na ovim pljackama imate pravo na uslove: a) Pljacka bakomata - 1 uslov;  b)  Plajcka jahte - 2 uslova;  c) Train / car heist - 2 uslova;  d) Pljacka zlatare i banke - 3 uslova;  e) Pljacka glavne banke 4 uslova"
         ]
       }
     ]
