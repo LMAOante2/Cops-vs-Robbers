@@ -5,10 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tx</title>
 </head>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+            body { font-family: Arial, sans-serif; background-color: #222; color: white; }
+        header { background-color: #2b716a; color: white; padding: 15px; text-align: center; }
+        nav { background-color: #333; padding: 15px; text-align: center; }
+        nav a { color: white; padding: 10px 20px; text-decoration: none; display: inline-block; }
+        nav a:hover { background-color: #555; }
+        .content { padding: 20px; place-self: center; }
+        .button { padding: 10px 20px; margin: 20px; background: #28a745; color: white; border: none; cursor: pointer; font-size: 1.1rem; }
+        .button:hover { background: #218838; }
+        .logout-btn { background: #dc3545; }
+        .logout-btn:hover { background: #c82333; }
+        .githubbutton {
+            text-decoration: none;
+            color: black;
+            background: blue;
+            padding: 15px 35px;
+            margin: 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            background-size: 200% 100%;
+            transition: all 0.2s ease-in-out;
+            text-align: center;
+        }
+
+        .githubbutton:hover {
+            animation: Sirena 0.15s infinite alternate;
+        }
+
+        @keyframes Sirena {
+            0% { background-position: 50% 100%; box-shadow: 20px 0 20px rgb(255, 0, 0); }
+            100% { background-position: 100% 100%; box-shadow: -20px 0 20px rgb(4, 0, 255); }
+        }
+</style>
 <body>
-    <h1>Tx</h1>
+    <header>
+        <h1>Tx</h1>
+    </header>
     
-    <a href="https://github.com/LMAOante2/Cops-vs-Robbers/blob/main/rules.json">Uredi Pravila</a>
+    <nav>
+        <a href="index.html">Početna</a>
+        <a href="admin-commands.html">Admin Komande</a>
+        <a href="admin.html">Admin</a>
+        <button class="logout-btn" onclick="logout()">Odjava Admin</button>
+        <button class="logout-btn" id="admin-link" style="display: none;" onclick="logouttx()">Odjava TX</button>
+    </nav>
+    
+    <a class="githubbutton" href="https://github.com/LMAOante2/Cops-vs-Robbers/blob/main/rules.json">Uredi Pravila</a>
 
 </body>
 <script>
