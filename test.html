@@ -13,28 +13,28 @@
     <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="android-chrome-192x192.png" sizes="96x96" type="image/png">
     <style>
-        /* Include your existing styles here */
+
     </style>
 </head>
 <body>
 
-    <!-- Add your header and navigation here -->
+
 
     <h1 style="color: white;">Pravila Servera</h1>
 
     <div class="rules-container" id="rules-container">
-        <!-- Rules will be dynamically loaded here -->
+
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Fetch the rules from the JSON file on GitHub
+
             fetch('https://github.com/LMAOante2/Cops-vs-Robbers/blob/main/rules.json') // Replace with your GitHub raw URL
                 .then(response => response.json())
                 .then(data => {
                     const rulesContainer = document.getElementById('rules-container');
                     data.rules.forEach(ruleCategory => {
-                        // Create a div for each category
+
                         const categoryDiv = document.createElement('div');
                         categoryDiv.classList.add('rule');
                         
@@ -74,23 +74,23 @@
     <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="android-chrome-192x192.png" sizes="96x96" type="image/png">
     <style>
-        /* Include your existing styles here */
+
     </style>
 </head>
 <body>
 
-    <!-- Add your header and navigation here -->
+
 
     <h1 style="color: white;">Pravila Servera</h1>
 
     <div class="rules-container" id="rules-container">
-        <!-- Rules will be dynamically loaded here -->
+
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Fetch the rules from the JSON file on GitHub
-            fetch('https://raw.githubusercontent.com/yourusername/yourrepo/main/rules.json') // Replace with your GitHub raw URL
+
+            fetch('https://github.com/LMAOante2/Cops-vs-Robbers/blob/main/rules.json')
                 .then(response => response.json())
                 .then(data => {
                     const rulesContainer = document.getElementById('rules-container');
