@@ -245,6 +245,7 @@
        background-color:grey;
        margin-top:10px; 
        margin-bottom:10px;
-       width: 100px;
+       width: 250px;
        border-radius: 30px;
+       place-self: center;
 }
