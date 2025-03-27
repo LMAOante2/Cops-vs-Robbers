@@ -10,7 +10,7 @@
                 document.getElementById('player-count').innerText = `${playerCount}/${maxPlayers}`;
 
                 const serverStatus = document.getElementById('server-status');
-                serverStatus.innerText = "✅ Online (Samo za Scriptere)";
+                serverStatus.innerText = "✅ Online (Samo za Administraciju)";
                 serverStatus.style.backgroundColor = "green";
                 serverStatus.style.color = "white";
             } catch (error) {
