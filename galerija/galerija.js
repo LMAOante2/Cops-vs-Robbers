@@ -41,3 +41,11 @@
                 mapaImages.style.display = "none";
             }
         }
+            function togglepause() {
+            const pausImages = document.getElementById("pausImages");
+            if (pausImages.style.display === "none" || pausImages.style.display === "") {
+                pausImages.style.display = "flex";
+            } else {
+                pausImages.style.display = "none";
+            }
+        }
