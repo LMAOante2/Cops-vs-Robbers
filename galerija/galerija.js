@@ -50,7 +50,7 @@
             }
         }
             function togglepuske() {
-            const pausImages = document.getElementById("puskeImages");
+            const puskeImages = document.getElementById("puskeImages");
             if (puskeImages.style.display === "none" || puskeImages.style.display === "") {
                 puskeImages.style.display = "flex";
             } else {
