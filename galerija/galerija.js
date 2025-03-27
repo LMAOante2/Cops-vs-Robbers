@@ -33,3 +33,11 @@
                 inventoryImages.style.display = "none";
             }
         }
+            function togglemapa() {
+            const mapaImages = document.getElementById("mapaImages");
+            if (mapaImages.style.display === "none" || mapaImages.style.display === "") {
+                mapaImages.style.display = "flex";
+            } else {
+                mapaImages.style.display = "none";
+            }
+        }
