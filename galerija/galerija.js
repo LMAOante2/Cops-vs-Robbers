@@ -42,7 +42,7 @@
             }
         }
             function togglepause() {
-            const pauseImages = document.getElementById("pausImages");
+            const pauseImages = document.getElementById("pauseImages");
             if (pauseImages.style.display === "none" || pauseImages.style.display === "") {
                 pauseImages.style.display = "flex";
             } else {
