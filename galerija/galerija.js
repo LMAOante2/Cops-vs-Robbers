@@ -25,3 +25,11 @@
                 carImages.style.display = "none";
             }
         }
+            function toggleinventory() {
+            const inventoryImages = document.getElementById("inventoryImages");
+            if (inventoryImages.style.display === "none" || inventoryImages.style.display === "") {
+                inventoryImages.style.display = "flex";
+            } else {
+                inventoryImages.style.display = "none";
+            }
+        }
