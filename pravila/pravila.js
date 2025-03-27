@@ -1,6 +1,6 @@
     document.addEventListener("DOMContentLoaded", function () {
 
-        fetch('https://raw.githubusercontent.com/LMAOante2/Cops-vs-Robbers/main/rules.jso')
+        fetch('https://raw.githubusercontent.com/LMAOante2/Cops-vs-Robbers/main/rules.json')
             .then(response => response.json())
             .then(data => {
                 const rulesContainer = document.getElementById('rules-container');
