@@ -242,7 +242,7 @@
 }
 .text {
        color: white;
-       background-color:grey;
+       background-color:rgba(0, 0, 0, 0.7);
        margin-top:10px; 
        margin-bottom:10px;
        width: 350px;
