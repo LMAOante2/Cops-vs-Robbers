@@ -42,10 +42,18 @@
             }
         }
             function togglepause() {
-            const pausImages = document.getElementById("pausImages");
-            if (pausImages.style.display === "none" || pausImages.style.display === "") {
-                pausImages.style.display = "flex";
+            const pauseImages = document.getElementById("pausImages");
+            if (pauseImages.style.display === "none" || pauseImages.style.display === "") {
+                pauseImages.style.display = "flex";
             } else {
-                pausImages.style.display = "none";
+                pauseImages.style.display = "none";
+            }
+        }
+            function togglepuske() {
+            const pausImages = document.getElementById("puskeImages");
+            if (puskeImages.style.display === "none" || puskeImages.style.display === "") {
+                puskeImages.style.display = "flex";
+            } else {
+                puskeImages.style.display = "none";
             }
         }
