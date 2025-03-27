@@ -2,7 +2,7 @@
 {
     "rules": [
       {
-        "category": "Pd (Policija)",
+        "category": "Pravila Policije",
         "items": [
           "1. Heli se dize samo na pljacke Glavne banke, banke i zlatare",
           "2. Zabranjeno prodavanje/davanje pd stvari (Oruzija, pancira...)",
@@ -18,7 +18,7 @@
         ]
       },
       {
-        "category": "Pljackas",
+        "category": "Pravila Pljackasa",
         "items": [
           "1. Tokom potjere zabranjeno je open fire prvih pola sata!",
           "2. Zabranjeno pucanje/krađa auta u safe zonama",
@@ -31,7 +31,7 @@
         ]
       },
       {
-        "category": "Opcenito",
+        "category": "Opcenita pravila",
         "items": [
           "1. Obavezan mikrofon",
           "2. Zabranjeno puhanje u mikrofon",
