@@ -336,6 +336,11 @@
                     user-select: none; 
         }
 
+        .discord-widget h2 {
+            margin-bottom: 15px;
+            
+        }
+
         .card {
             width: 300px;
             height: 500px;
