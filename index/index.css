@@ -291,11 +291,12 @@
     position: absolute;
     left: 50%;
     bottom: 100%; /* put it on the top */
-    background-color: black;
+    background-color: grey;
     width: max-content;
     opacity: 0;
     -webkit-transition: opacity 0.75s ease-in-out;
     color: white;
+    outline: white;
   }
 
   [data-tooltip]:hover:after {
