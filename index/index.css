@@ -293,7 +293,7 @@
     bottom: 100%; /* put it on the top */
     background-color: grey;
     width: max-content;
-    opacity: 0;
+    display: none;
     -webkit-transition: opacity 0.75s ease-in-out;
     color: white;
     border: 2px white;
