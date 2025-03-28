@@ -339,7 +339,7 @@
                 opacity: 2;
             }
             50% {
-                transform: scale(1.5);
+                transform: scale(1);
                 opacity: 1;
             }
             100% {
