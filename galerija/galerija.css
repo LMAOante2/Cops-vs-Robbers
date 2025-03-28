@@ -347,6 +347,9 @@
                 -ms-user-select: none; 
                     user-select: none; 
         }
+        .custom-cars-images img:hover {
+            transform: scale(1.05); 
+        }
 
 
         .show-button {
