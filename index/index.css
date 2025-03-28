@@ -301,8 +301,10 @@
 
   [data-tooltip]:hover:after {
     opacity: 1;
+    border: 2px white;
   }
 
   div[data-tooltip]:after {
     left: 5px!important;
+    border: 2px white;
   }
