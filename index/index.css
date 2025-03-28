@@ -159,6 +159,11 @@
             100% { background-position: 100% 100%; box-shadow: -20px 0 20px rgb(4, 0, 255); }
         }
 
+.btn img {
+       width: 24px;
+       height: 24px;
+}
+
         .blue-btn { background: rgba(0, 153, 255, 0.9); }
         .blue-btn:hover { background: rgba(0, 123, 255, 1); }
 
