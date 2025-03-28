@@ -5,10 +5,13 @@
         }
 
         body {
-            background: url('/slike/background.png') no-repeat center center;
+            font-family: Arial, sans-serif;
+            background-image: url('background.png');
             background-size: cover;
-            background-attachment: scroll;
+            background-position: center;
             color: white;
+            text-align: center;
+            padding: 20px;
         }
 
 
