@@ -1,26 +1,19 @@
-        async function updateServerStatus() {
-            try {
-                const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o'); 
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
-                const serverData = await response.json();
-                const playerCount = serverData?.Data?.players.length || 0;
-                const maxPlayers = serverData?.Data?.sv_maxclients || 48;
-
-                document.getElementById('player-count').innerText = `${playerCount}/${maxPlayers}`;
-
-                const serverStatus = document.getElementById('server-status');
-                serverStatus.innerText = "✅ Online (Samo za Administraciju)";
-                serverStatus.style.backgroundColor = "green";
-                serverStatus.style.color = "white";
-            } catch (error) {
-                console.error('Greška:', error);
-                const serverStatus = document.getElementById('server-status');
-                serverStatus.innerText = "❌ Offline";
-                serverStatus.style.backgroundColor = "red";
-                serverStatus.style.color = "white";
-            }
-        }
+async function updateServerStatus() {
+    try {
+        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const serverData = await response.json();
+        const playerCount = serverData?.Data?.players.length || 0;
+        const maxPlayers = serverData?.Data?.sv_maxclients || 48;
+        document.getElementById('player-count').innerText = `${playerCount}/${maxPlayers}`;
+        document.getElementById('server-status').innerHTML = "<span class='pulse'></span> Online";
+    } catch (error) {
+        console.error('Greška:', error);
+        document.getElementById('server-status').innerHTML = "<span class='pulse' style='background: red;'></span> Offline";
+    }
+}
+setInterval(updateServerStatus, 10000);
+window.onload = updateServerStatus;
 
         setInterval(updateServerStatus, 10000);
         window.onload = updateServerStatus;
