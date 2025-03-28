@@ -282,31 +282,4 @@
                 height: 20px;
             }
         }
-  [data-tooltip] {
-    position: relative;
-  }
 
-  [data-tooltip]:after {
-    content: attr(data-tooltip);
-    position: absolute;
-    left: 50%;
-    bottom: 100%; /* put it on the top */
-    background-color: grey;
-    width: auto;
-    display: none;
-    -webkit-transition: opacity 0.75s ease-in-out;
-    color: white;
-    border: 2px white;
-    font-size: 15px;
-    border-radius: 25px;
-  }
-
-  [data-tooltip]:hover:after {
-    display: block;
-    border: 2px white;
-  }
-
-  div[data-tooltip]:after {
-    left: 5px!important;
-    border: 2px white;
-  }
