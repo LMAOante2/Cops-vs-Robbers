@@ -22,11 +22,23 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         header .logo { 
             font-size: 22px; 
             font-weight: bold; 
             color: white;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .side-menu {
             position: fixed;
@@ -37,6 +49,12 @@
             background: rgba(0, 0, 0, 0.9);
             padding-top: 60px;
             transition: left 0.4s ease-in-out;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .side-menu.active {
             left: 0;
@@ -47,10 +65,22 @@
             margin: 0;
             display: flex;
             flex-direction: column;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         nav li {
             padding: 15px 20px;
             text-align: left;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         nav a {
             color: white;
@@ -59,6 +89,12 @@
             font-weight: bold;
             display: block;
             transition: color 0.3s;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         nav a:hover {
             color: #ff9900;
@@ -70,6 +106,12 @@
             border: none;
             cursor: pointer;
             display: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .close-menu {
             position: absolute;
@@ -80,15 +122,33 @@
             background: none;
             border: none;
             cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .desktop-nav {
             display: flex;
             justify-content: flex-end;
             gap: 15px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .desktop-nav li {
             padding: 0;
             list-style: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .desktop-nav a {
             font-size: 18px;
@@ -96,6 +156,12 @@
             color: white;
             text-decoration: none;
             padding: 10px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .desktop-nav a:hover {
             color: #ff9900;
@@ -118,6 +184,12 @@
             margin-bottom: 20px;
             font-size: 38px;
             color: rgb(0, 0, 0);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .rules-container {
             display: flex;
@@ -129,6 +201,12 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.7);
             margin-bottom: 20px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .rule {
             flex: 1;
@@ -140,10 +218,22 @@
             padding: 15px;
             border-radius: 10px;
             text-align: center;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .rule h2 {
             font-size: 24px;
             margin-bottom: 10px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         @media (max-width: 768px) {
             h1 {
@@ -159,18 +249,42 @@
         }
         .img{
             width: 150px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .Pravila{
             text-decoration: underline;
             text-decoration-color: rgba(0, 153, 255, 0.9);;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         p{
             font-size: medium;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .status-badge {
             display: inline-block;
             border-radius: 10px;
             width: 350px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         .Pocetna {
             text-decoration: underline;
@@ -178,6 +292,12 @@
             text-decoration-thickness: 2px;
             text-underline-offset: 5px;
             cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
 
    
@@ -186,6 +306,12 @@
             font-weight: bold;
             padding: 10px;
             margin-top: 10px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
 
    
@@ -195,5 +321,6 @@
                 padding: 8px;
                 width: auto; 
                 margin-top: 8px;
+                
             }
         }
