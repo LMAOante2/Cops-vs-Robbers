@@ -291,10 +291,11 @@
     position: absolute;
     left: 50%;
     bottom: 100%; /* put it on the top */
-    background-color: yellow;
+    background-color: black;
     width: max-content;
     opacity: 0;
-    -webkit-transition: opacity 0.75s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    color: black;
   }
 
   [title]:hover:after {
