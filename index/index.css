@@ -300,7 +300,7 @@
   }
 
   [data-tooltip]:hover:after {
-    opacity: 1;
+    display: block;
     border: 2px white;
   }
 
