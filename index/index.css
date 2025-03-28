@@ -296,7 +296,7 @@
     opacity: 0;
     -webkit-transition: opacity 0.75s ease-in-out;
     color: white;
-    outline: white;
+    border: 2px white;
   }
 
   [data-tooltip]:hover:after {
