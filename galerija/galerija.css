@@ -223,10 +223,7 @@
             box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
             position: fixed;
         }
-const img = document.querySelector("img");
-img.ondragstart = () => {
-  return false;
-};
+
 
         .show-button {
             background: #ff9900;
