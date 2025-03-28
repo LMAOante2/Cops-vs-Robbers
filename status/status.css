@@ -345,7 +345,7 @@
                 opacity: 0.5;
             }
             200% {
-                transform: scale(2);
+                transform: scale(3);
                 opacity: 0;
             }
         }
