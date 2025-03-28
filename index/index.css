@@ -292,7 +292,7 @@
     left: 50%;
     bottom: 100%; /* put it on the top */
     background-color: grey;
-    width: fit-content;
+    width: fit;
     display: none;
     -webkit-transition: opacity 0.75s ease-in-out;
     color: white;
