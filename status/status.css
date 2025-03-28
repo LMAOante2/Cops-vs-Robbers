@@ -193,7 +193,6 @@
         }
         .rules-container {
             display: flex;
-            text-align: center;
             justify-content: space-between;
             max-width: 1200px;
             margin: 0 auto;
@@ -202,6 +201,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.7);
             margin-bottom: 20px;
+            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
