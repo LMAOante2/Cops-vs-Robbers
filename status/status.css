@@ -201,7 +201,6 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.7);
             margin-bottom: 20px;
-            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
@@ -215,7 +214,7 @@
             text-align: left;
             font-size: 18px;
             line-height: 1.7;
-            background: rgba(255, 255, 255, 0.1);
+            background: none;
             padding: 15px;
             border-radius: 10px;
             text-align: center;
