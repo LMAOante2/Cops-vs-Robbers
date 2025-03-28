@@ -221,6 +221,7 @@
             background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
             color: white;
             padding: 20px;
+            margin-bottom: 150px;
         }
 
         .step {
