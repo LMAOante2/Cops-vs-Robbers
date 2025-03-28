@@ -332,6 +332,7 @@
             border-radius: 60%;
             position: relative;
             animation: pulseAnimate .8s infinite;
+            padding: 0 10px;
         }
         @keyframes pulseAnimate {
             0% {
