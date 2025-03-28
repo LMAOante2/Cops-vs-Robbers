@@ -282,22 +282,26 @@
                 height: 20px;
             }
         }
-  [title] {
+  [data-tooltip] {
     position: relative;
   }
 
-  [title]:after {
-    content: attr(title);
+  [data-tooltip]:after {
+    content: attr(data-tooltip);
     position: absolute;
     left: 50%;
     bottom: 100%; /* put it on the top */
     background-color: black;
     width: max-content;
     opacity: 0;
-    -webkit-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.75s ease-in-out;
     color: white;
   }
 
-  [title]:hover:after {
+  [data-tooltip]:hover:after {
     opacity: 1;
+  }
+
+  div[data-tooltip]:after {
+    left: 5px!important;
   }
