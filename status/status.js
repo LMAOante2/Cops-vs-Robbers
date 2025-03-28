@@ -1,6 +1,6 @@
 async function updateServerStatus() {
     try {
-        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
+        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const serverData = await response.json();
         const playerCount = serverData?.Data?.players.length || 0;
