@@ -337,7 +337,7 @@
         @keyframes pulseAnimate {
             0% {
                 transform: scale(1);
-                opacity: 2;
+                opacity: 3;
             }
 
             100% {
