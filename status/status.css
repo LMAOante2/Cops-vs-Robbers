@@ -340,8 +340,8 @@
                 opacity: 3;
             }
             50% {
-                transform: scale(2);
-                opacity: 1.5;
+                transform: scale(1.5);
+                opacity: 1;
             }
 
             100% {
