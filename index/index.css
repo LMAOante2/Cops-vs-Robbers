@@ -297,6 +297,8 @@
     -webkit-transition: opacity 0.75s ease-in-out;
     color: white;
     border: 2px white;
+    font-size: 15px;
+    border-radius: 25px;
   }
 
   [data-tooltip]:hover:after {
