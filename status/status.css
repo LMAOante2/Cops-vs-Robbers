@@ -339,13 +339,10 @@
                 transform: scale(1);
                 opacity: 3;
             }
-            50% {
-                transform: scale(1.5);
-                opacity: 1;
-            }
+
 
             100% {
-                transform: scale(3);
+                transform: scale(2);
                 opacity: 0;
             }
 
