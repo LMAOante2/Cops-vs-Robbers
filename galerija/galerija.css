@@ -321,6 +321,7 @@
         }
                 .custom-cars-container {
             margin-top: 20px;
+            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
