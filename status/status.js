@@ -38,7 +38,7 @@ window.onload = updateServerStatus;
             });
         });
 
-        let timeLeft = 600; // Set countdown time in seconds
+        let timeLeft = 480; // Set countdown time in seconds
         const timerElement = document.getElementById("timer");
 
         const countdown = setInterval(() => {
