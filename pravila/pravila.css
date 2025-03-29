@@ -278,6 +278,7 @@
 
         .img {
             width: 150px;
+            margin-top: 25px;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
