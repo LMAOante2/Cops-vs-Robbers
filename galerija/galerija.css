@@ -2,13 +2,15 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
         body {
+            font-family: Arial, sans-serif;
             background-image: url('/slike/background.png');
             background-size: cover;
-            background-attachment: scroll;
+            background-position: center;
             color: white;
+            text-align: center;
+            padding: 20px;
         }
         header {
             display: flex;
@@ -294,9 +296,6 @@
         img{
             width: 150px;
             margin-top: 30px;
-            text-align: center;
-            place-self: center;
-            align-self: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
