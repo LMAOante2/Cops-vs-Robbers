@@ -332,7 +332,6 @@
             border-radius: 60%;
             position: relative;
             animation: pulseAnimate 1s infinite;
-            animation-delay: calc(1s * var(--1));
             margin-right: 10px;
         }
         @keyframes pulseAnimate {
