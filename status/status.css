@@ -333,7 +333,7 @@
             border-radius: 60%;
             position: relative;
             animation: pulseAnimate 1s infinite;
-            margin-right: 10px;
+            margin-right: 6px;
         }
         @keyframes pulseAnimate {
             0% {
