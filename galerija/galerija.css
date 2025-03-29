@@ -291,7 +291,7 @@
                 -ms-user-select: none; 
                     user-select: none; 
         }
-        .img{
+        img{
             width: 150px;
             margin-top: 30px;
             -webkit-touch-callout: none;
