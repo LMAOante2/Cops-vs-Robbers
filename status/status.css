@@ -5,6 +5,7 @@
             font-family: Arial, sans-serif;
         }
         body {
+
             background-image: url('/slike/background.png');
             background-size: cover;
             background-attachment: scroll;
@@ -245,12 +246,9 @@
                 flex-direction: column;
             }
         }
-        img{
+        .img{
             width: 150px;
             margin-top: 30px;
-            text-align: center;
-            place-self: center;
-            align-self: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
