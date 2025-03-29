@@ -6,7 +6,7 @@ async function updateServerStatus() {
         const playerCount = serverData?.Data?.players.length || 0;
         const maxPlayers = serverData?.Data?.sv_maxclients || 48;
         document.getElementById('player-count').innerText = `${playerCount}/${maxPlayers}`;
-        document.getElementById('server-status').innerHTML = "<span class='pulse'></span> Online (Samo Za Administraciju)";
+        document.getElementById('server-status').innerHTML = "<span class='pulse'></span> Online";
     } catch (error) {
         console.error('Greška:', error);
         document.getElementById('server-status').innerHTML = "<span class='pulse' style='background: red;'></span> Offline";
@@ -38,19 +38,3 @@ window.onload = updateServerStatus;
             });
         });
 
-        let timeLeft = 480; // Set countdown time in seconds
-        const timerElement = document.getElementById("timer");
-
-        const countdown = setInterval(() => {
-            let minutes = Math.floor(timeLeft / 60);
-            let seconds = timeLeft % 60;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-            timerElement.textContent = `${minutes}:${seconds}`;
-            
-            if (timeLeft === 0) {
-                clearInterval(countdown);
-                timerElement.textContent = "Up!";
-            } else {
-                timeLeft--;
-            }
-        }, 1000);
