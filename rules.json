@@ -8,9 +8,9 @@
           "2. Zabranjeno prodavanje/davanje pd stvari (Oruzija, pancira...)",
           "3. Zabranjen odlazak na teritorije",
           "4. Zabranjeno pljackanje",
-          "5. Morate ispuniti sve ralne uslove od pljackasa",
+          "5. Morate ispuniti sve realne uslove od pljackasa",
           "6. Ne pucati bez razloga",
-          "7. Zabranjeno tejzanje igraca dok pljacka bankomt",
+          "7. Zabranjeno tejzanje igraca dok pljacka bankomat",
           "8. Kada netko radi heist auta, cim preda auto nemate ga pravo uhapsit",
           "9. Ne smijete krasti novac iz inventorya igraca"
             
@@ -20,12 +20,12 @@
       {
         "category": "Pravila Pljackasa",
         "items": [
-          "1. Tokom potjere zabranjeno je open fire prvih pola sata!",
+          "1. Tokom potjere zabranjen je open fire prvih pola sata!",
           "2. Zabranjeno pucanje/krađa auta u safe zonama",
           "3. Ako open fire pljacka traje vise od 30 minuta morate se predati",
           "4. Zabranjen respawn dok traje pljacka",
           "5. Zabranjena krađa PD auta",
-          "7. Vi kao pljackas nesmijete imati tazer",
+          "7. Zabranjeno je imati tazer",
           "6. Strogo zabranjeno kempanje na lokacijama",
           "7. Zabranjen RDM, VDM, RANDOM LOOT itd",
           "8. Bilo kakva vrsta SK-a nije dozvoljena"
@@ -40,7 +40,7 @@
           "4. Zabranjeni su Q/radio peakovi...",
           "5. Zabranjen bilo kakav oblik BA",
           "6. Zabranjeno ulazenje u vojne baze, aerodrome itd",
-          "7. Zabranjeno izlazenje sa servera dok se u nekoj pljacki ili potjeri",
+          "7. Zabranjeno izlazenje sa servera dok ste u nekoj pljacki ili potjeri",
           "8. Safe zone su:  a) Sve garaze;  b) Svi legalni shopovi;  c) mjesta za presvlacenje;  d) autosalon;  e) apartmani",
           "9. Na ovim pljackama imate pravo na uslove: a) Pljacka bakomata - 1 uslov;  b)  Plajcka jahte - 2 uslova;  c) Train / car heist - 2 uslova;  d) Pljacka zlatare i banke - 3 uslova;  e) Pljacka glavne banke 4 uslova; f) Pljacka Apple Stora/Digital Dena - 2 uslova"
         ]
