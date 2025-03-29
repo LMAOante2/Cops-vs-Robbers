@@ -278,6 +278,8 @@
             width: 150px;
             margin-top: 30px;
             text-align: center;
+            place-self: center;
+            align-self: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
