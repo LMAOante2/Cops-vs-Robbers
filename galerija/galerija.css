@@ -9,6 +9,8 @@
             background-size: cover;
             background-position: center;
             color: white;
+            text-align: center;
+            padding: 20px;
         }
         header {
             display: flex;
@@ -193,7 +195,6 @@
         }
         .rules-container {
             display: flex;
-            text-align: center;
             align-items: center;
             justify-content: space-between;
             max-width: fit-content;
@@ -228,7 +229,6 @@
         .rule h2 {
             font-size: 24px;
             margin-bottom: 10px;
-            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
@@ -277,7 +277,6 @@
         
         .div{
             background: fixed;
-            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
@@ -287,7 +286,6 @@
         }
         div img {
             width: 500px;
-            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
@@ -298,7 +296,6 @@
         img{
             width: 150px;
             margin-top: 30px;
-            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
@@ -321,7 +318,6 @@
         }
                 .custom-cars-container {
             margin-top: 20px;
-            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
@@ -330,7 +326,6 @@
                     user-select: none; 
         }
         .custom-cars-images {
-            text-align: center;
             display: none;
             flex-direction: column;
             align-items: center;
@@ -343,7 +338,6 @@
                     user-select: none; 
         }
         .custom-cars-images img {
-            text-align: center;
             width: 500px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
@@ -360,7 +354,6 @@
 
 
         .show-button {
-            text-align: center;
             background: #ff9900;
             border: none;
             padding: 10px 20px;
@@ -392,7 +385,6 @@
         }  
 }
 .text {
-    text-align: center;
        color: white;
        background-color:rgba(0, 0, 0, 0.7);
        margin-top:10px; 
@@ -410,7 +402,6 @@
                user-select: none; 
 }
 .lightbox {
-    text-align: center;
     display: none;
     position: fixed;
     top: 0;
@@ -422,7 +413,6 @@
     align-items: center;
 }
 .lightbox-img {
-    text-align: center;
     width: 50%;
     height: 40%;
     max-width: 90%;
