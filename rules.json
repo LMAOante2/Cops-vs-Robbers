@@ -25,13 +25,14 @@
           "3. Ako open fire pljacka traje vise od 30 minuta morate se predati",
           "4. Zabranjen respawn dok traje pljacka",
           "5. Zabranjena krađa PD auta",
+          "7. Vi kao pljackas nesmijete imate tazer",
           "6. Strogo zabranjeno kempanje na lokacijama",
           "7. Zabranjen RDM, VDM, RANDOM LOOT itd",
           "8. Bilo kakva vrsta SK-a nije dozvoljena"
         ]
       },
       {
-        "category": "Opcenita pravila",
+        "category": "Opcenita Pravila",
         "items": [
           "1. Obavezan mikrofon",
           "2. Zabranjeno puhanje u mikrofon",
