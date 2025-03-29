@@ -413,7 +413,7 @@
     align-items: center;
 }
 .lightbox-img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 110%;
+    max-height: 110%;
     border-radius: 10px;
 }
