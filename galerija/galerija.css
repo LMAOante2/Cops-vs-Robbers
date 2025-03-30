@@ -429,7 +429,7 @@
     height: 40%;
     max-width: 90%;
     max-height: 90%;
-    min-height: 35%;
+    min-width: 35%;
     min-height: 25%;
     border-radius: 10px;
 }
