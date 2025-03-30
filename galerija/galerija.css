@@ -9,8 +9,6 @@
             background-size: cover;
             background-position: center;
             color: white;
-            text-align: center;
-            padding: 20px;
         }
         header {
             display: flex;
@@ -194,6 +192,7 @@
             font-size: 38px;
         }
         .rules-container {
+            text-align: center;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -211,6 +210,7 @@
                     user-select: none; 
         }
         .rule {
+            text-align: center;
             flex: 1;
             margin: 0 15px;
             align-self: center;
@@ -227,6 +227,7 @@
                     user-select: none; 
         }
         .rule h2 {
+            text-align: center;
             font-size: 24px;
             margin-bottom: 10px;
             -webkit-touch-callout: none;
@@ -276,6 +277,7 @@
         }
         
         .div{
+            text-align: center;
             background: fixed;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
@@ -285,7 +287,7 @@
                     user-select: none; 
         }
         div img {
-            width: 500px;
+            text-align: center;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
@@ -294,6 +296,7 @@
                     user-select: none; 
         }
         img{
+            text-align: center;
             width: 150px;
             margin-top: 30px;
             -webkit-touch-callout: none;
@@ -304,6 +307,7 @@
                     user-select: none; 
         }
         .Pocetna {
+            text-align: center;
             text-decoration: underline;
             text-decoration-color: rgba(0, 153, 255, 0.9);
             text-decoration-thickness: 2px;
@@ -317,6 +321,7 @@
                     user-select: none; 
         }
                 .custom-cars-container {
+                    text-align: center;
             margin-top: 20px;
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
@@ -326,6 +331,7 @@
                     user-select: none; 
         }
         .custom-cars-images {
+            text-align: center;
             display: none;
             flex-direction: column;
             align-items: center;
@@ -338,6 +344,7 @@
                     user-select: none; 
         }
         .custom-cars-images img {
+            text-align: center;
             width: 500px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
@@ -349,11 +356,13 @@
                     user-select: none; 
         }
         .custom-cars-images img:hover {
+            text-align: center;
             transform: scale(1.05); 
         }
 
 
         .show-button {
+            text-align: center;
             background: #ff9900;
             border: none;
             padding: 10px 20px;
@@ -385,6 +394,7 @@
         }  
 }
 .text {
+    text-align: center;
        color: white;
        background-color:rgba(0, 0, 0, 0.7);
        margin-top:10px; 
@@ -402,6 +412,7 @@
                user-select: none; 
 }
 .lightbox {
+    text-align: center;
     display: none;
     position: fixed;
     top: 0;
@@ -413,9 +424,12 @@
     align-items: center;
 }
 .lightbox-img {
+    text-align: center;
     width: 50%;
     height: 40%;
     max-width: 90%;
     max-height: 90%;
+    min-height: 35%;
+    min-height: 25%;
     border-radius: 10px;
 }
