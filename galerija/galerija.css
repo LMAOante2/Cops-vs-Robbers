@@ -428,7 +428,7 @@
     height: 40%;
     max-width: 90%;
     max-height: 90%;
-    min-width: 35%;
-    min-height: 25%;
+    min-width: 0%;
+    min-height: 0%;
     border-radius: 10px;
 }
