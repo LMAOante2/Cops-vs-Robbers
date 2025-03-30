@@ -8,6 +8,7 @@
             background-image: url('/slike/background.png');
             background-size: cover;
             background-attachment: scroll;
+            background-position: center;
             color: white;
         }
         header {
