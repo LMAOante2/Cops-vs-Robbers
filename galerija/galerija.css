@@ -307,7 +307,6 @@
                     user-select: none; 
         }
         .Pocetna {
-            text-align: center;
             text-decoration: underline;
             text-decoration-color: rgba(0, 153, 255, 0.9);
             text-decoration-thickness: 2px;
