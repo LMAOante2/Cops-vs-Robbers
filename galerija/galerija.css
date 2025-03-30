@@ -29,6 +29,7 @@
         }
 
         header .logo { 
+            margin-left: 50px;
             font-size: 22px; 
             font-weight: bold; 
             color: white;
