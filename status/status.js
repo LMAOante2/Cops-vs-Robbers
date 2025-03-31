@@ -9,7 +9,7 @@ async function updateServerStatus() {
         document.getElementById('server-status').innerHTML = "<span style='background: rgb(0,255,0);' class='pulse'></span><span style='color: rgb(0,255,0);'>Online</span> ";
     } catch (error) {
         console.error('Greška:', error);
-        document.getElementById('server-status').innerHTML = "<span class='pulse' style='background: red;'></span> Offline";
+        document.getElementById('server-status').innerHTML = "<span class='pulse' style='background: red;'></span><span style='color: red;'>Offline</span>";
     }
 }
 setInterval(updateServerStatus, 10000);
