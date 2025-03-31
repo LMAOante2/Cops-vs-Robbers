@@ -318,7 +318,7 @@
    
         @media (max-width: 768px) {
             #server-status {
-                font-size: 14px;
+                font-size: 18px;
                 padding: 8px;
                 width: auto; 
                 margin-top: 8px;
