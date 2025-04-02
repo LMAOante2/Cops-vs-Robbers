@@ -26,20 +26,45 @@ async function fetchPlayers() {
                 let card = document.createElement("div");
                 card.className = "igrac-kartica";
                 card.innerHTML = `
-                    <h3>${player.name}</h3>
+                <h3 class="player-name">${player.name}</h3>
                     <p><span class="igrac-number">#${index + 1}</span></p>
-                    <p class="igrac-id">ID: ${player.id}</p>
+                    <p class="igrac-id" data-id="${player.id}">ID: ${player.id}</p>
                 `;
                 igraclista.appendChild(card);
             });
+            const nameElements = document.querySelectorAll('.player-name');
+            const idElements = document.querySelectorAll('.igrac-id');
+
+            nameElements.forEach((nameElement) => {
+                nameElement.addEventListener('click', () => {
+                    const playerName = nameElement.textContent;
+                    navigator.clipboard.writeText(playerName).then(() => {
+                        alert(`Ime "${playerName}" je uspjesno kopirano!`);
+                    }).catch(err => {
+                        console.error('Failed to copy name: ', err);
+                    });
+                });
+            });
+
+            idElements.forEach((idElement) => {
+                idElement.addEventListener('click', () => {
+                    const igracid = idElement.getAttribute('data-id');
+                    navigator.clipboard.writeText(igracid).then(() => {
+                        alert(`ID "${igracid}" je uspjesno kopiran!`);
+                    }).catch(err => {
+                        console.error('ID Je Neuspjesno Kopiran: ', err);
+                    });
+                });
+            });
         } else {
-            igraclista.innerHTML = "<p>No players online.</p>";
+            igraclista.innerHTML = "<p>Nema Igraca Online.</p>";
         }
     } catch (error) {
         console.error("Error fetching player data:", error);
-        document.getElementById("igraclista").innerHTML = "<p>Players failed to load.</p>";
+        document.getElementById("igraclista").innerHTML = "<p>Igraci Su Neuspjesno Ucitani.</p>";
     }
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
@@ -61,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Initial function calls to load data
+
 setInterval(updateServerStatus, 2000);
 setInterval(fetchPlayers, 2000);
 window.onload = () => {
