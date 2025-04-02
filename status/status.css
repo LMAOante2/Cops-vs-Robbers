@@ -11,6 +11,12 @@
             background-attachment: scroll;
             background-position: center;
             color: white;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
         header {
             display: flex;
@@ -350,4 +356,55 @@
         }
         #timer {
             font-size: 2em;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        #igraclista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .igrac-kartica {
+            background: #333;
+            padding: 20px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .igrac-kartica:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        .igrac-kartica h3 {
+            color: #ffcc00;
+            font-size: 18px;
+        }
+
+        .igrac-kartica p {
+            font-size: 14px;
+            color: #ccc;
+            margin: 10px 0;
+        }
+
+        .igrac-kartica .igrac-id {
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+        }
+
+        .igrac-kartica .igrac-number {
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
         }

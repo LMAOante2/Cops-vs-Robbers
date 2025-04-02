@@ -38,3 +38,34 @@ window.onload = updateServerStatus;
             });
         });
 
+        async function fetchPlayers() {
+            try {
+                const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
+                const data = await response.json();
+
+                let igraclista = document.getElementById("igraclista");
+                igraclista.innerHTML = "";
+
+                if (data.Data && data.Data.players) {
+                    data.Data.players.forEach((player, index) => {
+                        let card = document.createElement("div");
+                        card.className = "igrac-kartica";
+                        card.innerHTML = `
+                            <h3>${player.name}</h3>
+                            <p><span class="igrac-number">#${index + 1}</span></p>
+                            <p class="igrac-id">ID: ${player.id}</p>
+                        `;
+                        igraclista.appendChild(card);
+                    });
+                } else {
+                    igraclista.innerHTML = "<p>No players online.</p>";
+                }
+            } catch (error) {
+                console.error("Error fetching player data:", error);
+                document.getElementById("igraclista").innerHTML = "<p>Failed to load players.</p>";
+            }
+        }
+
+        setInterval(fetchPlayers, 10000);
+        window.onload = fetchPlayers;
+
