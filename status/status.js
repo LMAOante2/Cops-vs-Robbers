@@ -18,25 +18,6 @@ window.onload = updateServerStatus;
         setInterval(updateServerStatus, 10000);
         window.onload = updateServerStatus;
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuToggle = document.querySelector(".menu-toggle");
-            const closeMenu = document.querySelector(".close-menu");
-            const sideMenu = document.querySelector(".side-menu");
-
-            menuToggle.addEventListener("click", function () {
-                sideMenu.classList.add("active");
-            });
-
-            closeMenu.addEventListener("click", function () {
-                sideMenu.classList.remove("active");
-            });
-
-            document.addEventListener("click", function (event) {
-                if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                    sideMenu.classList.remove("active");
-                }
-            });
-        });
 
         async function fetchPlayers() {
             try {
@@ -58,14 +39,34 @@ window.onload = updateServerStatus;
                         igraclista.appendChild(card);
                     });
                 } else {
-                    igraclista.innerHTML = "<p>No players online.</p>";
+                    igraclista.innerHTML = "<p>Nema Igraca Online.</p>";
                 }
             } catch (error) {
                 console.error("Error fetching player data:", error);
-                document.getElementById("igraclista").innerHTML = "<p>Failed to load players.</p>";
+                document.getElementById("igraclista").innerHTML = "<p>Igraci Nisu Uspjesno Ucitani.</p>";
             }
         }
 
         setInterval(fetchPlayers, 10000);
         window.onload = fetchPlayers;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const closeMenu = document.querySelector(".close-menu");
+            const sideMenu = document.querySelector(".side-menu");
+
+            menuToggle.addEventListener("click", function () {
+                sideMenu.classList.add("active");
+            });
+
+            closeMenu.addEventListener("click", function () {
+                sideMenu.classList.remove("active");
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    sideMenu.classList.remove("active");
+                }
+            });
+        });
 
