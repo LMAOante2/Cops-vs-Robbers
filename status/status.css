@@ -379,12 +379,15 @@
             box-shadow: 0 4px 12px rgba(59, 59, 59, 0.575);
             transition: all 0.3s ease-in-out;
             text-align: center;
+            transition: transform 0.3s ease;
         }
 
         .igrac-kartica:hover {
-            transform: translateY(-4px);
+            transform: scale(1.05);
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.603);
         }
+
+
 
         .igrac-kartica h3 {
             color: #ffcc00;
