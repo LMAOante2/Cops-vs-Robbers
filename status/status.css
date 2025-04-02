@@ -383,7 +383,7 @@
 
         .igrac-kartica:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.603);
         }
 
         .igrac-kartica h3 {
