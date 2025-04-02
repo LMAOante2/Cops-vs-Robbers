@@ -41,7 +41,7 @@ async function fetchPlayers() {
                     navigator.clipboard.writeText(playerName).then(() => {
                         alert(`Ime "${playerName}" je uspjesno kopirano!`);
                     }).catch(err => {
-                        console.error('Failed to copy name: ', err);
+                        console.error('Ime Je Neuspjesno Kopirano: ', err);
                     });
                 });
             });
