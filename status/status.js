@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-setInterval(updateServerStatus, 2000);
-setInterval(fetchPlayers, 2000);
+setInterval(updateServerStatus, 1000);
+setInterval(fetchPlayers, 1000);
 window.onload = () => {
     updateServerStatus();
     fetchPlayers();
