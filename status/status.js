@@ -27,7 +27,7 @@ async function fetchPlayers() {
                 card.className = "igrac-kartica";
                 card.innerHTML = `
                 <h3 class="player-name">${player.name}</h3>
-                    <p><span class="igrac-number">#${index - 1}</span></p>
+                    <p><span class="igrac-number">#${index + 1}</span></p>
                     <p class="igrac-id" data-id="${player.id}">ID: ${player.id}</p>
                 `;
                 igraclista.appendChild(card);
