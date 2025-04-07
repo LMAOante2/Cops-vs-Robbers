@@ -6,7 +6,7 @@ async function updateServerStatus() {
         const playerCount = serverData?.Data?.players.length || 0;
         const maxPlayers = serverData?.Data?.sv_maxclients || 100;
         document.getElementById('player-count').innerText = `${playerCount}/${maxPlayers}`;
-        document.getElementById('server-status').innerHTML = "<span style='background: rgb(0,255,0);' class='pulse'></span><span style='color: rgb(0,255,0);'>Offline - Radovi na serveru!</span>";
+        document.getElementById('server-status').innerHTML = "<span style='background: rgb(255, 0, 0);' class='pulse'></span><span style='color: rgb(255, 0, 0);'>Offline - Radovi na serveru!</span>";
     } catch (error) {
         console.error('Error:', error);
         document.getElementById('server-status').innerHTML = "<span class='pulse' style='background: red;'></span><span style='color: red;'>Offline</span>";
