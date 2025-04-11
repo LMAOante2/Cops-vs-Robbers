@@ -190,6 +190,7 @@
         }
 
         .hero {
+            position: relative;
             text-align: center;
             padding: 180px 20px 20px;
             background: rgba(0, 0, 0, 0.5);
@@ -200,6 +201,59 @@
                -moz-user-select: none; 
                 -ms-user-select: none; 
                     user-select: none; 
+        }
+        .charactersrobber {
+            position: absolute;
+            bottom: -17px;
+            left: 10%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            padding-bottom: 10px;
+        }
+        
+        .characterscop {
+            position: absolute;
+            bottom: -10px;
+            left: 90%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            padding-bottom: 10px;
+        }
+        
+        .robber {
+            height: 240px;
+            background: none;
+            margin-top: -300px;
+            padding-top: 0px;
+        }
+        .cop {
+            background: none;
+            margin-top: -300px;
+            padding-top: 0px;
+        }
+        @media screen and (min-width:320px) {
+            .robber {
+                visibility: hidden;
+                display: none;
+            }
+            .cop {
+                visibility: hidden;
+                display: none;
+            }
+        }
+        @media screen and (min-width:1110px) {
+            .robber {
+                background: none;
+                visibility: visible;
+                display: block;
+            }
+            .cop {
+                background: none;
+                visibility: visible;
+                display: block;
+            }
         }
 
         .hero h1 { font-size: 2.5rem; margin-bottom: 15px;             
