@@ -377,133 +377,139 @@
                     user-select: none; 
         }
 
-        /* Kako igrati */
-        .container {
-            place-self: center;
-            display: flex;
-            gap: 7px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 10px;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none; 
-             -khtml-user-select: none; 
-               -moz-user-select: none; 
-                -ms-user-select: none; 
-                    user-select: none; 
-        }
+/* Kako igrati */
+.container {
+    place-self: center;
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
 
-        .discord-widget h2 {
-            margin-bottom: 15px;
-            
-        }
+.discord-widget h2 {
+    margin-bottom: 15px;
+}
 
-        .card {
-            width: 300px;
-            height: 500px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none; 
-             -khtml-user-select: none; 
-               -moz-user-select: none; 
-                -ms-user-select: none; 
-                    user-select: none; 
-        }
-        .card:hover {
-            transform: scale(1.05); 
-        }
+.card {
+    width: 300px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
 
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: white;
-            padding: 20px;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none; 
-             -khtml-user-select: none; 
-               -moz-user-select: none; 
-                -ms-user-select: none; 
-                    user-select: none; 
-        }
+.card:hover {
+    transform: scale(1.05); 
+}
 
-        .step {
-            color: yellow;
-            font-weight: bold;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none; 
-             -khtml-user-select: none; 
-               -moz-user-select: none; 
-                -ms-user-select: none; 
-                    user-select: none; 
-        }
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
 
-        .button {
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            gap: 10px;
-            margin-top: 10px;
-            padding: 10px;
-            background: yellow;
-            color: black;
-            text-align: left;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            width: 100%;
-            transition: transform 0.3s ease;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none; 
-             -khtml-user-select: none; 
-               -moz-user-select: none; 
-                -ms-user-select: none; 
-                    user-select: none; 
-        }
+.step {
+    color: yellow;
+    font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
 
-        .button:hover {
-            transform: translateY(-8px);
-        }
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Aligns the image in the center of the button */
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background: yellow;
+    color: black;
+    text-align: left;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    transition: transform 0.3s ease;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    overflow: hidden; /* Ensures the text is hidden when not hovered */
+}
 
-        .button img {
-            width: 24px;
-            height: 24px;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none; 
-             -khtml-user-select: none; 
-               -moz-user-select: none; 
-                -ms-user-select: none; 
-                    user-select: none; 
-        }
+.button:hover {
+    transform: translateY(-8px);
+}
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .card {
-                width: 250px;
-                height: 400px;
-            }
-            .overlay {
-                padding: 15px;
-            }
-            .button {
-                font-size: 14px;
-                padding: 8px;
-            }
-            .button img {
-                width: 20px;
-                height: 20px;
-            }
-        }
+.button img {
+    width: 24px;
+    height: 24px;
+}
+
+.button span {
+    display: none; /* Hide the text initially */
+    font-weight: bold;
+}
+
+/* Reveal text when hovering */
+.button:hover span {
+    display: inline-block;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 250px;
+        height: 400px;
+    }
+    .overlay {
+        padding: 15px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .button img {
+        width: 20px;
+        height: 20px;
+    }
+}
 
         .pisanje {
             white-space: nowrap;
