@@ -379,6 +379,7 @@
 
 /* Kako igrati */
 .container {
+    text-align: center;
     place-self: center;
     display: flex;
     gap: 7px;
