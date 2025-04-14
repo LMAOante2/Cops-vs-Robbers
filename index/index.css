@@ -551,7 +551,7 @@
             }
           }
 
-          @media (max-width: 769px) {
+          @media (min-width: 769px) {
             .pisanje {
                 animation-delay: 1s;
             }
