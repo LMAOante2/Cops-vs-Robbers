@@ -449,7 +449,7 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: flex-start;  /* Aligns the image to the left */
+    justify-content: center;
     gap: 10px;
     margin-top: 10px;
     padding: 10px;
@@ -471,7 +471,7 @@
 }
 
 .button:hover {
-    text-align: center
+    text-align: center;
     transform: translateY(-8px);
 }
 
@@ -492,6 +492,7 @@
 
 
 .button:hover span {
+    text-align: center;
     opacity: 1;
     transform: translateX(0);
 }
