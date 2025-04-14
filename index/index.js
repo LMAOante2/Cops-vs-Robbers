@@ -34,3 +34,7 @@
             }
         });
     });
+
+    setTimeout(() => {
+        document.getElementById('cursor').classList.add('fade-out');
+      }, 3000);
