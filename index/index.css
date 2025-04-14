@@ -509,7 +509,7 @@
             white-space: nowrap;
             overflow: hidden;
             display: inline-block;
-            animation: typing 3s steps(30, end) forwards;
+            animation: typing 2.5s steps(30, end) forwards;
             border-right: none;
           }
       
