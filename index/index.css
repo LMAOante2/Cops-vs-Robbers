@@ -510,7 +510,6 @@
             overflow: hidden;
             display: inline-block;
             animation: typing 3s steps(30, end) forwards;
-            animation-delay: 1s;
           }
           .pisanje h1 {
             font-size: 2rem;
@@ -549,6 +548,12 @@
             .pisanje {
                 max-width: 150%;
                 animation-delay: 0;
+            }
+          }
+
+          @media (max-width: 769px) {
+            .pisanje {
+                animation-delay: 1s;
             }
           }
 
