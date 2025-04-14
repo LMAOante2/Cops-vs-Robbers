@@ -527,3 +527,9 @@
             50% { opacity: 0; }
           }
 
+          @media (max-width: 768px) {
+            .pisanje {
+                font-size: 14px;
+              }
+          }
+
