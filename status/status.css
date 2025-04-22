@@ -387,7 +387,7 @@
         }
 
         .igrac-kartica h3 {
-            color: #ffcc00;
+            color: blue;
             font-size: 18px;
         }
 
@@ -399,7 +399,7 @@
 
         .igrac-kartica .igrac-id {
             font-weight: bold;
-            color: white;
+            color: red;
             font-size: 14px;
         }
 
