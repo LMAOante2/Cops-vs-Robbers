@@ -362,7 +362,10 @@ img {
     -khtml-user-select: none; 
     -moz-user-select: none; 
     -ms-user-select: none; 
-    user-select: none; 
+    user-select: none;
+
+    transition-property: transform;
+    transition: 0.8 ease;
 }
 
 .custom-cars-images img:hover {
@@ -389,7 +392,6 @@ img {
     user-select: none; 
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .custom-cars-images img {
         width: 350px;
@@ -404,7 +406,6 @@ img {
     }
 }
 
-/* Lightbox Styles */
 .lightbox {
     text-align: center;
     display: none;
@@ -429,26 +430,26 @@ img {
     border-radius: 10px;
 }
 
-/* Responsiveness for mobile devices */
+
 @media (max-width: 768px) {
     .lightbox-img {
-        width: 80%;  /* Make the image larger on mobile */
+        width: 80%;
         height: auto;
     }
 }
 
-/* Responsiveness for smaller screens (phones) */
+
 @media (max-width: 486px) {
     .lightbox-img {
-        width: 90%;  /* Make the image even larger on smaller devices */
+        width: 90%; 
         height: auto;
     }
 }
 
-/* Extra mobile tweaks (if needed) */
+
 @media (max-width: 320px) {
     .lightbox-img {
-        width: 95%;  /* Make the image almost full width on very small screens */
+        width: 95%;
         height: auto;
     }
 }
