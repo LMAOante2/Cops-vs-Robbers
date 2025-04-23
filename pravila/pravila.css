@@ -255,7 +255,7 @@
         }
 
         .rule:hover {
-            transform: translateY(-10px) scale(1);
+            transform: translateY(-15px) scale(1.05);
         }
 
         .rule h2 {
