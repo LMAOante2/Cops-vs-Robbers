@@ -248,7 +248,14 @@
              -khtml-user-select: none; 
                -moz-user-select: none; 
                 -ms-user-select: none; 
-                    user-select: none; 
+                    user-select: none;
+
+            transition-property: transform;
+            transition: 2s ease;
+        }
+
+        .rule:hover {
+            transform: translateY(-10px) scale(1.5);
         }
 
         .rule h2 {
