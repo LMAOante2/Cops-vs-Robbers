@@ -306,7 +306,18 @@
 
         .btn:hover {
             animation: Sirena 0.15s infinite alternate;
-            transform: translateY(-10px);
+            transition-property: gumb;
+            transition: 0.5s ease;
+        }
+
+        @keyframes gumb {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-8px);
+            }
         }
 
 
