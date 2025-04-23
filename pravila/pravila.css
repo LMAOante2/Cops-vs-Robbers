@@ -256,6 +256,7 @@
 
         .rule:hover {
             transform: translateY(-15px) scale(1.05);
+            background-color: rgba(46, 46, 46, 0.651);
         }
 
         .rule h2 {
