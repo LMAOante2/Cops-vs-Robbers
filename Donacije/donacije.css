@@ -257,7 +257,8 @@
                 -ms-user-select: none; 
                     user-select: none;
 
-            animation: 2s ease;
+            transition-property: transform;
+            transition: 2s ease;
         }
 
         .rule:hover {
