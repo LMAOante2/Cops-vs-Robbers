@@ -251,7 +251,7 @@
                     user-select: none;
 
             transition-property: transform;
-            transition: 2s ease;
+            transition: 0.5s ease;
         }
 
         .rule:hover {
