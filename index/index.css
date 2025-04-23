@@ -310,11 +310,11 @@
         }
 
         @keyframes gumb {
-            0% {
+            from {
                 transform: translateY(0);
             }
 
-            100% {
+            to {
                 transform: translateY(-8px);
             }
         }
