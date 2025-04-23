@@ -365,7 +365,7 @@ img {
     user-select: none;
 
     transition-property: transform;
-    transition: 0.8 ease;
+    transition: 0.8s ease;
 }
 
 .custom-cars-images img:hover {
