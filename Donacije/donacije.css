@@ -262,8 +262,7 @@
         }
 
         .rule:hover {
-            transform: translateY(-10px);
-            transform: scale(1);
+            transform: translateY(-10px) scale(1);
         }
 
         .rule h2 {
