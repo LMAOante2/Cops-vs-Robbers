@@ -510,7 +510,7 @@
     height: 100px;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-100%, -50%);
     overflow: hidden;
 }
 
@@ -546,7 +546,7 @@
     }
 
     100% {
-        transform: translate(-85%, 0);
+        transform: translate(-100%, 0);
     }
 }
 
