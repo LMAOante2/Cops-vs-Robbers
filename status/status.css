@@ -6,7 +6,8 @@
         }
         body {
 
-            background-image: url('/slike/background.png');
+            background: url('/slike/background.png');
+            background-repeat: no-repeat;
             background-size: cover;
             background-attachment: scroll;
             background-position: center;
