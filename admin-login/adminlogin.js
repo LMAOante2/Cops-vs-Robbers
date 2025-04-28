@@ -15,7 +15,7 @@
                 localStorage.setItem('isAdmin', 'true');
                 window.location.href = 'admin.html';
             } else {
-                alert('Incorrect username or password');
+                alert('Netocno Ime ili Lozinka');
             }
         });
 
