@@ -629,18 +629,22 @@
           ::-webkit-scrollbar {
             width: 5px;
             height: 5px;
+            border-radius: 50px;
         }
         
         ::-webkit-scrollbar-track {
             background: rgb(65, 65, 65);
+            border-radius: 20px;
         }
         
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(rgb(0, 153, 255), rgb(4, 0, 255));
             height: 5px;
+            border-radius: 50px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(rgb(4, 0, 255), rgb(0, 153, 255));
+            border: 50px;
         }
 
