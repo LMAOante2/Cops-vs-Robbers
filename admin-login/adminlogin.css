@@ -1,56 +1,85 @@
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background: #333;
-            color: white;
-        }
-        input {
-            text-align: center;
-            padding: 10px;
-            margin: 10px;
-            font-size: 1rem;
-            width: 250px;
-        }
-        button {
-            padding: 10px 20px;
-            background: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-        }
-        button:hover {
-            background: #218838;
-        }
-        .password-container {
-            position: relative;
-            display: inline-block;
-        }
-        .eye-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #000000;
-        }
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background: #333;
+    color: white;
+}
+input {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    width: 250px;
+    border-radius: 50px;
+}
+
+.prijava {
+    background-color: rgb(39, 39, 39);
+    justify-content: center;
+    text-align: center;
+    place-self: center;
+    place-items: center;
+    padding: 100px 150px 100px;
+    margin: 160px;
+    box-shadow: 2px 1px 32px 10px rgba(0,0,0,0.75);
+}
+button:last-child {
+    padding: 10px 20px;
+    background: #2878a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 50px;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+button:hover:last-child {
+    background: #215188;
+}
+
+button:first-child {
+    padding: 10px 20px;
+    background: #a72828;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+button:hover:first-child {
+    background: #a51a1a;
+}
+.password-container {
+    position: relative;
+    display: inline-block;
+}
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #000000;
+}
 
 
-        ::-webkit-scrollbar {
-            width: 5px;
-            height: 5px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: rgb(65, 65, 65);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(rgb(0, 153, 255), rgb(4, 0, 255));
-            height: 5px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(rgb(4, 0, 255), rgb(0, 153, 255));
-        }
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(65, 65, 65);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgb(0, 153, 255), rgb(4, 0, 255));
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(rgb(4, 0, 255), rgb(0, 153, 255));
+}
