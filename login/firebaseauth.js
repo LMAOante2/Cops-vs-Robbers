@@ -83,7 +83,7 @@ signIn.addEventListener('click', (event) => {
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      showMessage('Login is successful', 'signInMessage');
+      showMessage('Uspjesno ste se prijavili!', 'signInMessage');
       const user = userCredential.user;
       localStorage.setItem('loggedInUserId', user.uid);
       window.location.href = 'pocetna.html';
