@@ -17,6 +17,7 @@ h1 {
 p {
     text-align: center;
     margin-top: 20px;
+    font-size: 14px;
 }
 
 a {
@@ -24,6 +25,7 @@ a {
     text-decoration: none;
     color: rgb(0, 65, 187);
     margin-top: 20px;
+    font-size: 14px;
 }
 
 a:hover {
