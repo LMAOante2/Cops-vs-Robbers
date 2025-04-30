@@ -524,7 +524,7 @@ img {
                         .light-mode .rule,
                         .light-mode .h1,
                         .light-mode p,
-                        .light-mode .buttons
+                        .light-mode .button
                         {
                             color: black;
                         }
@@ -564,7 +564,7 @@ img {
                         .dark-mode .rule,
                         .dark-mode .h1,
                         .dark-mode p,
-                        .dark-mode .buttons
+                        .dark-mode .button
                         {
                             color: white;
                         }
