@@ -503,7 +503,6 @@ img {
                         
                         .light-mode .div,
                         .light-mode .side-menu,
-                        .light-mode button,
                         .light-mode header,
                         .light-mode .discord-widget,
                         .light-mode .container,
@@ -544,7 +543,6 @@ img {
                         }
                         
                         .dark-mode .div,
-                        .dark-mode button,
                         .dark-mode .stat-box
                          {
                             background-color: rgba(39, 39, 39, 0.9);
