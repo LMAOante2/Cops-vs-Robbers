@@ -126,9 +126,9 @@ onAuthStateChanged(auth, (user) => {
 onAuthStateChanged(auth, (user) => {
   const lightnot = document.getElementById('lightnot');
   if (user) {
-    lightnot.style.display = 'true';
-  } else {
     lightnot.style.display = 'none';
+  } else {
+    lightnot.style.display = 'true';
   }
 });
 
