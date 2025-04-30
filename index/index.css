@@ -669,9 +669,10 @@
 }
 
 .light-mode a, 
-.lightmode span,
+.light-mode span,
 .light-mode h3,
-.light-mode p
+.light-mode p,
+.light-mode .buttons
 {
     color: black;
 }
@@ -703,7 +704,8 @@
 
 .dark-mode a,
 .dark-mode h3,
-.dark-mode p
+.dark-mode p,
+.dark-mode .buttons
 {
     color: white;
 }
