@@ -690,9 +690,7 @@
 
 .dark-mode .div,
 .dark-mode button,
-.dark-mode .discord-widget,
-.dark-mode .stat-box,
-.dark-mode .hero
+.dark-mode .stat-box
  {
     background-color: rgba(39, 39, 39, 0.9);
     color: white;
