@@ -455,7 +455,6 @@
 
 .light-mode a, 
 .light-mode span,
-.light-mode h3,
 .light-mode h1,
 .light-mode h2,
 .light-mode .rule,
@@ -494,7 +493,6 @@
 }
 
 .dark-mode a,
-.dark-mode h3,
 .dark-mode p,
 .dark-mode h1,
 .dark-mode h2,
