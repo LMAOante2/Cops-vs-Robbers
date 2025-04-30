@@ -344,3 +344,82 @@
             background: linear-gradient(rgb(4, 0, 255), rgb(0, 153, 255));
             border: 50px;
         }
+
+
+                        /* Svijetlo */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .div,
+.light-mode .side-menu,
+.light-mode button,
+.light-mode header,
+.light-mode .discord-widget,
+.light-mode .container,
+.light-mode .stat-box,
+.light-mode .hero,
+.light-mode .rules-container
+ {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+    border-color: blue;
+}
+
+.light-mode a, 
+.light-mode span,
+.light-mode h3,
+.light-mode h1,
+.light-mode h2,
+.light-mode .rule,
+.light-mode .h1,
+.light-mode p,
+.light-mode .buttons
+{
+    color: black;
+}
+
+.lightmode h1 {
+    color: black;
+}
+
+.light-mode .menu-toggle {
+    background: none;
+}
+
+/* Tamno */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .div,
+.dark-mode button,
+.dark-mode .stat-box
+ {
+    background-color: rgba(39, 39, 39, 0.9);
+    color: white;
+    border-color: cyan;
+}
+
+.dark-mode .side-menu {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode a,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode .rule,
+.dark-mode .h1,
+.dark-mode p,
+.dark-mode .buttons
+{
+    color: white;
+}
+
+.dark-mode .menu-toggle {
+    background: none;
+}
