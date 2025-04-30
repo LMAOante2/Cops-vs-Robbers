@@ -138,3 +138,23 @@ setTimeout(() => {
   document.getElementById('cursor').classList.add('fade-out');
 }, 3000);
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("modeToggle");
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.body.classList.add(savedTheme + "-mode");
+  toggle.checked = savedTheme === "dark";
+
+  toggle.addEventListener("change", () => {
+    const newTheme = toggle.checked ? "dark" : "light";
+    document.body.classList.remove("dark-mode", "light-mode");
+    document.body.classList.add(newTheme + "-mode");
+    localStorage.setItem("theme", newTheme);
+  });
+
+
+  document.getElementById("logout").addEventListener("click", () => {
+
+    location.reload();
+  });
+});
