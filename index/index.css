@@ -658,7 +658,9 @@
 .light-mode .div,
 .light-mode .side-menu,
 .light-mode button,
-.light-mode header
+.light-mode header,
+.dark-mode h3,
+.dark-mode p
  {
     background-color: rgba(255, 255, 255, 0.85);
     color: black;
@@ -681,7 +683,8 @@
 
 .dark-mode .div,
 .dark-mode button,
-.dark-mode h3
+.dark-mode h3,
+.dark-mode p
  {
     background-color: rgba(39, 39, 39, 0.9);
     color: white;
