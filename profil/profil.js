@@ -114,6 +114,15 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+onAuthStateChanged(auth, (user) => {
+  const light = document.getElementById('light');
+  if (user) {
+    light.style.display = 'true';
+  } else {
+    light.style.display = 'none';
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const closeMenu = document.querySelector(".close-menu");
