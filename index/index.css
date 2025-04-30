@@ -661,7 +661,8 @@
 .light-mode header,
 .light-mode .discord-widget,
 .light-mode .container,
-.light-mode .stat-box
+.light-mode .stat-box,
+.light-mode .hero
  {
     background-color: rgba(255, 255, 255, 0.85);
     color: black;
@@ -692,6 +693,7 @@
 .dark-mode .discord-widget,
 .dark-mode .container,
 .dark-mode .stat-box
+.dark-mode .hero
  {
     background-color: rgba(39, 39, 39, 0.9);
     color: white;
