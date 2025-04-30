@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(() => {
         const messageDiv = document.getElementById('resetMessage');
         messageDiv.style.display = 'block';
-        messageDiv.innerText = 'E-mail za ponovno postavljanje lozinke je poslana!';
+        messageDiv.innerText = 'E-mail za ponovno postavljanje lozinke je poslan!';
         messageDiv.style.color = 'green';
       })
       .catch((error) => {
