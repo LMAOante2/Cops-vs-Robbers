@@ -228,11 +228,14 @@ nav a:hover {
 }
 
 .dark-mode .div,
-.dark-mode .side-menu,
 .dark-mode button {
     background-color: rgba(39, 39, 39, 0.9);
     color: white;
     border-color: cyan;
+}
+
+.dark-mode .side-menu {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .dark-mode a {
