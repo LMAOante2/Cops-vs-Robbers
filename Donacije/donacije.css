@@ -441,6 +441,11 @@
 .dark-mode a,
 .dark-mode h3,
 .dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode .rule,
+.dark-mode .h1,
+.dark-mode p,
 .dark-mode .buttons
 {
     color: white;
