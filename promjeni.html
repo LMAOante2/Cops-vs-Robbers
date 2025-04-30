@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profil/profil.css">
-    <title>Profil</title>
-    <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
+    <link rel="stylesheet" href="promjeni/promjeni.css">
+    <title>Promjeni</title>
     <style>
 
     </style>
-    <script type="module" src="profil/profil.js"></script>
+    <script type="module" src="promjeni/promjeni.js"></script>
 </head>
 <body>
     <header>
@@ -44,14 +41,15 @@
     </header>
 
     <div class="div">
-       <h1>Profil</h1>
-       <div style="color: white;" id="Ime">Ime: <span style="color: white;" id="loggedUserFName"></span></div>
-       <div style="color: white;" id="Ime1">Prezime: <span style="color: white;" id="loggedUserLName"></span></div>
-       <div style="color: white;" id="Ime2">Email: <span style="color: white;" id="loggedUserEmail"></span></div>
-       <button id="link1"><a style="text-decoration: none; color: white;" href="index.html">Prijavi se</a></button>
-       <button id="logout">Izlogiraj se</button>
-       <button id="resetPassword"><a style="text-decoration: none; color: white;" href="promjeni.html">E-mail Poslan</a></button>
+       <h1>Promjeni Lozinku</h1>
+       <input type="email" id="resetEmail" placeholder="e-mail (Mora biti vas!!)" />
+       <button id="resetPassword">Promjeni Lozinku</button>
+       <div id="resetMessage" style="color: green; display: none;"></div>
     </div>
+
+    
+
+
 
 </body>
 </html>
