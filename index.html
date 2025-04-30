@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prijava</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="login/style.css">
-    <script type="module" src="login/firebaseauth.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
 </head>
 <body>
     <div class="container" id="signup" style="display:none;">
       <h1 class="form-title">Napravi Account</h1>
       <form method="post" action="">
         <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+        <div id="signUpMessage1" class="messageDiv1" style="display:none;"></div>
         <div class="input-group">
            <i class="fas fa-user"></i>
            <input type="text"  id="fName" placeholder="First Name" required>
@@ -36,8 +37,8 @@
        <button class="btn" id="submitSignUp" >Napravi Account</button>
       </form>
       <div class="links">
-        <p style="width: 300px; margin-left: 40px;">Vec imas account?</p>
-        <button style="margin-top: -8px; margin-left: -40px;" id="signInButton">Prijavi se</button>
+        <p style="text-align: center;">Vec imas account?</p>
+        <button style="margin-bottom: 10px; margin-left: 30px; margin-top: -15px;" id="signInButton">Prijavi se</button>
       </div>
     </div>
 
@@ -45,6 +46,7 @@
         <h1 class="form-title">Prijavi se</h1>
         <form method="post" action="">
           <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+          <div id="signInMessage1" class="messageDiv1" style="display:none;"></div>
 
           <div class="input-group">
               <i class="fas fa-envelope"></i>
@@ -60,9 +62,10 @@
         </form>
         <div class="links">
           <p style="width: 350px; margin-left: 10px;">Jos nemas account?</p>
-          <button style="margin-top: -0.5rem; margin-left: -2px;" id="signUpButton">Napravi Account</button>
+          <button id="signUpButton">Napravi Account</button>
+          <a href="pocetna.html">Nastavi Kao Gost</a>
         </div>
       </div>
-      <script src="login/script.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
