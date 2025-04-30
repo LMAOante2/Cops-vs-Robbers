@@ -10,16 +10,19 @@ body {
 
 h1 {
     text-align: center;
+    margin-top: 250px;
 }
 
 p {
     text-align: center;
+    margin-top: 300px;
 }
 
 a {
     text-align: center;
     text-decoration: none;
     color: rgb(0, 65, 187);
+    margin-top: 300px;
 }
 
 a:hover {
