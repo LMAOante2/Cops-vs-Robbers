@@ -64,7 +64,7 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     link1.style.display = 'none';
   } else {
-    link1.style.display = 'none';
+    link1.style.display = 'true';
   }
 });
 
