@@ -659,8 +659,11 @@
 .light-mode .side-menu,
 .light-mode button,
 .light-mode header,
-.dark-mode h3,
-.dark-mode p
+.light-mode h3,
+.light-mode p,
+.light-mode .card,
+.light-mode .discord-widget,
+.light-mode .container
  {
     background-color: rgba(255, 255, 255, 0.85);
     color: black;
