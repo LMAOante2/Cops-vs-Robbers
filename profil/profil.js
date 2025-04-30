@@ -79,6 +79,15 @@ onAuthStateChanged(auth, (user) => {
 });
 
 onAuthStateChanged(auth, (user) => {
+  const resetPassword = document.getElementById('resetPassword');
+  if (user) {
+    resetPassword.style.display = 'true';
+  } else {
+    resetPassword.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
   const Ime = document.getElementById('Ime');
   if (user) {
     Ime.style.display = 'true';
