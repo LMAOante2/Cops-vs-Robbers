@@ -57,3 +57,75 @@ logoutButton.addEventListener('click', () => {
       console.error('Error signing out:', error);
     });
 });
+
+
+onAuthStateChanged(auth, (user) => {
+  const link1 = document.getElementById('link1');
+  if (user) {
+    link1.style.display = 'none';
+  } else {
+    link1.style.display = 'none';
+  }
+});
+
+
+onAuthStateChanged(auth, (user) => {
+  const logout = document.getElementById('logout');
+  if (user) {
+    logout.style.display = 'true';
+  } else {
+    logout.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const Ime = document.getElementById('Ime');
+  if (user) {
+    Ime.style.display = 'true';
+  } else {
+    Ime.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const Ime1 = document.getElementById('Ime1');
+  if (user) {
+    Ime1.style.display = 'true';
+  } else {
+    Ime1.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const Ime2 = document.getElementById('Ime2');
+  if (user) {
+    Ime2.style.display = 'true';
+  } else {
+    Ime2.style.display = 'none';
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const closeMenu = document.querySelector(".close-menu");
+  const sideMenu = document.querySelector(".side-menu");
+
+  menuToggle.addEventListener("click", function () {
+      sideMenu.classList.add("active");
+  });
+
+  closeMenu.addEventListener("click", function () {
+      sideMenu.classList.remove("active");
+  });
+
+  document.addEventListener("click", function (event) {
+      if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+          sideMenu.classList.remove("active");
+      }
+  });
+});
+
+setTimeout(() => {
+  document.getElementById('cursor').classList.add('fade-out');
+}, 3000);
+
