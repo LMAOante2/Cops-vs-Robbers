@@ -661,7 +661,6 @@
 .light-mode header,
 .light-mode h3,
 .light-mode p,
-.light-mode .card,
 .light-mode .discord-widget,
 .light-mode .container
  {
@@ -688,7 +687,6 @@
 .dark-mode button,
 .dark-mode h3,
 .dark-mode p,
-.dark-mode .card,
 .dark-mode .discord-widget,
 .dark-mode .container
  {
