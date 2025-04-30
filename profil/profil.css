@@ -1,87 +1,82 @@
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif; }
+    font-family: 'Arial', sans-serif;
+}
 
 body {
-    background: url('/slike/background.png') center center;
+    background: url('background.png') center center;
     background-size: cover;
     background-attachment: scroll;
-    color: white;
 }
-h1{
-    text-align:center;
 
-}
-button{
-    color:white;
-    background-color:blue;
-    padding:5px;
-    border-radius:5px;
-    font-size:1rem;
-    font-weight:bold;
-    border:none;
-}
-button, div{
-    font-size:20px;
-    padding:10px;
-}
-div{
-    font-weight:400;
-    color:rgb(12,11,11);
-    text-align: center;
-
-}
-span{
-    font-weight:600;
-    font-size:22px;
-    color:black;
+h1 {
     text-align: center;
 }
 
-.a{
+button {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+}
+
+button,
+div {
+    font-size: 20px;
+    padding: 10px;
+}
+
+div {
+    font-weight: 400;
+    text-align: center;
+}
+
+span {
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+
+.a {
     text-decoration: none;
-    color: blueviolet;
     text-align: center;
-} 
+}
 
 .a:hover {
     text-decoration: underline;
-    color: blueviolet;
     text-align: center;
-
 }
 
 .div {
-justify-content: center;
-place-self: center;
-padding: 25px 20px 25px;
-background-color: rgba(39, 39, 39, 0.664);
-margin-top: 300px;
-border-radius: 15px;
-border: 2px solid blue;
-color: white;
-transition: transform 0.5s ease;
-
-animation: strana 2s infinite;
+    justify-content: center;
+    place-self: center;
+    padding: 25px 20px 25px;
+    margin-top: 300px;
+    border-radius: 15px;
+    border: 2px solid blue;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+    animation: strana 2s infinite;
 }
 
 @keyframes strana {
-0% {
-border-color: blue;
-}
-50% {
-border-color: transparent;
-}
-100% {
-border-color: blue;
-}
+    0% {
+        border-color: blue;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: blue;
+    }
 }
 
 .div:hover {
-transition: 0.5s ease;
-transform: scale(1.1);
+    transition: 0.5s ease;
+    transform: scale(1.1);
 }
 
 header {
@@ -94,24 +89,14 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
-header .logo { 
-    font-size: 22px; 
-    font-weight: bold; 
+header .logo {
+    font-size: 22px;
+    font-weight: bold;
     color: white;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 .side-menu {
@@ -120,15 +105,9 @@ header .logo {
     left: -250px;
     width: 250px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
     padding-top: 60px;
     transition: left 0.4s ease-in-out;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 .side-menu.active {
@@ -141,38 +120,22 @@ nav ul {
     margin: 0;
     display: flex;
     flex-direction: column;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 nav li {
     padding: 15px 20px;
     text-align: left;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     display: block;
     transition: color 0.3s;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 nav a:hover {
@@ -181,17 +144,11 @@ nav a:hover {
 
 .menu-toggle {
     font-size: 30px;
-    color: white;
     background: none;
     border: none;
     cursor: pointer;
     display: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 .close-menu {
@@ -199,53 +156,31 @@ nav a:hover {
     top: 15px;
     right: 20px;
     font-size: 30px;
-    color: white;
     background: none;
     border: none;
     cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 .desktop-nav {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 .desktop-nav li {
     padding: 0;
     list-style: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 .desktop-nav a {
     font-size: 18px;
     font-weight: bold;
-    color: white;
     text-decoration: none;
     padding: 10px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+    user-select: none;
 }
 
 .desktop-nav a:hover {
@@ -260,4 +195,48 @@ nav a:hover {
     .desktop-nav {
         display: none;
     }
+}
+
+/* Svijetlo */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .div,
+.light-mode .side-menu,
+.light-mode button {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+    border-color: blue;
+}
+
+.light-mode a {
+    color: black;
+}
+
+.light-mode .menu-toggle {
+    background: none;
+}
+
+/* Tamno */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .div,
+.dark-mode .side-menu,
+.dark-mode button {
+    background-color: rgba(39, 39, 39, 0.9);
+    color: white;
+    border-color: cyan;
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode .menu-toggle {
+    background: none;
 }
