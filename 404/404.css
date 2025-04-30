@@ -4,10 +4,10 @@
 }
 
 body {
-    background: url('/slike/background.png') no-repeat auto auto;
+    background: url('/slike/background.png') no-repeat center center;
     background-size: cover;
     background-attachment: scroll;
-    color: black;
+    color: white;
 }
 
 h1 {
