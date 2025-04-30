@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url('background.png') center center;
+    background: url('/slike/background.png') center center;
     background-size: cover;
     background-attachment: scroll;
 }
