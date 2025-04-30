@@ -684,7 +684,10 @@
 .dark-mode .div,
 .dark-mode button,
 .dark-mode h3,
-.dark-mode p
+.dark-mode p,
+.dark-mode .card,
+.dark-mode .discord-widget,
+.dark-mode .container
  {
     background-color: rgba(39, 39, 39, 0.9);
     color: white;
