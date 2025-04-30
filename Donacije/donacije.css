@@ -411,6 +411,10 @@
     color: black;
 }
 
+.lightmode h1 {
+    color: black;
+}
+
 .light-mode .menu-toggle {
     background: none;
 }
