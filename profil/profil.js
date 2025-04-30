@@ -148,8 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
   toggle.checked = savedTheme === "dark";
 
   toggle.addEventListener("change", () => {
-    const newTheme = toggle.checked ? "dark" : "light";
-    document.body.classList.remove("dark-mode", "light-mode");
+    const newTheme = toggle.checked ? "light" : "dark";
+    document.body.classList.remove("light-mode", "dark-mode");
     document.body.classList.add(newTheme + "-mode");
     localStorage.setItem("theme", newTheme);
   });
