@@ -680,7 +680,9 @@
 }
 
 .dark-mode .div,
-.dark-mode button {
+.dark-mode button,
+.dark-mode h3
+ {
     background-color: rgba(39, 39, 39, 0.9);
     color: white;
     border-color: cyan;
