@@ -648,3 +648,53 @@
             border: 50px;
         }
 
+
+        /* Svijetlo */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .div,
+.light-mode .side-menu,
+.light-mode button,
+.light-mode header
+ {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+    border-color: blue;
+}
+
+.light-mode a, .lightmode span {
+    color: black;
+}
+
+.light-mode .menu-toggle {
+    background: none;
+}
+
+/* Tamno */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .div,
+.dark-mode button {
+    background-color: rgba(39, 39, 39, 0.9);
+    color: white;
+    border-color: cyan;
+}
+
+.dark-mode .side-menu {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode .menu-toggle {
+    background: none;
+}
+

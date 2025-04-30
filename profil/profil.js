@@ -154,41 +154,8 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", newTheme);
   });
 
-
   document.getElementById("logout").addEventListener("click", () => {
-
     location.reload();
   });
 });
-
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const toggle = document.getElementById("modeToggle");
-        const userId = "userID";  // This should be dynamically generated based on logged-in user
-
-        // Get the saved theme from Firebase Firestore
-        const userRef = db.collection('users').doc(userId);
-
-        // Check Firestore for stored theme preference
-        userRef.get().then((doc) => {
-            if (doc.exists) {
-                const theme = doc.data().theme || "light";  // Default to light if no theme is stored
-                document.body.classList.add(theme + "-mode");
-                toggle.checked = theme === "dark";
-            } else {
-                // If no theme is saved, default to light mode
-                document.body.classList.add("light-mode");
-            }
-        });
-
-        toggle.addEventListener("change", () => {
-            const newTheme = toggle.checked ? "dark" : "light";
-            document.body.classList.replace("dark-mode", "light-mode");
-            document.body.classList.replace("light-mode", "dark-mode");
-            document.body.classList.add(newTheme + "-mode");
-
-            // Save the theme preference to Firebase Firestore
-            userRef.set({ theme: newTheme }, { merge: true });
-        });
-    });
 
