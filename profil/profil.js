@@ -123,6 +123,15 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+onAuthStateChanged(auth, (user) => {
+  const lightnot = document.getElementById('lightnot');
+  if (user) {
+    lightnot.style.display = 'true';
+  } else {
+    lightnot.style.display = 'none';
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const closeMenu = document.querySelector(".close-menu");
