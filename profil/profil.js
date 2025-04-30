@@ -143,9 +143,9 @@ setTimeout(() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
-  const savedTheme = localStorage.getItem("theme") || "light";
+  const savedTheme = localStorage.getItem("theme") || "dark";
   document.body.classList.add(savedTheme + "-mode");
-  toggle.checked = savedTheme === "dark";
+  toggle.checked = savedTheme === "light";
 
   toggle.addEventListener("change", () => {
     const newTheme = toggle.checked ? "light" : "dark";
