@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(() => {
         const messageDiv = document.getElementById('resetMessage');
         messageDiv.style.display = 'block';
-        messageDiv.innerText = 'Password reset email sent!';
+        messageDiv.innerText = 'E-mail za ponovno postavljanje lozinke je poslana!';
         messageDiv.style.color = 'green';
       })
       .catch((error) => {
         const messageDiv = document.getElementById('resetMessage');
         messageDiv.style.display = 'block';
-        messageDiv.innerText = 'Error sending reset email. Check the address.';
+        messageDiv.innerText = 'Error u slanju e-maila. Pogledaj jel dobro upisano.';
         messageDiv.style.color = 'red';
         console.error(error);
       });
