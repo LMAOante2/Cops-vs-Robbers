@@ -27,9 +27,9 @@ a:hover {
     color: rgb(11, 49, 153);
 }
 
-div {
+.div {
     background-color: rgba(56, 56, 56, 0.692);
-    padding: 20px 20px 20px;
+    padding: 50px 40px 50px;
     text-align: center;
     place-self: center;
     margin-top: 300px;
