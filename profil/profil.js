@@ -7,6 +7,7 @@ import {
 import {
   getFirestore,
   getDoc,
+  setDoc,
   doc
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
@@ -14,7 +15,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDa-Gn5AtvCYwzC7GvArnDUrc6HQfdT-U4",
   authDomain: "login-form-19883.firebaseapp.com",
   projectId: "login-form-19883",
-  storageBucket: "login-form-19883.firebaseapp.com",
+  storageBucket: "login-form-19883.appspot.com",
   messagingSenderId: "469023290458",
   appId: "1:469023290458:web:d0d24d8e80ae5c557b5463"
 };
@@ -22,6 +23,45 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
+
+const discordClientId = "YOUR_DISCORD_CLIENT_ID";
+const redirectUri = "http://127.0.0.1:5500/discord-callback.html";
+
+document.getElementById("connectDiscordBtn")?.addEventListener("click", () => {
+  const discordAuthUrl = `https://discord.com/api/oauth2/authorize?client_id=${discordClientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=identify`;
+  window.location.href = discordAuthUrl;
+});
+
+if (window.location.pathname.includes("discord-callback.html")) {
+  const fragment = new URLSearchParams(window.location.hash.slice(1));
+  const accessToken = fragment.get("access_token");
+
+  if (accessToken) {
+    fetch("https://discord.com/api/users/@me", {
+      headers: {
+        Authorization: `Bearer ${accessToken}`
+      }
+    })
+      .then(res => res.json())
+      .then(async discordUser => {
+        const firebaseUser = auth.currentUser;
+        if (firebaseUser) {
+          const uid = firebaseUser.uid;
+          await setDoc(doc(db, "users", uid), {
+            discord: {
+              id: discordUser.id,
+              username: discordUser.username,
+              discriminator: discordUser.discriminator,
+              avatar: discordUser.avatar
+            }
+          }, { merge: true });
+
+          window.location.href = "dashboard.html";
+        }
+      })
+      .catch(console.error);
+  }
+}
 
 onAuthStateChanged(auth, (user) => {
   const loggedInUserId = localStorage.getItem('loggedInUserId');
@@ -34,6 +74,12 @@ onAuthStateChanged(auth, (user) => {
           document.getElementById('loggedUserFName').innerText = userData.firstName;
           document.getElementById('loggedUserEmail').innerText = userData.email;
           document.getElementById('loggedUserLName').innerText = userData.lastName;
+
+          if (userData.discord) {
+            document.getElementById('discordStatus').innerText = `Connected as ${userData.discord.username}#${userData.discord.discriminator}`;
+          } else {
+            document.getElementById('discordStatus').innerText = 'Discord not connected.';
+          }
         } else {
           console.log("No document found matching ID");
         }
@@ -58,78 +104,22 @@ logoutButton.addEventListener('click', () => {
     });
 });
 
+// UI show/hide
+const toggleElements = (id, show) => {
+  const el = document.getElementById(id);
+  if (el) el.style.display = show ? 'block' : 'none';
+};
 
 onAuthStateChanged(auth, (user) => {
-  const link1 = document.getElementById('link1');
-  if (user) {
-    link1.style.display = 'none';
-  } else {
-    link1.style.display = 'true';
-  }
-});
-
-
-onAuthStateChanged(auth, (user) => {
-  const logout = document.getElementById('logout');
-  if (user) {
-    logout.style.display = 'true';
-  } else {
-    logout.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const resetPassword = document.getElementById('resetPassword');
-  if (user) {
-    resetPassword.style.display = 'true';
-  } else {
-    resetPassword.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const Ime = document.getElementById('Ime');
-  if (user) {
-    Ime.style.display = 'true';
-  } else {
-    Ime.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const Ime1 = document.getElementById('Ime1');
-  if (user) {
-    Ime1.style.display = 'true';
-  } else {
-    Ime1.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const Ime2 = document.getElementById('Ime2');
-  if (user) {
-    Ime2.style.display = 'true';
-  } else {
-    Ime2.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const light = document.getElementById('light');
-  if (user) {
-    light.style.display = 'true';
-  } else {
-    light.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const lightnot = document.getElementById('lightnot');
-  if (user) {
-    lightnot.style.display = 'none';
-  } else {
-    lightnot.style.display = 'true';
-  }
+  const isLoggedIn = !!user;
+  toggleElements('link1', !isLoggedIn);
+  toggleElements('logout', isLoggedIn);
+  toggleElements('resetPassword', isLoggedIn);
+  toggleElements('Ime', isLoggedIn);
+  toggleElements('Ime1', isLoggedIn);
+  toggleElements('Ime2', isLoggedIn);
+  toggleElements('light', isLoggedIn);
+  toggleElements('lightnot', !isLoggedIn);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -137,43 +127,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeMenu = document.querySelector(".close-menu");
   const sideMenu = document.querySelector(".side-menu");
 
-  menuToggle.addEventListener("click", function () {
-      sideMenu.classList.add("active");
-  });
-
-  closeMenu.addEventListener("click", function () {
-      sideMenu.classList.remove("active");
-  });
-
-  document.addEventListener("click", function (event) {
-      if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-          sideMenu.classList.remove("active");
-      }
+  menuToggle?.addEventListener("click", () => sideMenu?.classList.add("active"));
+  closeMenu?.addEventListener("click", () => sideMenu?.classList.remove("active"));
+  document.addEventListener("click", (event) => {
+    if (!sideMenu?.contains(event.target) && !menuToggle?.contains(event.target)) {
+      sideMenu?.classList.remove("active");
+    }
   });
 });
 
 setTimeout(() => {
-  document.getElementById('cursor').classList.add('fade-out');
+  document.getElementById('cursor')?.classList.add('fade-out');
 }, 3000);
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
   const savedTheme = localStorage.getItem("theme") || "dark";
-  document.body.classList.add(savedTheme + "-mode");
-  toggle.checked = savedTheme === "light";
+  document.body.classList.add(`${savedTheme}-mode`);
+  if (toggle) toggle.checked = savedTheme === "light";
 
-  toggle.addEventListener("change", () => {
+  toggle?.addEventListener("change", () => {
     const newTheme = toggle.checked ? "light" : "dark";
     document.body.classList.remove("light-mode", "dark-mode");
-    document.body.classList.add(newTheme + "-mode");
+    document.body.classList.add(`${newTheme}-mode`);
     localStorage.setItem("theme", newTheme);
   });
 
-  document.getElementById("logout").addEventListener("click", () => {
+  document.getElementById("logout")?.addEventListener("click", () => {
     location.reload();
   });
 });
-
