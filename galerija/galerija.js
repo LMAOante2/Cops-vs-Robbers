@@ -86,11 +86,3 @@
             }
           });
 
-          window.addEventListener("wheel", function(event) {
-            event.preventDefault(); 
-            window.scrollBy({
-              top: event.deltaY * 0.2,  
-              left: 0,
-              behavior: "smooth"
-            });
-          });
