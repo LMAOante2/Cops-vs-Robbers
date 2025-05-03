@@ -366,6 +366,9 @@
     color: black;
     border-color: blue;
 }
+.light-mode .rules-container {
+    background-color: rgba(177, 177, 177, 0.85);
+}
 
 .light-mode a, 
 .light-mode span,
