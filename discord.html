@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discord Callback</title>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import {
+      getFirestore,
+      doc,
+      updateDoc
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDa-Gn5AtvCYwzC7GvArnDUrc6HQfdT-U4",
+      authDomain: "login-form-19883.firebaseapp.com",
+      projectId: "login-form-19883",
+      storageBucket: "login-form-19883.appspot.com",
+      messagingSenderId: "469023290458",
+      appId: "1:469023290458:web:d0d24d8e80ae5c557b5463"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore();
+
+    const hash = window.location.hash.substring(1);
+    const params = new URLSearchParams(hash);
+    const accessToken = params.get("access_token");
+
+    if (accessToken) {
+      fetch("https://discord.com/api/users/@me", {
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        }
+      })
+      .then(res => res.json())
+      .then(async discordUser => {
+        const loggedInUserId = localStorage.getItem("loggedInUserId");
+        if (loggedInUserId) {
+          const userDocRef = doc(db, "users", loggedInUserId);
+          await updateDoc(userDocRef, {
+            discord: `${discordUser.username}#${discordUser.discriminator}`,
+            discordId: discordUser.id
+          });
+          alert("Discord account linked successfully.");
+        } else {
+          alert("No Firebase user ID found.");
+        }
+        window.location.href = "profil.html";
+      })
+      .catch(() => {
+        alert("Error.");
+      });
+    } else {
+      alert("");
+      window.location.href = "/";
+    }
+  </script>
+</head>
+<body>
+  <p>Connecting your Discord account...</p>
+</body>
+</html>
