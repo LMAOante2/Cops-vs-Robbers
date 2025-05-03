@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -11,12 +10,10 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    scroll-behavior: smooth;
     scroll-snap-align: start;
 }
 
 html {
-    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
 
