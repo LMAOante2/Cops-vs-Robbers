@@ -289,13 +289,4 @@ nav a:hover {
   input:checked + .slider:before {
     transform: translateX(26px);
   }
-
-  .discord-btn {
-    background-color: #5865F2;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
   
