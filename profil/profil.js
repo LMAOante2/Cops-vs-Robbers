@@ -56,7 +56,7 @@ if (window.location.pathname.includes("discord.html")) {
             }
           }, { merge: true });
 
-          window.location.href = "dashboard.html";
+          window.location.href = "profil.html";
         }
       })
       .catch(console.error);
