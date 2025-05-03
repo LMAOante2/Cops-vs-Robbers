@@ -89,7 +89,7 @@
           window.addEventListener("wheel", function(event) {
             event.preventDefault(); 
             window.scrollBy({
-              top: event.deltaY * 2,  
+              top: event.deltaY * 0.5,  
               left: 0,
               behavior: "smooth"
             });
