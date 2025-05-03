@@ -24,15 +24,15 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
 
-const discordClientId = "YOUR_DISCORD_CLIENT_ID";
-const redirectUri = "http://127.0.0.1:5500/discord-callback.html";
+const discordClientId = "1368306787333312565";
+const redirectUri = "https://balkancopsvsrobbers.netlify.app/profil";
 
 document.getElementById("connectDiscordBtn")?.addEventListener("click", () => {
   const discordAuthUrl = `https://discord.com/api/oauth2/authorize?client_id=${discordClientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=identify`;
   window.location.href = discordAuthUrl;
 });
 
-if (window.location.pathname.includes("discord-callback.html")) {
+if (window.location.pathname.includes("discord.html")) {
   const fragment = new URLSearchParams(window.location.hash.slice(1));
   const accessToken = fragment.get("access_token");
 
@@ -78,7 +78,7 @@ onAuthStateChanged(auth, (user) => {
           if (userData.discord) {
             document.getElementById('discordStatus').innerText = `Connected as ${userData.discord.username}#${userData.discord.discriminator}`;
           } else {
-            document.getElementById('discordStatus').innerText = 'Discord not connected.';
+            document.getElementById('discordStatus').innerText = 'Discord Nije Spojen.';
           }
         } else {
           console.log("No document found matching ID");
