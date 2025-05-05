@@ -582,4 +582,7 @@
         margin-bottom: -15px;
         place-self: center;
         justify-content: center;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
     }
