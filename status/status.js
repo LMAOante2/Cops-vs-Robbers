@@ -86,13 +86,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+let updateInterval = null;
+  let fetchInterval = null;
 
-setInterval(updateServerStatus, 1000);
-setInterval(fetchPlayers, 1000);
+
+  document.getElementById('toggleMonitor').addEventListener('change', function () {
+    if (this.checked) {
+      updateInterval = setInterval(updateServerStatus, 1000);
+      fetchInterval = setInterval(fetchPlayers, 1000);
+      const refresh = document.getElementById('refresh');
+      refresh.style.display = 'none';
+    } else {
+      clearInterval(updateInterval);
+      clearInterval(fetchInterval);
+      const refresh = document.getElementById('refresh');
+      refresh.style.display = 'inline';
+    }
+  });
+
 window.onload = () => {
     updateServerStatus();
     fetchPlayers();
+
+    const refreshButton = document.getElementById("refresh");
+    if (refreshButton) {
+        refreshButton.onclick = refresh;
+    }
 };
+
+function refresh() {
+    fetchPlayers();
+    updateServerStatus();
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const theme = localStorage.getItem("theme");
