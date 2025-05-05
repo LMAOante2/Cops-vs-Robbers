@@ -535,6 +535,8 @@
         }
 
         .switch {
+      place-self: center;
+      text-align: center;
       position: relative;
       display: inline-block;
       width: 60px;
