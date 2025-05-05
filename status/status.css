@@ -579,6 +579,6 @@
         width: 141px;
         display: flex;
         margin-bottom: -15px;
-        margin-left: 479px;
+        place-self: center;
         justify-content: center;
     }
