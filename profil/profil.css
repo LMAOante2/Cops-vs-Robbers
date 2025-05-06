@@ -289,4 +289,12 @@ nav a:hover {
   input:checked + .slider:before {
     transform: translateX(26px);
   }
+
+  .logout {
+    background-color: rgb(255, 32, 32);
+  }
+
+  .logout:hover {
+    background-color: rgb(255, 0, 0);
+  } 
   
