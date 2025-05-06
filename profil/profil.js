@@ -161,13 +161,13 @@ setTimeout(() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
-  const savedTheme = localStorage.getItem("theme") || "light";
+  const savedTheme = localStorage.getItem("theme") || "dark";
   document.body.classList.add(savedTheme + "-mode");
-  toggle.checked = savedTheme === "dark";
+  toggle.checked = savedTheme === "light";
 
   toggle.addEventListener("change", () => {
     const newTheme = toggle.checked ? "dark" : "light";
-    document.body.classList.remove("dark-mode", "light-mode");
+    document.body.classList.remove("light-mode", "dark-mode");
     document.body.classList.add(newTheme + "-mode");
     localStorage.setItem("theme", newTheme);
   });
