@@ -106,14 +106,14 @@ document.getElementById('toggleMonitor').addEventListener('change', function () 
     const refresh = document.getElementById('refresh');
     refresh.style.display = 'none';
     const tekst = document.getElementById('tekst');
-    tekst.style.color = 'blue';
+    tekst.style.color = 'green';
   } else {
     clearInterval(updateInterval);
     clearInterval(fetchInterval);
     const refresh = document.getElementById('refresh');
     refresh.style.display = 'inline';
     const tekst = document.getElementById('tekst');
-    tekst.style.color = 'black';
+    tekst.style.color = 'red';
   }
 });
 
