@@ -447,7 +447,6 @@
 
 .light-mode .div,
 .light-mode .side-menu,
-.light-mode button,
 .light-mode header,
 .light-mode .discord-widget,
 .light-mode .container,
@@ -522,7 +521,6 @@
     background: none;
     background-color: transparent;
     margin-bottom: 10px;
-    border: 2px solid blue;
     border-radius: 10px;
 }
 
