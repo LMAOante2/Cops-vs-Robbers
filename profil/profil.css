@@ -269,7 +269,7 @@ nav a:hover {
   .slider {
     position: absolute;
     cursor: pointer;
-    background-color: #ccc;
+    background-color: #ff0000;
     border-radius: 34px;
     top: 0;
     left: 0;
