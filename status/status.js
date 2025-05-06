@@ -87,22 +87,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let updateInterval = null;
-  let fetchInterval = null;
+let fetchInterval = null;
 
+// Restore state from localStorage on load
+window.addEventListener('DOMContentLoaded', function () {
+  const toggleState = localStorage.getItem('monitorToggle');
+  if (toggleState === 'true') {
+    document.getElementById('toggleMonitor').checked = true;
+    document.getElementById('toggleMonitor').dispatchEvent(new Event('change'));
+  }
+});
 
-  document.getElementById('toggleMonitor').addEventListener('change', function () {
-    if (this.checked) {
-      updateInterval = setInterval(updateServerStatus, 1000);
-      fetchInterval = setInterval(fetchPlayers, 1000);
-      const refresh = document.getElementById('refresh');
-      refresh.style.display = 'none';
-    } else {
-      clearInterval(updateInterval);
-      clearInterval(fetchInterval);
-      const refresh = document.getElementById('refresh');
-      refresh.style.display = 'inline';
-    }
-  });
+document.getElementById('toggleMonitor').addEventListener('change', function () {
+  localStorage.setItem('monitorToggle', this.checked); // Save state
+
+  if (this.checked) {
+    updateInterval = setInterval(updateServerStatus, 1000);
+    fetchInterval = setInterval(fetchPlayers, 1000);
+    const refresh = document.getElementById('refresh');
+    refresh.style.display = 'none';
+  } else {
+    clearInterval(updateInterval);
+    clearInterval(fetchInterval);
+    const refresh = document.getElementById('refresh');
+    refresh.style.display = 'inline';
+  }
+});
 
 window.onload = () => {
     updateServerStatus();
