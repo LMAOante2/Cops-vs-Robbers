@@ -218,7 +218,7 @@ nav a:hover {
 }
 
 .light-mode .logout {
-    background-color: rgb(255, 32, 32);
+    background-color: rgb(253, 55, 55);
 }
 
 /* Tamno */
@@ -235,7 +235,7 @@ nav a:hover {
 }
 
 .dark-mode .logout {
-    background-color: rgb(255, 32, 32);
+    background-color: rgb(255, 60, 60);
 }
 
 .dark-mode .side-menu {
@@ -299,7 +299,7 @@ nav a:hover {
   }
 
   .logout {
-    background-color: rgb(255, 32, 32);
+    background-color: rgb(255, 60, 60);
   }
 
   .logout:hover {
