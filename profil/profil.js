@@ -162,16 +162,17 @@ setTimeout(() => {
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
   const savedTheme = localStorage.getItem("theme");
+  const currentTheme = savedTheme || "dark";
 
-  const theme = savedTheme || "dark";
 
   if (savedTheme !== null) {
-    toggle.checked = theme === "light";
+    toggle.checked = currentTheme === "dark";
   } else {
-    // Default to dark, and store it
+
     localStorage.setItem("theme", "dark");
-    toggle.checked = false;
+    toggle.checked = true; // checked = dark
   }
+
 
   toggle.addEventListener("change", () => {
     const newTheme = toggle.checked ? "dark" : "light";
@@ -180,8 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", newTheme);
   });
 
+
   document.getElementById("logout").addEventListener("click", () => {
+    localStorage.removeItem("theme");
     location.reload();
   });
 });
+
 
