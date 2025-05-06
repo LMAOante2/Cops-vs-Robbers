@@ -193,34 +193,6 @@ nav a:hover {
     }
 }
 
-/* Svijetlo */
-.light-mode {
-    background-color: white;
-    color: black;
-}
-
-.light-mode .div,
-.light-mode .side-menu,
-.light-mode button,
-.light-mode header
- {
-    background-color: rgba(255, 255, 255, 0.85);
-    color: black;
-    border-color: blue;
-}
-
-.light-mode a, .lightmode span {
-    color: black;
-}
-
-.light-mode .menu-toggle {
-    background: none;
-}
-
-.light-mode .logout {
-    background-color: rgb(253, 55, 55);
-}
-
 /* Tamno */
 .dark-mode {
     background-color: #121212;
@@ -248,6 +220,34 @@ nav a:hover {
 
 .dark-mode .menu-toggle {
     background: none;
+}
+
+/* Svijetlo */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .div,
+.light-mode .side-menu,
+.light-mode button,
+.light-mode header
+ {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+    border-color: blue;
+}
+
+.light-mode a, .lightmode span {
+    color: black;
+}
+
+.light-mode .menu-toggle {
+    background: none;
+}
+
+.light-mode .logout {
+    background-color: rgb(253, 55, 55);
 }
 
 .switch {
