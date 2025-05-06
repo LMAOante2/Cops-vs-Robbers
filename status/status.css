@@ -522,6 +522,8 @@
     background: none;
     background-color: transparent;
     margin-bottom: 10px;
+    border: 2px solid blue;
+    border-radius: 10px;
 }
 
 .refresh:hover {
