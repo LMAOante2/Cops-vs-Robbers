@@ -169,13 +169,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (savedTheme !== null) {
     toggle.checked = theme === "light";
   } else {
-    // Default to dark, and store it
     localStorage.setItem("theme", "dark");
     toggle.checked = false;
   }
 
   toggle.addEventListener("change", () => {
-    const newTheme = toggle.checked ? "dark" : "light";
+    const newTheme = toggle.checked ? "light" : "dark";
     document.body.classList.remove("dark-mode", "light-mode");
     document.body.classList.add(newTheme + "-mode");
     localStorage.setItem("theme", newTheme);
