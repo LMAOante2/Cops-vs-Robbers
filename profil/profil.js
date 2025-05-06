@@ -161,13 +161,21 @@ setTimeout(() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
-  const savedTheme = localStorage.getItem("theme") || "dark";
-  document.body.classList.add(savedTheme + "-mode");
-  toggle.checked = savedTheme === "light";
+  const savedTheme = localStorage.getItem("theme");
+
+  const theme = savedTheme || "dark";
+  document.body.classList.add(theme + "-mode");
+
+  if (savedTheme !== null) {
+    toggle.checked = theme === "light";
+  } else {
+    localStorage.setItem("theme", "dark");
+    toggle.checked = false;
+  }
 
   toggle.addEventListener("change", () => {
     const newTheme = toggle.checked ? "dark" : "light";
-    document.body.classList.remove("light-mode", "dark-mode");
+    document.body.classList.remove("dark-mode", "light-mode");
     document.body.classList.add(newTheme + "-mode");
     localStorage.setItem("theme", newTheme);
   });
@@ -175,5 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("logout").addEventListener("click", () => {
     location.reload();
   });
+});
 });
 
