@@ -165,15 +165,30 @@ button:hover {
     font-weight: bold;
 }
 
-.links a {
+.a1 {
     font-size: 12px;
     text-decoration: none;
     margin-right: -120px;
     color: rgb(125, 125, 235);
     width: 150px;
+    height: 10px;
 }
 
-.links a:hover {
+.a1:hover {
+    text-decoration: underline;
+        color: blue;
+}
+
+.a2 {
+    font-size: 12px;
+    text-decoration: none;
+    margin-right: -120px;
+    color: rgb(125, 125, 235);
+    width: 150px;
+    margin-top: 30px;
+}
+
+.a2:hover {
     text-decoration: underline;
         color: blue;
 }
@@ -212,7 +227,7 @@ button:hover {
         font-size: 12px;
     }
 
-    .links a {
+    .links .a1 {
         font-size: 12px;
         text-decoration: none;
         margin-right: -250px;
@@ -221,7 +236,21 @@ button:hover {
         flex-direction: row;
     }
     
-    .links a:hover {
+    .links .a1:hover {
+        text-decoration: underline;
+            color: blue;
+    }
+
+    .a2 {
+        font-size: 12px;
+        text-decoration: none;
+        margin-right: -250px;
+        color: rgb(125, 125, 235);
+        width: 150px;
+        flex-direction: row;
+    }
+    
+    .a2:hover {
         text-decoration: underline;
             color: blue;
     }

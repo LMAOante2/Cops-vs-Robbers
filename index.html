@@ -12,64 +12,64 @@
     <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
 </head>
 <body>
-    <div class="container" id="signup" style="display:none;">
-      <h1 class="form-title">Napravi Account</h1>
+  <div class="container" id="signup" style="display:none;">
+    <h1 class="form-title">Napravi Account</h1>
+    <form method="post" action="">
+      <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+      <div id="signUpMessage1" class="messageDiv1" style="display:none;"></div>
+      <div class="input-group">
+         <i class="fas fa-user"></i>
+         <input autocomplete="off" type="text"  id="fName" placeholder="First Name" required>
+         <label for="fname">Ime</label>
+      </div>
+      <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input autocomplete="off" type="text"  id="lName" placeholder="Last Name" required>
+          <label for="lName">Prezime</label>
+      </div>
+      <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input autocomplete="off" type="email"  id="rEmail" placeholder="Email" required>
+          <label for="rEmail">Email</label>
+      </div>
+      <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input autocomplete="off" type="password" id="rPassword"  placeholder="Password" required>
+          <label for="rPassword">Lozinka</label>
+      </div>
+     <button class="btn" id="submitSignUp" >Napravi Account</button>
+    </form>
+    <div class="links">
+      <p style="text-align: center;">Vec imas account?</p>
+      <button style="margin-bottom: 10px; margin-left: 30px; margin-top: -15px;" id="signInButton">Prijavi se</button>
+    </div>
+  </div>
+
+<div class="container" id="signIn">
+      <h1 class="form-title">Prijavi se</h1>
       <form method="post" action="">
-        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
-        <div id="signUpMessage1" class="messageDiv1" style="display:none;"></div>
-        <div class="input-group">
-           <i class="fas fa-user"></i>
-           <input autocomplete="off" type="text"  id="fName" placeholder="First Name" required>
-           <label for="fname">Ime</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input autocomplete="off" type="text"  id="lName" placeholder="Last Name" required>
-            <label for="lName">Prezime</label>
-        </div>
+        <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+        <div id="signInMessage1" class="messageDiv1" style="display:none;"></div>
+
         <div class="input-group">
             <i class="fas fa-envelope"></i>
-            <input autocomplete="off" type="email"  id="rEmail" placeholder="Email" required>
-            <label for="rEmail">Email</label>
+            <input autocomplete="off" type="email"  id="email" placeholder="Email" required>
+            <label for="email">Email</label>
         </div>
         <div class="input-group">
             <i class="fas fa-lock"></i>
-            <input autocomplete="off" type="password" id="rPassword"  placeholder="Password" required>
-            <label for="rPassword">Lozinka</label>
+          <input autocomplete="off" type="password" id="password"  placeholder="Lozinka" required>
+            <label for="password">Lozinka</label>
         </div>
-       <button class="btn" id="submitSignUp" >Napravi Account</button>
+       <button  class="btn"  id="submitSignIn">Prijavi se</button>
       </form>
       <div class="links">
-        <p style="text-align: center;">Vec imas account?</p>
-        <button style="margin-bottom: 10px; margin-left: 30px; margin-top: -15px;" id="signInButton">Prijavi se</button>
+        <p style="width: 350px; margin-left: 10px;">Jos nemas account?</p>
+        <button id="signUpButton">Napravi Account</button>
+        <a class="a2" href="promjeni.html">Zaboravio si lozinku?</a>
+        <a class="a1" href="pocetna.html">Nastavi Kao Gost</a>
       </div>
     </div>
-
-  <div class="container" id="signIn">
-        <h1 class="form-title">Prijavi se</h1>
-        <form method="post" action="">
-          <div id="signInMessage" class="messageDiv" style="display:none;"></div>
-          <div id="signInMessage1" class="messageDiv1" style="display:none;"></div>
-
-          <div class="input-group">
-              <i class="fas fa-envelope"></i>
-              <input autocomplete="off" type="email"  id="email" placeholder="Email" required>
-              <label for="email">Email</label>
-          </div>
-          <div class="input-group">
-              <i class="fas fa-lock"></i>
-            <input autocomplete="off" type="password" id="password"  placeholder="Lozinka" required>
-              <label for="password">Lozinka</label>
-          </div>
-         <button  class="btn"  id="submitSignIn">Prijavi se</button>
-        </form>
-        <div class="links">
-          <p style="width: 350px; margin-left: 10px;">Jos nemas account?</p>
-          <button id="signUpButton">Napravi Account</button>
-          <a style="margin-bottom: -25px;" href="promjeni.html">Zaboravio si lozinku?</a>
-          <a href="pocetna.html">Nastavi Kao Gost</a>
-        </div>
-      </div>
-      <script src="login/script.js"></script>
+    <script src="login/script.js"></script>
 </body>
 </html>
