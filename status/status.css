@@ -460,6 +460,10 @@
     border-color: blue;
 }
 
+.light-mode .refresh {
+    background-color: rgba(39, 39, 39, 0.9);
+}
+
 .light-mode a, 
 .light-mode span,
 .light-mode h1,
@@ -522,6 +526,7 @@
     background-color: transparent;
     margin-bottom: 10px;
     border-radius: 10px;
+    border-color: cyan;
 }
 
 .refresh:hover {
