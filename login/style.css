@@ -218,6 +218,7 @@ button:hover {
         margin-right: -250px;
         color: rgb(125, 125, 235);
         width: 150px;
+        flex-direction: row;
     }
     
     .links a:hover {
