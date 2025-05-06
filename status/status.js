@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
 let updateInterval = null;
 let fetchInterval = null;
 
-// Restore state from localStorage on load
 window.addEventListener('DOMContentLoaded', function () {
   const toggleState = localStorage.getItem('monitorToggle');
   if (toggleState === 'true') {
@@ -99,7 +98,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 document.getElementById('toggleMonitor').addEventListener('change', function () {
-  localStorage.setItem('monitorToggle', this.checked); // Save state
+  localStorage.setItem('monitorToggle', this.checked);
 
   if (this.checked) {
     updateInterval = setInterval(updateServerStatus, 1000);
