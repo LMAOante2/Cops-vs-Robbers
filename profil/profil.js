@@ -164,19 +164,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
 
   const theme = savedTheme || "dark";
-  document.body.classList.add(theme + "-mode");
 
   if (savedTheme !== null) {
     toggle.checked = theme === "light";
   } else {
+    // Default to dark, and store it
     localStorage.setItem("theme", "dark");
     toggle.checked = false;
   }
 
   toggle.addEventListener("change", () => {
     const newTheme = toggle.checked ? "dark" : "light";
-    document.body.classList.remove("dark-mode", "light-mode");
-    document.body.classList.add(newTheme + "-mode");
+    document.documentElement.classList.remove("dark-mode", "light-mode");
+    document.documentElement.classList.add(newTheme + "-mode");
     localStorage.setItem("theme", newTheme);
   });
 
