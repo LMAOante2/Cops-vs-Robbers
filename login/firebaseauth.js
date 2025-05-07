@@ -1,4 +1,4 @@
-// Import Firebase SDKs
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import {
   getAuth,
@@ -35,7 +35,6 @@ function showMessage(message, divId) {
   }, 5000);
 }
 
-// Sign up handler
 const signUp = document.getElementById('submitSignUp');
 signUp.addEventListener('click', (event) => {
   event.preventDefault();
