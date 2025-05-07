@@ -414,6 +414,11 @@
     color: black;
     background-color: white;
 }
+.light-mode hr {
+    border-color: black;
+    background-color: black;
+    color: black;
+}
 
 .lightmode h1 {
     color: black;
@@ -442,6 +447,12 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.dark-mode hr {
+    border-color: white;
+    background-color: white;
+    color: white;
+}
+
 .dark-mode a,
 .dark-mode h3,
 .dark-mode p,
@@ -458,3 +469,8 @@
 .dark-mode .menu-toggle {
     background: none;
 }
+
+hr {
+    width: 100%;
+    color: white;
+  }
