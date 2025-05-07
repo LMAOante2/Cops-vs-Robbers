@@ -53,6 +53,7 @@ span {
 .div {
     justify-content: center;
     place-self: center;
+    justify-self: center;
     padding: 25px 20px 25px;
     margin-top: 300px;
     border-radius: 15px;
