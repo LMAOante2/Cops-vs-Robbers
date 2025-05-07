@@ -200,12 +200,17 @@ nav a:hover {
 }
 
 .dark-mode .div,
-.dark-mode button,
-.dark-mode hr 
+.dark-mode button
 {
     background-color: rgba(39, 39, 39, 0.9);
     color: white;
     border-color: cyan;
+}
+
+.dark-mode hr {
+    border-color: white;
+    background-color: white;
+    color: white;
 }
 
 .dark-mode .logout {
@@ -233,12 +238,17 @@ nav a:hover {
 .light-mode .div,
 .light-mode .side-menu,
 .light-mode button,
-.light-mode header,
-.light-mode hr
+.light-mode header
  {
     background-color: rgba(255, 255, 255, 0.85);
     color: black;
     border-color: blue;
+}
+
+.light-mode hr {
+    border-color: black;
+    background-color: black;
+    color: black;
 }
 
 .light-mode a, .lightmode span {
