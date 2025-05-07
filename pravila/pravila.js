@@ -1,6 +1,6 @@
     document.addEventListener("DOMContentLoaded", function () {
 
-        fetch('https://raw.githubusercontent.com/LMAOante2/Cops-vs-Robbers/main/rules.json')
+        fetch('https://raw.githubusercontent.com/LMAOante2/Cops-vs-Robbers/main/pravila/pravila.json')
             .then(response => response.json())
             .then(data => {
                 const rulesContainer = document.getElementById('rules-container');
@@ -23,7 +23,7 @@
                     rulesContainer.appendChild(categoryDiv);
                 });
             })
-            .catch(error => console.error('Error loading rules:', error));
+            .catch(error => console.error('Error:', error));
     });
             document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.querySelector(".menu-toggle");
