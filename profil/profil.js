@@ -167,9 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add(theme + "-mode");
 
   if (savedTheme !== null) {
-    toggle.checked = theme === "light";
+    toggle.checked = theme === "dark";
   } else {
-    localStorage.setItem("theme", "dark");
+    localStorage.setItem("theme", "light");
     toggle.checked = false;
   }
 
