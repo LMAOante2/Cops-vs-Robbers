@@ -161,17 +161,15 @@ setTimeout(() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
-  const savedTheme = localStorage.getItem("theme");
+  let savedTheme = localStorage.getItem("theme");
 
-  const theme = savedTheme || "dark";
-  document.body.classList.add(theme + "-mode");
-
-  if (savedTheme !== null) {
-    toggle.checked = theme === "dark";
-  } else {
-    localStorage.setItem("theme", "light");
-    toggle.checked = false;
+  if (!savedTheme) {
+    savedTheme = "dark";
+    localStorage.setItem("theme", "dark");
   }
+
+  document.body.classList.add(savedTheme + "-mode");
+  toggle.checked = savedTheme === "light";
 
   toggle.addEventListener("change", () => {
     const newTheme = toggle.checked ? "light" : "dark";
@@ -184,4 +182,5 @@ document.addEventListener("DOMContentLoaded", () => {
     location.reload();
   });
 });
+
 
