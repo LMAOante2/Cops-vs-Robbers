@@ -69,14 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
   let savedTheme = localStorage.getItem("theme");
 
-  // Default to dark if no theme is set yet
+
   if (!savedTheme) {
     savedTheme = "dark";
     localStorage.setItem("theme", "dark");
   }
 
   document.body.classList.add(savedTheme + "-mode");
-  toggle.checked = savedTheme === "light"; // checked means light mode
+  toggle.checked = savedTheme === "light";
 
   toggle.addEventListener("change", () => {
     const newTheme = toggle.checked ? "light" : "dark";
