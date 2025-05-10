@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
  
-  toggle.checked = savedStatus === "false";
+  toggle.checked = savedStatus === "true";
 
   toggle.addEventListener("change", () => {
     const newStatus = toggle.checked ? "true" : "false";
