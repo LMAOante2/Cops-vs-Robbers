@@ -90,3 +90,39 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+      document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("modeToggle");
+  let savedTheme = localStorage.getItem("theme");
+
+
+  if (!savedTheme) {
+    savedTheme = "dark";
+    localStorage.setItem("theme", "dark");
+  }
+
+  document.body.classList.add(savedTheme + "-mode");
+  toggle.checked = savedTheme === "light";
+
+  toggle.addEventListener("change", () => {
+    const newTheme = toggle.checked ? "light" : "dark";
+    document.body.classList.remove("dark-mode", "light-mode");
+    document.body.classList.add(newTheme + "-mode");
+    localStorage.setItem("theme", newTheme);
+  });
+
+  document.getElementById("logout").addEventListener("click", () => {
+    location.reload();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedStatus = localStorage.getItem("status");
+  const content = document.getElementById("igraci");
+
+  if (savedStatus === "true") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+});
+
