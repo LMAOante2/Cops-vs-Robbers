@@ -1,3 +1,4 @@
+//--<Igraci>--//
 async function updateServerStatus() {
     try {
         const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
@@ -65,7 +66,7 @@ async function fetchPlayers() {
     }
 }
 
-
+//--<Meni>--//
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const closeMenu = document.querySelector(".close-menu");
@@ -86,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//--<Refresh>--//
 let updateInterval = null;
 let fetchInterval = null;
 
@@ -132,6 +134,7 @@ function refresh() {
     updateServerStatus();
 }
 
+//--<Svjetlo-Tamno>--//
 document.addEventListener("DOMContentLoaded", () => {
   let theme = localStorage.getItem("theme");
 
