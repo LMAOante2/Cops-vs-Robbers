@@ -1,3 +1,7 @@
+  if (localStorage.getItem("status") === null) {
+    localStorage.setItem("status", "true");
+  }
+
 //--<Igraci>--//
 async function updateServerStatus() {
     try {

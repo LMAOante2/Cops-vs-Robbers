@@ -1,3 +1,7 @@
+      if (localStorage.getItem("status") === null) {
+    localStorage.setItem("status", "true");
+  }
+    
     if (localStorage.getItem('isAdmin') === 'true') {
         document.getElementById('admin-link').style.display = 'inline-block';
     }
