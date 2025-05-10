@@ -372,4 +372,13 @@ nav a:hover {
     width: 100%;
     color: white;
   }
+
+  .opcenito {
+    text-align: center;
+  }
+  .opcenito hr {
+    text-align: center;
+    width: 100%;
+    color: white;
+  }
   
