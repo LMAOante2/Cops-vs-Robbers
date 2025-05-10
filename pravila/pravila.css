@@ -5,7 +5,11 @@
             font-family: 'Arial', sans-serif;
         }
 
-        body {
+        body, html {
+            touch-action: manipulation;
+            -ms-touch-action: manipulation;
+            touch-action: pan-y;
+            -ms-touch-action: pan-y;
             background-image: url('/slike/background.png');
             background-size: cover;
             background-attachment: scroll;
