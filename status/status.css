@@ -469,7 +469,9 @@
     color: white;
 }
 
-.light-mode .menu-toggle {
+.light-mode .menu-toggle,
+.light-mode .close-menu
+{
     color: black;
 }
 
