@@ -183,9 +183,23 @@
             color: #ff9900;
         }
 
+        .title {
+            color: rgb(43, 113, 106);
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: rgb(66, 125, 117);
+        }
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
+                margin-top: -27px;
+                margin-left: -20px;
+            }
+
+            .title {
+                margin-left: 25px;
+                font-size: 20px;
+                margin-bottom: -32px;
             }
 
             .desktop-nav {
