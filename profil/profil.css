@@ -197,14 +197,14 @@ nav a:hover {
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
-                margin-top: -37px;
+                margin-top: -40px;
                 margin-left: -20px;
             }
 
             .title {
                 margin-left: 25px;
                 font-size: 20px;
-                margin-bottom: -45px;
+                margin-bottom: -50px;
             }
 
             .desktop-nav {
