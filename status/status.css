@@ -443,7 +443,7 @@
             border: 50px;
         }
 
-                                /* Svijetlo */
+/* Svijetlo */
 .light-mode {
     background-color: white;
     color: black;
@@ -469,7 +469,7 @@
     color: white;
 }
 
-.light-mode menu-toggle {
+.light-mode .menu-toggle {
     color: black;
 }
 
