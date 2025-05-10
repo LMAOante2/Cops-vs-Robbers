@@ -264,7 +264,6 @@ nav a:hover {
     background-color: rgb(253, 55, 55);
 }
 
-/*svjetlost*/
 .switch {
     position: fixed;
     top: 20px;
@@ -313,7 +312,6 @@ nav a:hover {
     transform: translateX(26px);
   }
 
-  /*status*/
   .switch1 {
     position: fixed;
     top: 20px;
