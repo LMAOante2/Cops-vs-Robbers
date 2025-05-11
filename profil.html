@@ -44,7 +44,11 @@
         </ul>
     </header>
 
-    <div class="div">
+    <div class="buttons">
+        <button id="profil1" class="btn4">profil</button>
+        <button id="postavke1" class="btn4">postavke</button>
+    </div>
+    <div id="profil" style="margin-top: 10px; display: none;" class="div">
        <h1>Profil</h1>
        <hr>
        <div  id="Ime"><span  id="loggedUserFName"></span></div>
@@ -55,7 +59,7 @@
        <button id="resetPassword"><a style="text-decoration: none;" href="promjeni.html">Promjeni Lozinku</a></button>    
     </div>
 
-    <div style="margin-top: 30px; width: 360px;" class="div">
+    <div id="postavke" style="margin-top: 30px; width: 360px; display: none;" class="div div1">
         <h1 style="margin-bottom: 30px;">Postavke</h1>
         <hr style="margin-top: -30px;">
         
@@ -66,7 +70,8 @@
                 <span class="slider"></span>
             </label>
         </div>
-        <div id="status1">
+
+        <div class="test" id="status1">
             <h3 style="margin-left: -85px; margin-top: 5px;">Pokazi Igrace (status)</h3>
             <label class="switch1">
                 <input type="checkbox" id="status">

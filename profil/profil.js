@@ -229,6 +229,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const buttons = document.querySelectorAll('.btn4');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("profil1").addEventListener("click", function () {
+    if(document.getElementById("postavke").style.display = "none"){
+      document.getElementById("profil").style.display = "block";
+    }
+    else {
+      document.getElementById("postavke").style.display = "none";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("postavke1").addEventListener("click", function () {
+    if(    document.getElementById("profil").style.display = "none") {
+      document.getElementById("postavke").style.display = "block";
+      document.getElementById("profil").style.display = "none";
+    }
+    else{
+      document.getElementById("profil").style.display = "none";
+    }
+  });
+});
+
 
 
 
