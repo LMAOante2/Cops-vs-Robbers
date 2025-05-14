@@ -1,35 +1,35 @@
     const scheduleData = {
       "2025-05-12": [
-        ["17", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["18", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["19", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["20", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
-        ["21", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
-        ["22", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
-        ["23", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
-        ["00", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"]
+        ["17h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["18h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["19h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["20h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
+        ["21h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
+        ["22h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
+        ["23h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
+        ["00h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Battle Royale Event", "Nema Eventa"]
       ],
 
       "2025-05-19": [
-        ["17", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["18", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["19", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["20", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"],
-        ["21", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"],
-        ["22", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"],
-        ["23", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"],
-        ["00", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"]
+        ["17h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["18h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["19h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["20h", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"],
+        ["21h", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"],
+        ["22h", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"],
+        ["23h", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"],
+        ["00h", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event"]
       ],
 
       "2025-05-26": [
-        ["17", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["18", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["19", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
-        ["20", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
-        ["21", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
-        ["22", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
-        ["23", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
-        ["00", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"]
+        ["17h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["18h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["19h", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa", "Nema Eventa"],
+        ["20h", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
+        ["21h", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
+        ["22h", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
+        ["23h", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"],
+        ["00h", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa", "Battle Royale Event", "Nema Eventa"]
       ],
 
     };
