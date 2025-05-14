@@ -98,6 +98,11 @@
             eventDiv.style.cursor = "pointer";
             eventDiv.onclick = () => showEventInfo(cell);
           }
+
+          if (cell === "Nema Eventa") {
+            eventDiv.style.cursor = "pointer";
+            eventDiv.onclick = () => showEventInfo(cell);
+          }
   
           td.appendChild(eventDiv);
   
