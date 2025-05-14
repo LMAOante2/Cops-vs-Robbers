@@ -48,19 +48,19 @@
       return date.toISOString().split('T')[0];
     }
   
-    function showEventInfo(eventName) {
+    function showEventInfo(eventIme) {
       const infoBox = document.getElementById("event-info");
       const desc = document.getElementById("event-deskripcija");
   
       let deskripcija = "";
   
-      if (eventName === "Battle Royale Event") {
+      if (eventIme === "Battle Royale Event") {
         deskripcija = "U subotu ce biti prvi fiveM Battle Royale Event na Balkanu i sire, za vise informacija pogledajte nas TikTok";
       } else {
         deskripcija = "Nema Eventa dodatnih informacija za ovaj događaj.";
       }
 
-        if (eventName === "Nema Eventa") {
+        if (eventIme === "Nema Eventa") {
         description = "Nema Eventa u ovo vrijeme";
       } else {
         description = "Nema Eventa dodatnih informacija za ovaj događaj.";
