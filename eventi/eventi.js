@@ -55,7 +55,7 @@
       let deskripcija = "";
   
       if (eventName === "Battle Royale Event") {
-        deskripcija = "U subotu ce biti prvi fiveM Battle Royale Event event na Balkanu i sire, za vise informacija pogledajte nas TikTok";
+        deskripcija = "U subotu ce biti prvi fiveM Battle Royale Event na Balkanu i sire, za vise informacija pogledajte nas TikTok";
       } else {
         deskripcija = "Nema Eventa dodatnih informacija za ovaj događaj.";
       }
