@@ -30,6 +30,7 @@ body {
 .kalendar-glavno h2 {
     margin: 0;
     flex: 1 1 200px;
+    color: black;
     
 }
 
@@ -59,6 +60,7 @@ table {
     border-collapse: collapse;
     margin-bottom: 20px;
     color: black;
+    background-color: white;
 }
 
 th, td {
