@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('/slike/background.png') center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.kalendar {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.kalendar-glavno {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.kalendar-glavno h2 {
+    margin: 0;
+    flex: 1 1 200px;
+    
+}
+
+.strijelica-btn {
+    font-size: 28px;
+    cursor: pointer;
+    background-color: #eee;
+    box-shadow: -2px 6px 10px -3px rgba(0,0,0,0.97);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.strijelica-btn:hover {
+    background-color: #ccc;
+    box-shadow: none;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: black;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+.zuta { background-color: #fffac8; }
+.plava { background-color: #a0c4ff; }
+.roza { background-color: #ffb3c1; }
+.zelena { background-color: #b9fbc0; }
+.ljubicasta { background-color: #dab6fc; }
+.grey { background-color: #e0e0e0; }
+
+.eventi {
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        header .logo { 
+            font-size: 22px; 
+            font-weight: bold; 
+            color: white;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding-top: 60px;
+            transition: left 0.4s ease-in-out;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        nav li {
+            padding: 15px 20px;
+            text-align: left;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        nav a:hover {
+            color: #ff9900;
+        }
+
+        .menu-toggle {
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        .desktop-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        .desktop-nav li {
+            padding: 0;
+            list-style: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        .desktop-nav a {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; 
+             -khtml-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
+        }
+
+        .desktop-nav a:hover {
+            color: #ff9900;
+        }
+
+        .title {
+            color: rgb(43, 113, 106);
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: rgb(66, 125, 117);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                margin-top: -27px;
+                margin-left: -20px;
+            }
+
+            .title {
+                margin-left: 25px;
+                font-size: 20px;
+                margin-bottom: -32px;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+        }
+
+        /* Svijetlo */
+        .light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .div,
+.light-mode .side-menu,
+.light-mode button,
+.light-mode header,
+.light-mode .discord-widget,
+.light-mode .container,
+.light-mode .stat-box,
+.light-mode .hero
+ {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+    border-color: blue;
+}
+
+.light-mode th {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+}
+
+.light-mode a, 
+.light-mode span,
+.light-mode h3,
+.light-mode p,
+.light-mode .buttons
+{
+    color: black;
+}
+
+.light-mode .menu-toggle {
+    background: none;
+}
+
+/* Tamno */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .div,
+.dark-mode button,
+.dark-mode .stat-box
+ {
+    background-color: rgba(39, 39, 39, 0.9);
+    color: white;
+    border-color: cyan;
+}
+
+.dark-mode th {
+    background-color: rgba(39, 39, 39, 0.9);
+    color: white;
+}
+
+.dark-mode .side-menu {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode a,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode .buttons
+{
+    color: white;
+}
+
+.dark-mode .menu-toggle {
+    background: none;
+}
+
+
