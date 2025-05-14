@@ -59,6 +59,12 @@
       } else {
         deskripcija = "Nema Eventa dodatnih informacija za ovaj događaj.";
       }
+
+        if (eventName === "Nema") {
+        description = "Nema Eventa u ovo vrijeme";
+      } else {
+        description = "Nema Eventa dodatnih informacija za ovaj događaj.";
+      }
   
       desc.textContent = deskripcija;
       infoBox.style.display = "block";
