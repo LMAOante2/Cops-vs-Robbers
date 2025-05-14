@@ -70,6 +70,12 @@ th, td {
     text-align: center;
 }
 
+td:hover {
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  transform: scale(1.06);
+}
+
 th {
     font-weight: bold;
 }
