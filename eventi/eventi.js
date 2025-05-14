@@ -61,9 +61,9 @@
       }
 
         if (eventIme === "Nema Eventa") {
-        description = "Nema Eventa u ovo vrijeme";
+        deskripcija = "Nema Eventa u ovo vrijeme";
       } else {
-        description = "Nema Eventa dodatnih informacija za ovaj događaj.";
+        deskripcija = "Nema Eventa dodatnih informacija za ovaj događaj.";
       }
   
       desc.textContent = deskripcija;
