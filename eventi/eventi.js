@@ -52,15 +52,15 @@
       const infoBox = document.getElementById("event-info");
       const desc = document.getElementById("event-deskripcija");
   
-      let description = "";
+      let deskripcija = "";
   
       if (eventName === "Battle Royale Event") {
-        description = "U subotu ce biti prvi fiveM Battle Royale Event event na Balkanu i sire, za vise informacija pogledajte nas TikTok";
+        deskripcija = "U subotu ce biti prvi fiveM Battle Royale Event event na Balkanu i sire, za vise informacija pogledajte nas TikTok";
       } else {
-        description = "Nema Eventa dodatnih informacija za ovaj događaj.";
+        deskripcija = "Nema Eventa dodatnih informacija za ovaj događaj.";
       }
   
-      desc.textContent = description;
+      desc.textContent = deskripcija;
       infoBox.style.display = "block";
     }
   
