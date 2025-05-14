@@ -60,7 +60,7 @@
         deskripcija = "Nema Eventa dodatnih informacija za ovaj događaj.";
       }
 
-        if (eventName === "Nema") {
+        if (eventName === "Nema Eventa") {
         description = "Nema Eventa u ovo vrijeme";
       } else {
         description = "Nema Eventa dodatnih informacija za ovaj događaj.";
