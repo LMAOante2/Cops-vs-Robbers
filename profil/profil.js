@@ -62,88 +62,6 @@ logoutButton.addEventListener('click', () => {
 });
 
 
-onAuthStateChanged(auth, (user) => {
-  const link1 = document.getElementById('link1');
-  if (user) {
-    link1.style.display = 'none';
-  } else {
-    link1.style.display = 'true';
-  }
-});
-
-
-onAuthStateChanged(auth, (user) => {
-  const logout = document.getElementById('logout');
-  if (user) {
-    logout.style.display = 'true';
-  } else {
-    logout.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const resetPassword = document.getElementById('resetPassword');
-  if (user) {
-    resetPassword.style.display = 'true';
-  } else {
-    resetPassword.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const Ime = document.getElementById('Ime');
-  if (user) {
-    Ime.style.display = 'true';
-  } else {
-    Ime.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const Ime1 = document.getElementById('Ime1');
-  if (user) {
-    Ime1.style.display = 'true';
-  } else {
-    Ime1.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const Ime2 = document.getElementById('Ime2');
-  if (user) {
-    Ime2.style.display = 'true';
-  } else {
-    Ime2.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const light = document.getElementById('light');
-  if (user) {
-    light.style.display = 'true';
-  } else {
-    light.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const light = document.getElementById('status1');
-  if (user) {
-    light.style.display = 'true';
-  } else {
-    light.style.display = 'none';
-  }
-});
-
-onAuthStateChanged(auth, (user) => {
-  const lightnot = document.getElementById('lightnot');
-  if (user) {
-    lightnot.style.display = 'none';
-  } else {
-    lightnot.style.display = 'true';
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const closeMenu = document.querySelector(".close-menu");
@@ -212,6 +130,24 @@ document.addEventListener("DOMContentLoaded", () => {
   toggle.addEventListener("change", () => {
     const newStatus = toggle.checked ? "true" : "false";
     localStorage.setItem("status", newStatus);
+
+ 
+    const content = document.getElementById("igraci");
+    if (toggle.checked) {
+      content.style.display = "block";
+    } else {
+      content.style.display = "none";
+    }
+  });
+
+ 
+  const content = document.getElementById("igraci");
+  if (savedStatus === "true") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+});
 
 const buttons = document.querySelectorAll('.btn4');
 
