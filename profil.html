@@ -15,6 +15,7 @@
     <script type="module" src="profil/profil.js"></script>
 </head>
 <body>
+    <div class="loader"></div>
     <header>
         <div class="logo">
         <h4 class="title">Balkan Cops vs Robbers</h4>
@@ -45,6 +46,16 @@
             <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
         </ul>
     </header>
+    <div id="profil" style="margin-top: 10px;" class="div">
+       <h1>Profil</h1>
+       <hr>
+       <div  id="Ime"><span  id="loggedUserFName"></span></div>
+       <div  id="Ime1"><span  id="loggedUserLName"></span></div>
+       <div  id="Ime2"><span  id="loggedUserEmail"></span></div>
+       <button id="link1"><a style="text-decoration: none;" href="index.html">Prijavi se</a></button>
+       <button class="logout" id="logout">Izlogiraj se</button>
+       <button id="promjenibtn">Promjeni Lozinku</button>    
+    </div>
 
     <div id="postavke" style="margin-top: 30px; width: 360px;" class="div div1">
         <h1 style="margin-bottom: 30px;">Postavke</h1>
