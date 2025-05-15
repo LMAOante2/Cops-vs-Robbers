@@ -158,30 +158,6 @@ buttons.forEach(btn => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("profil1").addEventListener("click", function () {
-    if(document.getElementById("postavke").style.display = "none"){
-      document.getElementById("profil").style.display = "block";
-    }
-    else {
-      document.getElementById("postavke").style.display = "none";
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("postavke1").addEventListener("click", function () {
-    if(    document.getElementById("profil").style.display = "none") {
-      document.getElementById("postavke").style.display = "block";
-      document.getElementById("profil").style.display = "none";
-      document.getElementById("promjenidiv").style.display = "none";
-    }
-    else{
-      document.getElementById("profil").style.display = "none";
-    }
-  });
-});
-
 
 
 
