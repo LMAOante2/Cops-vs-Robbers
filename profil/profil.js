@@ -182,57 +182,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-window.addEventListener("load", () => {
-  const loader = document.querySelector(".loader");
-
-  loader.classList.add("loader--hidden");
-
-  loader.addEventListener("transitionend", () => {
-    document.body.removeChild(loader);
-  });
-});
 
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("promjenibtn").addEventListener("click", function () {
-    if(document.getElementById("promjenidiv").style.display = "none") {
-      document.getElementById("promjenidiv").style.display = "block";
-    }
-    else{
-      document.getElementById("profil").style.display = "none";
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const resetBtn = document.getElementById('resetPassword');
-  if (!resetBtn) return;
-
-  resetBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    const emailInput = document.getElementById('resetEmail');
-    const messageDiv = document.getElementById('resetMessage');
-
-    if (!emailInput || !messageDiv) return;
-
-    const email = emailInput.value.trim();
-
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        messageDiv.style.display = 'block';
-        messageDiv.innerText = 'E-mail za ponovno postavljanje lozinke je poslan!';
-        messageDiv.style.color = 'green';
-      })
-      .catch((error) => {
-        messageDiv.style.display = 'block';
-        messageDiv.innerText = 'Error u slanju e-maila. Pogledaj jel dobro upisano.';
-        messageDiv.style.color = 'red';
-        console.error(error);
-      });
-  });
-});
 
 
 
