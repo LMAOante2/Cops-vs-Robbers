@@ -436,7 +436,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   background: black;
-  transition: opacity 2s, visibility 3s;
+  transition: opacity 3s, visibility 4s;
   z-index: 500000;
 }
 
@@ -452,7 +452,7 @@ nav a:hover {
   border: 15px solid #dddddd;
   border-top-color: #009578;
   border-radius: 50%;
-  animation: loading 4s ease infinite;
+  animation: loading 5s ease infinite;
 }
 
 @keyframes loading {
