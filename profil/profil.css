@@ -437,7 +437,7 @@ nav a:hover {
   justify-content: center;
   background: black;
   transition: opacity 1s, visibility 15s;
-  z-index: 500000;
+  z-index: 500;
 }
 
 .loader--hidden {
