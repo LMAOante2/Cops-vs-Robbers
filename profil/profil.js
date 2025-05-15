@@ -2,7 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebas
 import {
   getAuth,
   onAuthStateChanged,
-  signOut
+  signOut,
+  sendPasswordResetEmail
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import {
   getFirestore,
@@ -22,6 +23,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
+
 
 onAuthStateChanged(auth, (user) => {
   const loggedInUserId = localStorage.getItem('loggedInUserId');
@@ -45,6 +47,7 @@ onAuthStateChanged(auth, (user) => {
     console.log("User ID not found in local storage");
   }
 });
+
 
 const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
@@ -167,7 +170,6 @@ setTimeout(() => {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
   let savedTheme = localStorage.getItem("theme");
@@ -254,6 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if(    document.getElementById("profil").style.display = "none") {
       document.getElementById("postavke").style.display = "block";
       document.getElementById("profil").style.display = "none";
+      document.getElementById("promjenidiv").style.display = "none";
     }
     else{
       document.getElementById("profil").style.display = "none";
@@ -270,6 +273,50 @@ window.addEventListener("load", () => {
     document.body.removeChild(loader);
   });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("promjenibtn").addEventListener("click", function () {
+    if(document.getElementById("promjenidiv").style.display = "none") {
+      document.getElementById("promjenidiv").style.display = "block";
+    }
+    else{
+      document.getElementById("profil").style.display = "none";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const resetBtn = document.getElementById('resetPassword');
+  if (!resetBtn) return;
+
+  resetBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const emailInput = document.getElementById('resetEmail');
+    const messageDiv = document.getElementById('resetMessage');
+
+    if (!emailInput || !messageDiv) return;
+
+    const email = emailInput.value.trim();
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        messageDiv.style.display = 'block';
+        messageDiv.innerText = 'E-mail za ponovno postavljanje lozinke je poslan!';
+        messageDiv.style.color = 'green';
+      })
+      .catch((error) => {
+        messageDiv.style.display = 'block';
+        messageDiv.innerText = 'Error u slanju e-maila. Pogledaj jel dobro upisano.';
+        messageDiv.style.color = 'red';
+        console.error(error);
+      });
+  });
+});
+
+
 
 
 
