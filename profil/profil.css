@@ -436,7 +436,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   background: black;
-  transition: visibility 15s;
+  transition: opacity 1s, visibility 15s;
   z-index: 500000;
 }
 
