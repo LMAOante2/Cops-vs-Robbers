@@ -326,7 +326,7 @@
 
         .btn:hover {
             animation: Sirena 0.15s infinite alternate;
-            transform: translateY(-7px) skew(-15deg);
+            transform: translateY(-7px) skew(15deg);
         }
 
 
