@@ -498,7 +498,7 @@ nav a:hover {
         text-align: center;
     }
 
-        .promjenibtn {
+    .promjenibtn {
       position: absolute;
       top: 210px;
       margin-left: -10px;
@@ -507,7 +507,7 @@ nav a:hover {
 
     .logout {
       background-color: rgb(255, 60, 60);
-      margin-left: 100px;
+      margin-left: 1px;
     }
   
     .logout:hover {
