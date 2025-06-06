@@ -66,7 +66,7 @@ async function fetchPlayers() {
         }
     } catch (error) {
         console.error("Error fetching player data:", error);
-        document.getElementById("igraclista").innerHTML = "<p>Igraci Su Neuspjesno Ucitani.</p>";
+        document.getElementById("igraclista").innerHTML = "<p>Error tokom ucitavanja igraca.</p>";
     }
 }
 
