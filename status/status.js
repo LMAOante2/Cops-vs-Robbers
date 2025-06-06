@@ -1,150 +1,263 @@
-  if (localStorage.getItem("status") === null) {
-    localStorage.setItem("status", "true");
-  }
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signOut,
+  sendPasswordResetEmail
+} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+import {
+  getFirestore,
+  getDoc,
+  setDoc,
+  updateDoc,
+  doc,
+  onSnapshot
+} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-//--<Igraci>--//
-async function updateServerStatus() {
-    try {
-        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const serverData = await response.json();
-        const playerCount = serverData?.Data?.players.length || 0;
-        const maxPlayers = serverData?.Data?.sv_maxclients || 150;
-        document.getElementById('player-count').innerText = `${playerCount}/${maxPlayers}`;
-        document.getElementById('server-status').innerHTML = "<span style='background: rgb(0,255,0);' class='pulse'></span><span style='color: rgb(0,255,0);'>Online</span>";
-    } catch (error) {
-        console.error('Error:', error);
-        document.getElementById('server-status').innerHTML = "<span class='pulse' style='background: red;'></span><span style='color: red;'>Offline</span>";
-    }
-}
-
-async function fetchPlayers() {
-    try {
-        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
-        const data = await response.json();
-
-        let igraclista = document.getElementById("igraclista");
-        igraclista.innerHTML = "";
-
-        if (data.Data && data.Data.players) {
-            data.Data.players.forEach((player, index) => {
-                let card = document.createElement("div");
-                card.className = "igrac-kartica";
-                card.innerHTML = `
-                <h3 class="player-name">${player.name}</h3>
-                    <p><span class="igrac-number">#${index + 1}</span></p>
-                    <p class="igrac-id" data-id="${player.id}">ID: ${player.id}</p>
-                `;
-                igraclista.appendChild(card);
-            });
-            const nameElements = document.querySelectorAll('.player-name');
-            const idElements = document.querySelectorAll('.igrac-id');
-
-            nameElements.forEach((nameElement) => {
-                nameElement.addEventListener('click', () => {
-                    const playerName = nameElement.textContent;
-                    navigator.clipboard.writeText(playerName).then(() => {
-                        alert(`Ime "${playerName}" je uspjesno kopirano!`);
-                    }).catch(err => {
-                        console.error('Ime Je Neuspjesno Kopirano: ', err);
-                    });
-                });
-            });
-
-            idElements.forEach((idElement) => {
-                idElement.addEventListener('click', () => {
-                    const igracid = idElement.getAttribute('data-id');
-                    navigator.clipboard.writeText(igracid).then(() => {
-                        alert(`ID "${igracid}" je uspjesno kopiran!`);
-                    }).catch(err => {
-                        console.error('ID Je Neuspjesno Kopiran: ', err);
-                    });
-                });
-            });
-        } else {
-            igraclista.innerHTML = "<p>Nema Igraca Online.</p>";
-        }
-    } catch (error) {
-        console.error("Error fetching player data:", error);
-        document.getElementById("igraclista").innerHTML = "<p>Error tokom ucitavanja igraca.</p>";
-    }
-}
-
-//--<Meni>--//
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const closeMenu = document.querySelector(".close-menu");
-    const sideMenu = document.querySelector(".side-menu");
-
-    menuToggle.addEventListener("click", function () {
-        sideMenu.classList.add("active");
-    });
-
-    closeMenu.addEventListener("click", function () {
-        sideMenu.classList.remove("active");
-    });
-
-    document.addEventListener("click", function (event) {
-        if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            sideMenu.classList.remove("active");
-        }
-    });
-});
-
-//--<Refresh>--//
-let updateInterval = null;
-let fetchInterval = null;
-
-window.addEventListener('DOMContentLoaded', function () {
-  const toggleState = localStorage.getItem('monitorToggle');
-  if (toggleState === 'true') {
-    document.getElementById('toggleMonitor').checked = true;
-    document.getElementById('toggleMonitor').dispatchEvent(new Event('change'));
-  }
-});
-
-document.getElementById('toggleMonitor').addEventListener('change', function () {
-  localStorage.setItem('monitorToggle', this.checked);
-
-  if (this.checked) {
-    updateInterval = setInterval(updateServerStatus, 1000);
-    fetchInterval = setInterval(fetchPlayers, 1000);
-    const refresh = document.getElementById('refresh');
-    refresh.style.display = 'none';
-    const tekst = document.getElementById('tekst');
-    tekst.style.color = 'green';
-  } else {
-    clearInterval(updateInterval);
-    clearInterval(fetchInterval);
-    const refresh = document.getElementById('refresh');
-    refresh.style.display = 'inline';
-    const tekst = document.getElementById('tekst');
-    tekst.style.color = 'red';
-  }
-});
-
-window.onload = () => {
-    updateServerStatus();
-    fetchPlayers();
-
-    const refreshButton = document.getElementById("refresh");
-    if (refreshButton) {
-        refreshButton.onclick = refresh;
-    }
+const firebaseConfig = {
+  apiKey: "AIzaSyDa-Gn5AtvCYwzC7GvArnDUrc6HQfdT-U4",
+  authDomain: "login-form-19883.firebaseapp.com",
+  projectId: "login-form-19883",
+  storageBucket: "login-form-19883.appspot.com",
+  messagingSenderId: "469023290458",
+  appId: "1:469023290458:web:d0d24d8e80ae5c557b5463"
 };
 
-function refresh() {
-    fetchPlayers();
-    updateServerStatus();
-}
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore();
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) return;
+
+  const userDocRef = doc(db, "users", user.uid);
+  let userSnap = await getDoc(userDocRef);
+
+  // Create user doc if it doesn't exist
+  if (!userSnap.exists()) {
+    await setDoc(userDocRef, {
+      theme: "dark",
+      status1: true
+    });
+    userSnap = await getDoc(userDocRef);
+  }
+
+  const data = userSnap.data();
+  document.getElementById('loggedUserFName').innerText = data.firstName || "";
+  document.getElementById('loggedUserEmail').innerText = data.email || "";
+  document.getElementById('loggedUserLName').innerText = data.lastName || "";
+
+
+  const theme = data.theme || "dark";
+  const modeToggle = document.getElementById("modeToggle");
+
+  document.body.classList.add(`${theme}-mode`);
+  modeToggle.checked = theme === "light";
+
+  modeToggle.addEventListener("change", async () => {
+    const newTheme = modeToggle.checked ? "light" : "dark";
+    document.body.classList.remove("light-mode", "dark-mode");
+    document.body.classList.add(`${newTheme}-mode`);
+    await updateDoc(userDocRef, { theme: newTheme });
+  });
+
+  const statusToggle = document.getElementById("status");
+  const igraci = document.getElementById("igraci");
+
+  onSnapshot(userDocRef, (docSnap) => {
+    if (!docSnap.exists()) return;
+    const data = docSnap.data();
+    const isStatusOn = data.status1 === true || data.status1 === "true";
+    if (statusToggle) statusToggle.checked = isStatusOn;
+    if (igraci) igraci.style.display = isStatusOn ? "block" : "none";
+  });
+
+  statusToggle.addEventListener("change", async () => {
+    const newStatus = statusToggle.checked;
+    await updateDoc(userDocRef, { status1: newStatus });
+  });
+});
+
+const toggleElements = [
+  ['link1', false],
+  ['logout', true],
+  ['resetPassword', true],
+  ['Ime', true],
+  ['Ime1', true],
+  ['Ime2', true],
+  ['light', true],
+  ['status1', true],
+  ['lightnot', false]
+];
+
+toggleElements.forEach(([id, showWhenLoggedIn]) => {
+  onAuthStateChanged(auth, (user) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.display = user ? (showWhenLoggedIn ? 'block' : 'none') : (showWhenLoggedIn ? 'none' : 'block');
+  });
+});
+
+document.getElementById('logout').addEventListener('click', () => {
+  signOut(auth).then(() => {
+    window.location.href = 'index.html';
+  }).catch(console.error);
+});
 
 document.addEventListener("DOMContentLoaded", () => {
-  const savedStatus = localStorage.getItem("status");
-  const content = document.getElementById("igraci");
+  const resetBtn = document.getElementById('resetPassword');
+  if (!resetBtn) return;
 
-  if (savedStatus === "true") {
-    content.style.display = "block";
+  resetBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const email = document.getElementById('resetEmail').value.trim();
+    const msg = document.getElementById('resetMessage');
+    if (!email) return;
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        msg.style.display = 'block';
+        msg.innerText = 'E-mail za ponovno postavljanje lozinke je poslan!';
+        msg.style.color = 'green';
+      })
+      .catch(() => {
+        msg.style.display = 'block';
+        msg.innerText = 'Greška u slanju e-maila. Provjeri adresu.';
+        msg.style.color = 'red';
+      });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const closeMenu = document.querySelector(".close-menu");
+  const sideMenu = document.querySelector(".side-menu");
+
+  menuToggle.addEventListener("click", () => sideMenu.classList.add("active"));
+  closeMenu.addEventListener("click", () => sideMenu.classList.remove("active"));
+
+  document.addEventListener("click", (e) => {
+    if (!sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      sideMenu.classList.remove("active");
+    }
+  });
+});
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  loader.classList.add("loader--hidden");
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("profil1").addEventListener("click", () => {
+    document.getElementById("profil").style.display = "block";
+    document.getElementById("postavke").style.display = "none";
+  });
+
+  document.getElementById("postavke1").addEventListener("click", () => {
+    document.getElementById("profil").style.display = "none";
+    document.getElementById("postavke").style.display = "block";
+    document.getElementById("promjenidiv").style.display = "none";
+  });
+
+  document.getElementById("promjenibtn").addEventListener("click", () => {
+    document.getElementById("profil").style.display = "none";
+    document.getElementById("promjenidiv").style.display = "block";
+  });
+});
+
+document.querySelectorAll('.btn4').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.btn4').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+setTimeout(() => {
+  document.getElementById('cursor')?.classList.add('fade-out');
+}, 3000);
+
+onAuthStateChanged(auth, (user) => {
+  const link1 = document.getElementById('link1');
+  if (user) {
+    link1.style.display = 'none';
   } else {
-    content.style.display = "none";
+    link1.style.display = 'true';
+  }
+});
+
+
+onAuthStateChanged(auth, (user) => {
+  const logout = document.getElementById('logout');
+  if (user) {
+    logout.style.display = 'true';
+  } else {
+    logout.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const resetPassword = document.getElementById('resetPassword');
+  if (user) {
+    resetPassword.style.display = 'true';
+  } else {
+    resetPassword.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const Ime = document.getElementById('Ime');
+  if (user) {
+    Ime.style.display = 'true';
+  } else {
+    Ime.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const Ime1 = document.getElementById('Ime1');
+  if (user) {
+    Ime1.style.display = 'true';
+  } else {
+    Ime1.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const Ime2 = document.getElementById('Ime2');
+  if (user) {
+    Ime2.style.display = 'true';
+  } else {
+    Ime2.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const light = document.getElementById('light');
+  if (user) {
+    light.style.display = 'true';
+  } else {
+    light.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const light = document.getElementById('status1');
+  if (user) {
+    light.style.display = 'true';
+  } else {
+    light.style.display = 'none';
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  const lightnot = document.getElementById('lightnot');
+  if (user) {
+    lightnot.style.display = 'none';
+  } else {
+    lightnot.style.display = 'true';
   }
 });
