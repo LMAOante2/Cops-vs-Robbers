@@ -137,3 +137,14 @@ function refresh() {
     fetchPlayers();
     updateServerStatus();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedStatus = localStorage.getItem("status");
+  const content = document.getElementById("igraci");
+
+  if (savedStatus === "true") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+});
