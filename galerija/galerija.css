@@ -349,45 +349,52 @@ img {
 .custom-cars-container {
     text-align: center;
     margin-top: 20px;
+    transition: all 0.5s ease;
+    user-select: none;
+    -webkit-user-select: none;
     -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
 }
 
 .custom-cars-images {
-    text-align: center;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
+    width: 100%;
+    max-width: 10000px;
+    margin: 0 auto;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+
+    transition: opacity 0.6s ease, max-height 0.5s ease;
+    user-select: none;
+    -webkit-user-select: none;
     -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
+}
+
+
+.custom-cars-images.visible {
+    opacity: 1;
+    max-height: 3000px;
+    pointer-events: auto;
 }
 
 .custom-cars-images img {
-    text-align: center;
-    width: 500px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease-in-out;
     user-select: none;
-
-    transition-property: transform;
-    transition: 0.5s ease-in-out;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .custom-cars-images img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
     text-align: center;
     transform: translateY(-10px) scale(1.05); 
 }

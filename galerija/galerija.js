@@ -17,46 +17,27 @@
             }
         });
     });
-            function toggleCars() {
-            const carImages = document.getElementById("carImages");
-            if (carImages.style.display === "none" || carImages.style.display === "") {
-                carImages.style.display = "flex";
-            } else {
-                carImages.style.display = "none";
-            }
-        }
-            function toggleinventory() {
-            const inventoryImages = document.getElementById("inventoryImages");
-            if (inventoryImages.style.display === "none" || inventoryImages.style.display === "") {
-                inventoryImages.style.display = "flex";
-            } else {
-                inventoryImages.style.display = "none";
-            }
-        }
-            function togglemapa() {
-            const mapaImages = document.getElementById("mapaImages");
-            if (mapaImages.style.display === "none" || mapaImages.style.display === "") {
-                mapaImages.style.display = "flex";
-            } else {
-                mapaImages.style.display = "none";
-            }
-        }
-            function togglepause() {
-            const pauseImages = document.getElementById("pauseImages");
-            if (pauseImages.style.display === "none" || pauseImages.style.display === "") {
-                pauseImages.style.display = "flex";
-            } else {
-                pauseImages.style.display = "none";
-            }
-        }
-            function togglepuske() {
-            const puskeImages = document.getElementById("puskeImages");
-            if (puskeImages.style.display === "none" || puskeImages.style.display === "") {
-                puskeImages.style.display = "flex";
-            } else {
-                puskeImages.style.display = "none";
-            }
-        }
+    function toggleCars() {
+        const carImages = document.getElementById("carImages");
+        carImages.classList.toggle("visible");
+    }
+    
+    function toggleinventory() {
+        const inventoryImages = document.getElementById("inventoryImages");
+        inventoryImages.classList.toggle("visible");
+    }
+    function togglemapa() {
+        const mapaImages = document.getElementById("mapaImages");
+        mapaImages.classList.toggle("visible");
+    }
+    function togglepause() {
+        const pauseImages = document.getElementById("pauseImages");
+        pauseImages.classList.toggle("visible");
+    }
+    function togglepuske() {
+        const puskeImages = document.getElementById("puskeImages");
+        puskeImages.classList.toggle("visible");
+    }
         function openLightbox(src) {
             document.getElementById("lightbox").style.display = "flex";
             document.getElementById("lightbox-img").src = src;
