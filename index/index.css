@@ -315,7 +315,7 @@
             background-size: 200% 100%;
             transition: Sirena 0.2s ease-in-out;
             transition: 0.5s ease;
-            transform: skew(-20deg);
+            transform: skew(-15deg);
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
