@@ -39,18 +39,18 @@ onAuthStateChanged(auth, async (user) => {
     });
   }
 
-  // Apply status1
+  // Apply status1 as boolean
   const statusToggle = document.getElementById("status");
   const igraci = document.getElementById("igraci");
-  const status = data.status1 === "true";
+  const status = !!data.status1;  // Cast to boolean
 
   if (statusToggle && igraci) {
     statusToggle.checked = status;
     igraci.style.display = status ? "block" : "none";
 
     statusToggle.addEventListener("change", async () => {
-      const newStatus = statusToggle.checked ? "true" : "false";
-      igraci.style.display = newStatus === "true" ? "block" : "none";
+      const newStatus = statusToggle.checked; // boolean value
+      igraci.style.display = newStatus ? "block" : "none";
       await updateDoc(userDocRef, { status1: newStatus });
     });
   }
