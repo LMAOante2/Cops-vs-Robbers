@@ -138,24 +138,4 @@ function refresh() {
     updateServerStatus();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const statusToggle = document.getElementById("status");
-    const igraci = document.getElementById("igraci");
-
-    // Check if user is authenticated
-    const isLoggedIn = !!localStorage.getItem("loggedIn"); // Optional, or detect another way
-
-    // For unauthenticated users, apply status from localStorage
-    if (statusToggle && igraci) {
-        const savedStatus = localStorage.getItem("status") === "true";
-        statusToggle.checked = savedStatus;
-        igraci.style.display = savedStatus ? "block" : "none";
-
-        statusToggle.addEventListener("change", () => {
-            const isOn = statusToggle.checked;
-            localStorage.setItem("status", isOn);
-            igraci.style.display = isOn ? "block" : "none";
-        });
-    }
-});
 

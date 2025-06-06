@@ -25,7 +25,7 @@ onAuthStateChanged(auth, async (user) => {
 
   const data = userSnap.data();
 
-  // Apply theme
+ 
   const modeToggle = document.getElementById("modeToggle");
   const theme = data.theme || "dark";
   document.body.classList.add(`${theme}-mode`);
@@ -39,17 +39,16 @@ onAuthStateChanged(auth, async (user) => {
     });
   }
 
-  // Apply status1 as boolean
   const statusToggle = document.getElementById("status");
   const igraci = document.getElementById("igraci");
-  const status = !!data.status1;  // Cast to boolean
+  const status = !!data.status1;
 
   if (statusToggle && igraci) {
     statusToggle.checked = status;
     igraci.style.display = status ? "block" : "none";
 
     statusToggle.addEventListener("change", async () => {
-      const newStatus = statusToggle.checked; // boolean value
+      const newStatus = statusToggle.checked;
       igraci.style.display = newStatus ? "block" : "none";
       await updateDoc(userDocRef, { status1: newStatus });
     });
