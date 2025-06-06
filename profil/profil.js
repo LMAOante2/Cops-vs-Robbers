@@ -265,3 +265,40 @@ onAuthStateChanged(auth, (user) => {
     lightnot.style.display = 'true';
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("status");
+
+
+  let savedStatus = localStorage.getItem("status");
+  
+ 
+  if (savedStatus === null) {
+    savedStatus = "true";
+    localStorage.setItem("status", savedStatus);
+  }
+
+ 
+  toggle.checked = savedStatus === "true";
+
+  toggle.addEventListener("change", () => {
+    const newStatus = toggle.checked ? "true" : "false";
+    localStorage.setItem("status", newStatus);
+
+ 
+    const content = document.getElementById("igraci");
+    if (toggle.checked) {
+      content.style.display = "block";
+    } else {
+      content.style.display = "none";
+    }
+  });
+
+ 
+  const content = document.getElementById("igraci");
+  if (savedStatus === "true") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+});
