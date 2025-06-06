@@ -61,21 +61,20 @@ onAuthStateChanged(auth, async (user) => {
     await updateDoc(userDocRef, { theme: newTheme });
   });
 
-  const statusToggle = document.getElementById("status");
-  const igraci = document.getElementById("igraci");
+const statusToggle = document.getElementById("status");
+const igraci = document.getElementById("igraci");
 
-  onSnapshot(userDocRef, (docSnap) => {
-    if (!docSnap.exists()) return;
-    const data = docSnap.data();
-    const isStatusOn = data.status1 === true || data.status1 === "true";
-    if (statusToggle) statusToggle.checked = isStatusOn;
-    if (igraci) igraci.style.display = isStatusOn ? "block" : "none";
-  });
+onSnapshot(userDocRef, (docSnap) => {
+  if (!docSnap.exists()) return;
+  const data = docSnap.data();
+  const isStatusOn = !!data.status1; // 👈 Correct Boolean check
+  if (statusToggle) statusToggle.checked = isStatusOn;
+  if (igraci) igraci.style.display = isStatusOn ? "block" : "none"; // 👈 Real-time show/hide
+});
 
-  statusToggle.addEventListener("change", async () => {
-    const newStatus = statusToggle.checked;
-    await updateDoc(userDocRef, { status1: newStatus });
-  });
+statusToggle.addEventListener("change", async () => {
+  const newStatus = statusToggle.checked;
+  await updateDoc(userDocRef, { status1: newStatus });
 });
 
 const toggleElements = [
