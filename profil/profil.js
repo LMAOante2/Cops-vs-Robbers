@@ -61,16 +61,16 @@
       await updateDoc(userDocRef, { theme: newTheme });
     });
 
-// 🔄 Status1 - Real-time Sync
+
 const statusToggle = document.getElementById("status");
 const igraci = document.getElementById("igraci");
 
 onSnapshot(userDocRef, (docSnap) => {
   if (!docSnap.exists()) return;
   const data = docSnap.data();
-  const isStatusOn = !!data.status1; // 👈 Correct Boolean check
+  const isStatusOn = !!data.status1;
   if (statusToggle) statusToggle.checked = isStatusOn;
-  if (igraci) igraci.style.display = isStatusOn ? "block" : "none"; // 👈 Real-time show/hide
+  if (igraci) igraci.style.display = isStatusOn ? "block" : "none";
 });
 
 statusToggle.addEventListener("change", async () => {
