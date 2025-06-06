@@ -44,10 +44,3 @@
             }
         });
     });
-
-
-
-  document.getElementById("logout").addEventListener("click", () => {
-    location.reload();
-  });
-});
