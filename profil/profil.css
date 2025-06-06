@@ -64,6 +64,7 @@ span {
     transition: transform 0.5s ease;
     transform: scale(1);
     animation: strana 2s infinite;
+    transition: all 1s ease;
 }
 
 .btn4 {
@@ -425,3 +426,74 @@ nav a:hover {
     width: 100%;
     color: white;
   }
+  
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    transition: visibility 1.5s;
+    z-index: 200;
+  }
+  
+  .loader--hidden {
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #7e7e7e;
+    border-top-color: #0011ff;
+    border-radius: 50%;
+    animation: loading 2s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  .loading {
+    z-index: 200;
+  }
+
+    .div2 {
+    justify-content: center;
+    place-self: center;
+    padding: 25px 20px 25px;
+    background-color: rgba(39, 39, 39, 0.664);
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 2px solid blue;
+    color: white;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+    transform: all 2s ease;
+    
+    animation: strana 2s infinite;
+    }
+
+    input {
+        border-radius: 10px;
+        height: 25px;
+        background: none;
+        color: white;
+        text-align: center;
+        border: 1px solid white;
+    }
+    
+    input::placeholder {
+        font-size: 14px;
+        text-align: center;
+    }
