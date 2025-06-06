@@ -497,3 +497,19 @@ nav a:hover {
         font-size: 14px;
         text-align: center;
     }
+
+        .promjenibtn {
+      position: absolute;
+      top: 210px;
+      margin-left: -10px;
+      margin-right: 10px;
+    }
+
+    .logout {
+      background-color: rgb(255, 60, 60);
+      margin-left: 100px;
+    }
+  
+    .logout:hover {
+      background-color: rgb(255, 0, 0);
+    }
