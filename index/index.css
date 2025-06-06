@@ -300,10 +300,10 @@
 
         .buttons .btn {
             padding: 15px 35px;
-            margin: 10px;
-            border-radius: 30px;
+            margin: -1px;
             color: white;
             text-decoration: none;
+            margin-top: 10px;
             font-size: 1.1rem;
             font-weight: bold;
             display: inline-block;
@@ -315,6 +315,7 @@
             background-size: 200% 100%;
             transition: Sirena 0.2s ease-in-out;
             transition: 0.5s ease;
+            transform: skew(-25deg);
             -webkit-touch-callout: none;
             -webkit-user-select: none; 
              -khtml-user-select: none; 
@@ -325,7 +326,7 @@
 
         .btn:hover {
             animation: Sirena 0.15s infinite alternate;
-            transform: translateY(-7px);
+            transform: translateY(-7px) skew(-25deg);
         }
 
 

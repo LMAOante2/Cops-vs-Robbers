@@ -78,34 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     savedTheme = "dark";
     localStorage.setItem("theme", "dark");
   }
-
-  document.body.classList.add(savedTheme + "-mode");
-  toggle.checked = savedTheme === "light";
-
-  toggle.addEventListener("change", () => {
-    const newTheme = toggle.checked ? "light" : "dark";
-    document.body.classList.remove("dark-mode", "light-mode");
-    document.body.classList.add(newTheme + "-mode");
-    localStorage.setItem("theme", newTheme);
-  });
-
-  document.getElementById("logout").addEventListener("click", () => {
-    location.reload();
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("status");
-
-
-  let savedStatus = localStorage.getItem("status");
-  
- 
-  if (savedStatus === null) {
-    savedStatus = "true";
-    localStorage.setItem("status", savedStatus);
-  }
-
  
   toggle.checked = savedStatus === "true";
 
