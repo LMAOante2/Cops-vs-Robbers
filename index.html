@@ -1,142 +1,82 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ovo je prvi Cops Vs Robbers server ikad na Balkanu!">
-    <meta name="keywords" content="Balkan cops vs robbers Balkan Cops Vs Robbers">
-    <meta name="author" content="Balkan Cops Vs Robbers">
-    <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="HGvKcQ3b0bT5SE0yGNMlDwvYMaLh_PgTC2DnKvqywRo" />
-    <link rel="stylesheet" href="index/index.css">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prvi Cops Vs Robbers Fivem Server Na Balkanu">
+  <meta name="keywords" content="Prvi Balkan Cops Vs Robbers Server Na Balkanu">
+  <meta name="author" content="Balkan Cops Vs Robbers">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="HGvKcQ3b0bT5SE0yGNMlDwvYMaLh_PgTC2DnKvqywRo" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="login/style.css">
+    <script type="module" src="login/firebaseauth.js"></script>
+    <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
 
-
-        <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
-        <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
-
-     
-    <title>Balkan Cops Vs Robbers</title>
-
+    <title>Balkan Cops Vs Robbers | Prijava</title>
 </head>
 <body>
-
-<header>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MYWVBW0EFL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MYWVBW0EFL');
-</script>
-    <div class="logo">
-        <h4 class="title">Balkan Cops vs Robbers</h4>
-        <button class="menu-toggle">☰</button>
+  <div class="container" id="signup" style="display:none;">
+    <h1 class="form-title">Napravi Account</h1>
+    <form method="post" action="">
+      <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+      <div id="signUpMessage1" class="messageDiv1" style="display:none;"></div>
+      <div class="input-group">
+         <i class="fas fa-user"></i>
+         <input autocomplete="off" type="text"  id="fName" placeholder="First Name" required>
+         <label for="fname">Ime</label>
+      </div>
+      <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input autocomplete="off" type="text"  id="lName" placeholder="Last Name" required>
+          <label for="lName">Prezime</label>
+      </div>
+      <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input autocomplete="off" type="email"  id="rEmail" placeholder="Email" required>
+          <label for="rEmail">Email</label>
+      </div>
+      <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input autocomplete="off" type="password" id="rPassword"  placeholder="Password" required>
+          <label for="rPassword">Lozinka</label>
+      </div>
+     <button class="btn" id="submitSignUp" >Napravi Account</button>
+    </form>
+    <div class="links">
+      <p style="text-align: center;">Vec imas account?</p>
+      <button style="margin-bottom: 10px; margin-left: 30px; margin-top: -15px;" id="signInButton">Prijavi se</button>
     </div>
-    <nav class="side-menu">
-        <button class="close-menu">&times;</button>
-        <ul>
-            <li class="Pocetna"><h4 class="Pocetna">Početna</h4></li>
-            <li><a draggable="false" href="pravila.html">Pravila</a></li>
-            <li><a draggable="false" href="donacije.html">Donacije</a></li>
-            <li><a draggable="false" href="serverstatus.html">Status</a></li>
-            <li><a draggable="false" href="eventi.html">Eventi</a></li>
-            <li><a draggable="false" href="galerija.html">Slike</a></li>
-            <li><a draggable="false" href="profil.html">Postavke</a></li>
-            <li id="admin-link1" style="display: none;"><a href="admin.html">Admin</a></li>
-        </ul>
-    </nav>
+  </div>
 
-    <ul class="desktop-nav">
-        <li class="Pocetna"><h4>Početna</h4></li>
-        <li><a draggable="false" href="pravila.html">Pravila</a></li>
-        <li><a draggable="false" href="donacije.html">Donacije</a></li>
-        <li><a draggable="false" href="serverstatus.html">Status</a></li>
-        <li><a draggable="false" href="eventi.html">Eventi</a></li>
-        <li><a draggable="false" href="galerija.html">Slike</a></li>
-        <li><a draggable="false" href="profil.html">Postavke</a></li>
-        <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
-    </ul>
-</header>
+<div class="container" id="signIn">
+      <h1 class="form-title">Prijavi se</h1>
+      <form method="post" action="">
+        <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+        <div id="signInMessage1" class="messageDiv1" style="display:none;"></div>
 
-<section class="hero">
-    <div style="visibility: hidden;" class="even">
-        <div class="eventtex">
-            <span>🔥Sutra u 17h na AERODROMU je organizirana trka sa traktorima!🔥</span>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input autocomplete="off" type="email"  id="email" placeholder="Email" required>
+            <label for="email">Email</label>
         </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+          <input autocomplete="off" type="password" id="password"  placeholder="Lozinka" required>
+            <label for="password">Lozinka</label>
+        </div>
+       <button  class="btn"  id="submitSignIn">Prijavi se</button>
+      </form>
+      <div class="links">
+        <p style="width: 350px; margin-left: 10px;">Jos nemas account?</p>
+        <button id="signUpButton">Napravi Account</button>
+        <a class="a2" href="promjeni.html">Zaboravio si lozinku?</a>
+        <a class="a1" href="pocetna.html">Nastavi Kao Gost</a>
+      </div>
     </div>
-    <img oncontextmenu="return false;" draggable="false" src="slike/Ucopsvsrobbers.png" alt="Ucopsvsrobbers">
-    <div>
-            <span class="pisanje" id="typedtext">
-            <h1>Prvi Balkan Cops vs Robbers Server</h1>
-    </span>
-    <span class="cursor" id="cursor"></span>
-
-    </div>
-
-    <div class="buttons">
-        <a draggable="false" href="https://www.tiktok.com/@cops_vs_robbers_balkan" class="btn green-btn" data-tooltip="Zaprati Nas Na TikToku">Tik Tok</a>
-        <a draggable="false" href="https://discord.gg/YhQrpCVux6" class="btn blue-btn" data-tooltip="Udi Na Nas Discord Server">Discord</a>
-        <a draggable="false" href="fivem://connect/cfx.re/join/g9k35o" class="btn red-btn" data-tooltip="Igraj Cops Vs Robbers">Igraj</a>
-        <div  style="text-align: left;" class="karakterrobber">
-            <img oncontextmenu="return false;" draggable="false" class="robber" src="robber.png" alt="robber">
-        </div>
-        <div style="text-align: right;" class="karaktercop">
-            <img oncontextmenu="return false;" draggable="false" class="cop" src="cop.png" alt="cop">
-        </div>
-    </div>
-</section>
-
-<div class="stat-box">
-    <strong>Cops Vs Robbers</strong><br>
-    <h5>- Prvi ovakav Fivem server na balkanu🎈</h5>
-    <h5>- 48/48 svaki dan🔥</h5>
-    <h5>- Stariji i aktivan staff team🌟</h5>
-    <h5>- Odlicna zabava🎭</h5>
-    <h5>- Optimizovane skripte ⌨️</h5>
-</div>
-
-<section class="discord-widget">
-    <h2>Kako Igrati Na Serveru</h2>
-    <div class="container">
-        <div class="card" style="background-image: url('slike/row-1-column-1.png');">
-            <div class="overlay">
-                <p class="step">KORAK 1</p>
-                <h4>KUPITE LICENCIRAN GTA V</h4>
-                <p>Morate imati igricu kupjenu da bi igrali</p>
-                <a style="text-align: center;" draggable="false" href="https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/" target="_blank" class="button">
-                    <img src="slike/steam.png" alt="Steam Logo"> 
-                    <span>KUPITE PREKO STEAMA</span>
-                </a>
-            </div>
-        </div>
-        <div class="card" style="background-image: url('slike/row-1-column-2.png');">
-            <div class="overlay">
-                <p class="step">KORAK 2</p>
-                <h4>SKINITE I INSTALIRAJTE FIVEM</h4>
-                <a style="text-align: center;" draggable="false" href="https://fivem.net/" target="_blank" class="button">
-                    <img src="slike/FiveM.png" alt="FiveM Logo"> 
-                    <span>SKINITE FIVEM</span>
-                </a>
-            </div>
-        </div>
-        <div class="card" style="background-image: url('slike/row-1-column-3.png');">
-            <div class="overlay">
-                <p class="step">KORAK 3</p>
-                <h4>TRAŽITE Balkan Cops Vs Robbers I UĐITE</h4>
-                <a style="text-align: center;" draggable="false" href="fivem://connect/cfx.re/join/g9k35o" class="button">
-                    <img src="slike/logo.png" alt="Server Icon"> 
-                    <span>UDITE</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+    <script src="login/script.js"></script>
 </body>
-        <script src="index/index.js"></script>
 </html>

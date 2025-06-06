@@ -25,11 +25,10 @@
             <button class="close-menu">&times;</button>
             <ul>
                 <li class="Pocetna"><h4 class="Pocetna">Profil</h4></li>
-                <li><a draggable="false" href="index.html">Pocetna</a></li>
+                <li><a draggable="false" href="pocetna.html">Pocetna</a></li>
                 <li><a draggable="false" href="pravila.html">Pravila</a></li>
                 <li><a draggable="false" href="donacije.html">Donacije</a></li>
                 <li><a draggable="false" href="serverstatus.html">Status</a></li>
-                <li><a draggable="false" href="eventi.html">Eventi</a></li>
                 <li><a draggable="false" href="galerija.html">Slike</a></li>
                 <li id="admin-link1" style="display: none;"><a href="admin.html">Admin</a></li>
             </ul>
@@ -37,18 +36,31 @@
     
         <ul class="desktop-nav">
             <li class="Pocetna"><h4>Profil</h4></li>
-            <li><a draggable="false" href="index.html">Pocetna</a></li>
+            <li><a draggable="false" href="pocetna.html">Pocetna</a></li>
             <li><a draggable="false" href="pravila.html">Pravila</a></li>
             <li><a draggable="false" href="donacije.html">Donacije</a></li>
             <li><a draggable="false" href="serverstatus.html">Status</a></li>
-            <li><a draggable="false" href="eventi.html">Eventi</a></li>
             <li><a draggable="false" href="galerija.html">Slike</a></li>
             <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
         </ul>
     </header>
 
+    <div class="buttons">
+        <button id="profil1" class="btn4">profil</button>
+        <button id="postavke1" class="btn4">postavke</button>
+    </div>
+    <div id="profil" style="margin-top: 10px;" class="div">
+       <h1>Profil</h1>
+       <hr>
+       <div  id="Ime"><span  id="loggedUserFName"></span></div>
+       <div  id="Ime1"><span  id="loggedUserLName"></span></div>
+       <div  id="Ime2"><span  id="loggedUserEmail"></span></div>
+       <button id="link1"><a style="text-decoration: none;" href="index.html">Prijavi se</a></button>
+       <button class="logout" id="logout">Izlogiraj se</button>
+       <button id="promjenibtn">Promjeni Lozinku</button>    
+    </div>
 
-    <div id="profil" style="width: 400px; margin-top: 150px;" class="div">
+    <div id="postavke" style="margin-top: 30px; width: 360px; display: none;" class="div div1">
         <h1 style="margin-bottom: 30px;">Postavke</h1>
         <hr style="margin-top: -30px;">
         
@@ -69,6 +81,15 @@
         </div>
 
 
+    
+        <h3 id="lightnot">Moras Biti Prijavljen/a da bi mjenjao/la postavke</h3>
+    </div>
+
+    <div class="div2" id="promjenidiv" style="display: none;">
+            <h1>Promjeni Lozinku</h1>
+            <input type="email" id="resetEmail" placeholder="e-mail (Mora biti vas!!)" />
+            <button id="resetPassword">Posalji E-mail</button>
+            <div id="resetMessage" style="color: green; display: none;"></div>
     </div>
 
 
