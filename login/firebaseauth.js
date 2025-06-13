@@ -15,14 +15,14 @@ const firebaseConfig = {
   apiKey: "AIzaSyDa-Gn5AtvCYwzC7GvArnDUrc6HQfdT-U4",
   authDomain: "login-form-19883.firebaseapp.com",
   projectId: "login-form-19883",
-  storageBucket: "login-form-19883.firebaseapp.com",
+  storageBucket: "login-form-19883.appspot.com",
   messagingSenderId: "469023290458",
   appId: "1:469023290458:web:d0d24d8e80ae5c557b5463"
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const db = getFirestore();
+const auth = getAuth(app);
+const db = getFirestore(app);
 
 function showMessage(message, divId) {
   const messageDiv = document.getElementById(divId);
@@ -34,64 +34,59 @@ function showMessage(message, divId) {
   }, 5000);
 }
 
-const signUp = document.getElementById('submitSignUp');
-signUp.addEventListener('click', (event) => {
+
+document.getElementById('submitSignUp')?.addEventListener('click', (event) => {
   event.preventDefault();
   const email = document.getElementById('rEmail').value;
   const password = document.getElementById('rPassword').value;
   const firstName = document.getElementById('fName').value;
   const lastName = document.getElementById('lName').value;
 
+  if (!email || !password || !firstName || !lastName) {
+    showMessage('Molimo popunite sva polja.', 'signUpMessage');
+    return;
+  }
+
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      const userData = {
-        email: email,
-        firstName: firstName,
-        lastName: lastName
-      };
-
-      showMessage('Račun je uspješno kreiran!', 'signUpMessage');
+      const userData = { email, firstName, lastName };
 
       const docRef = doc(db, "users", user.uid);
-      setDoc(docRef, userData)
-        .then(() => {
-          localStorage.setItem('loggedInUserId', user.uid);
-          window.location.href = 'account.html';
-        })
-        .catch((error) => {
-          console.error("Greška prilikom upisa dokumenta", error);
-        });
+      return setDoc(docRef, userData).then(() => {
+        localStorage.setItem('loggedInUserId', user.uid);
+        showMessage('Račun je uspješno kreiran!', 'signUpMessage');
+        window.location.href = 'account.html';
+      });
     })
     .catch((error) => {
-      const errorCode = error.code;
-      if (errorCode === 'auth/email-already-in-use') {
+      console.error("Greška:", error);
+      if (error.code === 'auth/email-already-in-use') {
         showMessage('Račun već postoji!', 'signUpMessage');
       } else {
-        showMessage('Greška prilikom kreiranja računa!', 'signUpMessage');
+        showMessage('Greška prilikom kreiranja računa: ' + error.message, 'signUpMessage');
       }
     });
 });
 
-const signIn = document.getElementById('submitSignIn');
-signIn.addEventListener('click', (event) => {
+document.getElementById('submitSignIn')?.addEventListener('click', (event) => {
   event.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      showMessage('Uspješno ste se prijavili!', 'signInMessage');
       const user = userCredential.user;
       localStorage.setItem('loggedInUserId', user.uid);
+      showMessage('Uspješno ste se prijavili!', 'signInMessage');
       window.location.href = 'pocetna.html';
     })
     .catch((error) => {
-      const errorCode = error.code;
-      if (errorCode === 'auth/invalid-credential') {
+      console.error("Login error:", error);
+      if (error.code === 'auth/invalid-credential' || error.code === 'auth/wrong-password') {
         showMessage('Pogrešan e-mail ili lozinka!', 'signInMessage');
       } else {
-        showMessage('Račun ne postoji!', 'signInMessage');
+        showMessage('Greška prilikom prijave: ' + error.message, 'signInMessage');
       }
     });
 });
