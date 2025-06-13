@@ -11,15 +11,14 @@ import {
   doc
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyCxo93Osh71ezUJKZk6w67CbCAMhS0_kG0",
-    authDomain: "baratew-a2d98.firebaseapp.com",
-    projectId: "baratew-a2d98",
-    storageBucket: "baratew-a2d98.firebasestorage.app",
-    messagingSenderId: "895275978310",
-    appId: "1:895275978310:web:c4572e2ee381afa6bc4447",
-    measurementId: "G-S2HW2M8NQ5"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDa-Gn5AtvCYwzC7GvArnDUrc6HQfdT-U4",
+  authDomain: "login-form-19883.firebaseapp.com",
+  projectId: "login-form-19883",
+  storageBucket: "login-form-19883.appspot.com",
+  messagingSenderId: "469023290458",
+  appId: "1:469023290458:web:d0d24d8e80ae5c557b5463"
+};
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
