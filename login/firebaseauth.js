@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import {
   getAuth,
@@ -52,24 +51,24 @@ signUp.addEventListener('click', (event) => {
         lastName: lastName
       };
 
-      showMessage('Account Uspjesno Kreiran!', 'signUpMessage');
+      showMessage('Račun je uspješno kreiran!', 'signUpMessage');
 
       const docRef = doc(db, "users", user.uid);
       setDoc(docRef, userData)
         .then(() => {
           localStorage.setItem('loggedInUserId', user.uid);
-          window.location.href = 'pocetna.html';
+          window.location.href = 'account.html';
         })
         .catch((error) => {
-          console.error("Error writing document", error);
+          console.error("Greška prilikom upisa dokumenta", error);
         });
     })
     .catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/email-already-in-use') {
-        showMessage('Email Adresa vec postoji!!!', 'signUpMessage');
+        showMessage('Račun već postoji!', 'signUpMessage');
       } else {
-        showMessage('Greska u izradi!', 'signUpMessage');
+        showMessage('Greška prilikom kreiranja računa!', 'signUpMessage');
       }
     });
 });
@@ -82,7 +81,7 @@ signIn.addEventListener('click', (event) => {
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      showMessage('Uspjesno ste se prijavili!', 'signInMessage');
+      showMessage('Uspješno ste se prijavili!', 'signInMessage');
       const user = userCredential.user;
       localStorage.setItem('loggedInUserId', user.uid);
       window.location.href = 'pocetna.html';
@@ -90,9 +89,9 @@ signIn.addEventListener('click', (event) => {
     .catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/invalid-credential') {
-        showMessage('Netocan email ili lozinka!', 'signInMessage');
+        showMessage('Pogrešan e-mail ili lozinka!', 'signInMessage');
       } else {
-        showMessage('Account Nepostoji!', 'signInMessage');
+        showMessage('Račun ne postoji!', 'signInMessage');
       }
     });
 });
