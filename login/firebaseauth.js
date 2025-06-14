@@ -56,7 +56,7 @@ document.getElementById('submitSignUp')?.addEventListener('click', (event) => {
       return setDoc(docRef, userData).then(() => {
         localStorage.setItem('loggedInUserId', user.uid);
         showMessage('Račun je uspješno kreiran!', 'signUpMessage');
-        window.location.href = 'account.html';
+        window.location.href = 'pocetna.html';
       });
     })
     .catch((error) => {
