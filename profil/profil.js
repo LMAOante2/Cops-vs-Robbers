@@ -69,12 +69,6 @@ onAuthStateChanged(auth, (user) => {
   const logout = document.getElementById('logout');
   logout.style.display = user ? 'true' : 'none';
 });
-
-onAuthStateChanged(auth, (user) => {
-  const resetPassword = document.getElementById('resetPassword');
-  resetPassword.style.display = user ? 'true' : 'none';
-});
-
 onAuthStateChanged(auth, (user) => {
   const Ime = document.getElementById('Ime');
   Ime.style.display = user ? 'true' : 'none';
