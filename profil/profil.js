@@ -9,7 +9,7 @@ import {
   getFirestore,
   getDoc,
   doc,
-  updateDoc // 🔹 added this
+  updateDoc
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -69,6 +69,12 @@ onAuthStateChanged(auth, (user) => {
   const logout = document.getElementById('logout');
   logout.style.display = user ? 'true' : 'none';
 });
+
+onAuthStateChanged(auth, (user) => {
+  const resetPassword = document.getElementById('resetPassword');
+  resetPassword.style.display = user ? 'true' : 'none';
+});
+
 onAuthStateChanged(auth, (user) => {
   const Ime = document.getElementById('Ime');
   Ime.style.display = user ? 'true' : 'none';
@@ -141,7 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add(newTheme + "-mode");
     localStorage.setItem("theme", newTheme);
 
-    // 🔹 Save theme to Firestore
     const loggedInUserId = localStorage.getItem("loggedInUserId");
     if (loggedInUserId) {
       const userRef = doc(db, "users", loggedInUserId);
@@ -174,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const content = document.getElementById("igraci");
     content.style.display = toggle.checked ? "block" : "none";
 
-    // 🔹 Save status to Firestore
     const loggedInUserId = localStorage.getItem("loggedInUserId");
     if (loggedInUserId) {
       const userRef = doc(db, "users", loggedInUserId);
@@ -264,3 +268,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
