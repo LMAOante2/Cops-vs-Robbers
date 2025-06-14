@@ -9,7 +9,7 @@ import {
   getFirestore,
   getDoc,
   doc,
-  updateDoc // 🔹 added this
+  updateDoc 
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -34,7 +34,7 @@ onAuthStateChanged(auth, async (user) => {
       if (userSnap.exists()) {
         const userData = userSnap.data();
 
-        // Apply saved theme from Firestore (fallback: dark)
+  
         const savedTheme = userData.theme || "dark";
         localStorage.setItem("theme", savedTheme);
         document.body.classList.remove("dark-mode", "light-mode");
@@ -42,7 +42,7 @@ onAuthStateChanged(auth, async (user) => {
         const toggleTheme = document.getElementById("modeToggle");
         if (toggleTheme) toggleTheme.checked = savedTheme === "light";
 
-        // Apply saved status from Firestore (fallback: "true")
+     
         const savedStatus = userData.status ?? "true";
         localStorage.setItem("status", savedStatus);
         const toggleStatus = document.getElementById("status");
@@ -56,7 +56,6 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
-// Existing onAuthStateChanged: Load and display user info from Firestore based on localStorage user ID
 onAuthStateChanged(auth, (user) => {
   const loggedInUserId = localStorage.getItem('loggedInUserId');
   if (loggedInUserId) {
@@ -80,7 +79,6 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-// Fix display style assignments here (replacing 'true' with 'block' or 'inline' as needed)
 onAuthStateChanged(auth, (user) => {
   const link1 = document.getElementById('link1');
   if (link1) link1.style.display = user ? 'none' : 'block';
