@@ -78,6 +78,10 @@
       color: #007bff;
     }
 
+    input::placeholder {
+      visibility: hidden;
+    }
+
     .messageDiv, .messageDiv1 {
       padding: 10px;
       color: #fff;
