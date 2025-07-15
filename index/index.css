@@ -465,8 +465,8 @@
 }
 .card-inner {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.3s;
     border-radius: 50%;
@@ -482,8 +482,8 @@
 
 .naprijed, .iza {
     position: absolute;
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
     border-radius: 50%;
     display: flex;
