@@ -454,12 +454,13 @@
 
 .card {
     width: 320px;
-    height: 290px;
+    height: 320px;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+    border-radius: 50%;
     border: 1px solid #0004ff;
 }
 .card-inner {
