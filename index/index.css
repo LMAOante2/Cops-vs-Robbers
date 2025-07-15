@@ -655,6 +655,10 @@
         padding: 8px;
     }
 
+    .card:nth-child(2) {
+    margin-top: 0px;
+    }
+
 .button span {
     text-align: center;
     display: inline-block;
