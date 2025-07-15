@@ -244,13 +244,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    const resetForm = document.getElementById("resetForm");
-    const messageDiv = document.getElementById("resetMessage");
+const resetForm = document.getElementById("resetForm");
+const messageDiv = document.getElementById("resetMessage");
 
 resetForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const email = document.getElementById("resetEmail").value.trim();
+  messageDiv.style.display = "block";
   messageDiv.style.color = "black";
   messageDiv.textContent = "Slanje e-maila...";
 
@@ -260,7 +261,8 @@ resetForm.addEventListener("submit", async (e) => {
     messageDiv.textContent = "Email za ponovo postavljanje lozinke je poslan! Provjeri svoj mail.";
   } catch (error) {
     messageDiv.style.color = "red";
-    messageDiv.textContent = error.message || "Error tokom salnja maila.";
+    messageDiv.textContent = error.message || "Error tokom slanja maila.";
   }
 });
+
 

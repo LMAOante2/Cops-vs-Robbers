@@ -406,12 +406,11 @@ span {
 
   .promjenibtn {
     font-size: 14px;
-    z-index: 3;
   }
 }
 
-.promjenibtn {
-  z-index: 3;
+.reset {
+  z-index: 7;
 }
 
 @media (max-width: 480px) {
