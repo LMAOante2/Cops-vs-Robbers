@@ -3,6 +3,7 @@
   }
 
 //--<Igraci>--//
+const igraci = document.getElementById('igraci');
 async function updateServerStatus() {
     try {
         const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
@@ -62,34 +63,13 @@ async function fetchPlayers() {
                 });
             });
         } else {
-            igraclista.innerHTML = "<p>Nema Igraca Online.</p>";
+            igraci.style.display = 'none';
         }
     } catch (error) {
         console.error("Error fetching player data:", error);
-        document.getElementById("igraclista").innerHTML = "<p>Error tokom ucitavanja igraca.</p>";
+        document.getElementById("igraci").style.display = 'none';
     }
 }
-
-//--<Meni>--//
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const closeMenu = document.querySelector(".close-menu");
-    const sideMenu = document.querySelector(".side-menu");
-
-    menuToggle.addEventListener("click", function () {
-        sideMenu.classList.add("active");
-    });
-
-    closeMenu.addEventListener("click", function () {
-        sideMenu.classList.remove("active");
-    });
-
-    document.addEventListener("click", function (event) {
-        if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            sideMenu.classList.remove("active");
-        }
-    });
-});
 
 //--<Refresh>--//
 let updateInterval = null;
@@ -137,5 +117,37 @@ function refresh() {
     fetchPlayers();
     updateServerStatus();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("status");
+    let savedStatus = localStorage.getItem("status");
+  
+    if (savedStatus === null) {
+      savedStatus = "true";
+      localStorage.setItem("status", savedStatus);
+    }
+  
+    toggle.checked = savedStatus === "true";
+  
+    toggle.addEventListener("change", () => {
+      const newStatus = toggle.checked ? "true" : "false";
+      localStorage.setItem("status", newStatus);
+  
+      const content = document.getElementById("igraci");
+      content.style.display = toggle.checked ? "block" : "none";
+  
+      const loggedInUserId = localStorage.getItem("loggedInUserId");
+      if (loggedInUserId) {
+        const userRef = doc(db, "users", loggedInUserId);
+        updateDoc(userRef, { status: newStatus }).catch((error) => {
+          console.error("Error saving status to Firestore:", error);
+        });
+      }
+    });
+  
+    const content = document.getElementById("igraci");
+    content.style.display = savedStatus === "true" ? "block" : "none";
+  });
+
 
 
