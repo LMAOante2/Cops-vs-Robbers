@@ -7,7 +7,6 @@
 
 body, html {
   background: url('/slike/background.png') center center;
-  background-size: cover;
   background-attachment: scroll;
   touch-action: manipulation;
   -ms-touch-action: manipulation;
@@ -32,6 +31,7 @@ div {
   font-size: 20px;
   padding: 10px;
 }
+
 
 div {
   font-weight: 400;
@@ -104,120 +104,240 @@ span {
   }
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  user-select: none;
-  flex-wrap: wrap;
-}
 
-header .logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  user-select: none;
-}
+/*Meni*/
 
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  padding-top: 60px;
-  transition: left 0.4s ease-in-out;
-  user-select: none;
-}
+        #menutoggle {
+            display: none;
+        }
+    
+        #menutoggle:checked ~ .nav {
+            left: 0;
+        }
+    
+        #menutoggle:checked + .menutoggle-icon span:nth-child(1) {
+            transform: rotate(45deg) translateY(15px);
+        }
+    
+        #menutoggle:checked + .menutoggle-icon span:nth-child(2) {
+            opacity: 0;
+        }
+    
+        #menutoggle:checked + .menutoggle-icon span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-15px);
+    
+        }
 
-.side-menu.active {
-  left: 0;
-}
+    
+        @media screen and (min-width: 880px) {
+    
+            .menutoggle-icon span {
+                display: none;
+            }
+    
+            .nav {
+                display: none;
+            }
+    
+            .desktopnav {
+                display: block;
+            }
+        }
+    
+        @media screen and (max-width: 880px) {
+            .desktopnav {
+                display: none;
+            }
+        }
+    
+        .menutoggle-icon {
+            position: fixed;
+            width: 35px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            top: 20px;
+            left: 20px;
+            z-index: 6;
+        }
+    
+        .menutoggle-icon span {
+            width: 100%;
+            height: 4px;
+            background: grey;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+    
+        .nav {
+            position: fixed;
+            width: 150px;
+            height: 100%;
+            background: rgba(51, 51, 51, 0.822);
+            left: -100%;
+            padding: 60px 20px;
+            transition: left 0.3s ease;
+            box-shadow: 0px 7px 30px 3px rgba(0,0,0,0.34);
+            z-index: 5;
+            top: 0;
+    
+        }
+    
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+    
+            to {
+                transform: rotate(30deg);
+            }
+        }
+    
+        .nav ul {
+            list-style: none;
+            margin: 0;
+        }
+    
+        .nav li {
+            padding: 20px;
+        }
+    
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  user-select: none;
-}
+        .nav .title {
+          color: rgb(0, 152, 223);
+            font-weight: bold;
+            font-size: 22px;
+        }
+    
+        .nav a:hover {
+            color: red;
+        }
+    
+        .desktopnav {
+            position: absolute;
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            background: rgba(112, 112, 112, 0.274);
+            box-shadow: 0px -4px 30px 3px rgba(0,0,0,0.34);
+            z-index: 5;
+            top: 0;
+        }
+    
+        .desktopnav ul {
+            position: relative;
+            list-style: none;
+            margin: 0;
+            display: flex;
+            justify-content: right;
+        }
+    
+        .desktopnav li {
+            padding: 20px 20px;
+            text-align: right;
+    
+        }
+    
+        .desktopnav a {
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+        }
 
-nav li {
-  padding: 15px 20px;
-  text-align: left;
-  user-select: none;
-}
+        .desktopnav .title {
+          color: rgb(0, 152, 223);
+            font-weight: bold;
+            font-size: 22px;
+        }
 
-nav a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  display: block;
-  transition: color 0.3s;
-  user-select: none;
-}
+        .pocetna {
+            font-size: 18px;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-color: blue;
+            text-decoration-line: underline;
+        }
+    
+        .desktopnav a:hover {
+            color: red;
+        }
+    
+        .desktopnav h3 {
+            position: absolute;
+            font-size: 18px;
+            margin: auto;
+            padding: 20px 0;
+            left: 35px;
+        }
+    
+        .nav h3 {
+            font-size: 18px;
+            padding: 20px 0;
+            margin: 0;
+            left: 0px;
+        }
 
-nav a:hover {
-  color: #ff9900;
-}
 
-.menu-toggle {
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
-  user-select: none;
-}
-
-.close-menu {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  user-select: none;
-}
-
-.desktop-nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  user-select: none;
-}
-
-.desktop-nav li {
-  padding: 0;
-  list-style: none;
-  user-select: none;
-}
-
-.desktop-nav a {
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px;
-  user-select: none;
-}
-
-.desktop-nav a:hover {
-  color: #ff9900;
-}
-
-.title {
-  color: rgb(43, 113, 106);
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: rgb(66, 125, 117);
-}
+        #remove {
+            display: none;
+        }
+        
+        
+        .remove-icon {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 5;
+            transition: all 0.2s ease;
+            background: rgba(165, 165, 165, 0.616);
+            backdrop-filter: blur(1px);
+            top: 0;
+          }
+        
+          .remove-icon span {
+            width: 100%;
+            height: 10px;
+            background: black;
+            transition: all 2s ease;
+          }
+        
+          #remove:checked ~ .nav {
+            left: -100%;
+        }
+        
+        #remove:checked ~ .menutoggle-icon span:nth-child(1) {
+            transform: rotate(0) translateY(0);
+        }
+        
+        #remove:checked ~ .menutoggle-icon span:nth-child(2) {
+            opacity: 1;
+        }
+        
+        #remove:checked ~ .menutoggle-icon span:nth-child(3) {
+            transform: rotate(0) translateY(0);
+        
+        }
+        
+          #remove:checked ~ .remove-icon {
+            display: none;
+          }
+        
+          #remove:checked ~ .remove-icon span {
+            display: none;
+          }
+        
+          #menutoggle:checked ~ .remove-icon {
+            display: flex;
+          }
 
 @media (max-width: 1024px) {
   .buttons {
@@ -319,6 +439,16 @@ nav a:hover {
   }
 }
 
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(30deg);
+  }
+}
+
 /* Tamno */
 .dark-mode {
   background-color: #121212;
@@ -355,13 +485,26 @@ nav a:hover {
   background: none;
 }
 
+.dark-mode .div2 input {
+  color: white;
+}
+
+.dark-mode .menutoggle-icon span {
+  background: rgb(157, 157, 157);
+}
+
 /* Svijetlo */
 .light-mode {
   background-color: white;
   color: black;
 }
 
+.light-mode .menutoggle-icon span {
+  background: rgb(255, 255, 255);
+}
+
 .light-mode .div,
+.light-mode .div2,
 .light-mode .side-menu,
 .light-mode button,
 .light-mode header
@@ -369,6 +512,13 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.85);
   color: black;
   border-color: blue;
+}
+
+.light-mode .desktopnav,
+.light-mode .nav {
+    background-color: rgba(131, 121, 121, 0.521);
+    color: black;
+    backdrop-filter: blur(1.5px);
 }
 
 .light-mode hr {
@@ -389,6 +539,12 @@ nav a:hover {
   background-color: rgb(253, 55, 55);
 }
 
+.light-mode .div2 input {
+  color: black;
+}
+
+
+/*Postavke*/
 .switch {
   position: fixed;
   right: 20px;
@@ -483,20 +639,7 @@ input:checked + .slider1:before {
   transform: translateX(26px);
 }
 
-hr {
-  width: 100%;
-  color: white;
-}
-
-.opcenito {
-  text-align: center;
-}
-.opcenito hr {
-  text-align: center;
-  width: 100%;
-  color: white;
-}
-
+/*Ucitavanje*/
 .loader {
   position: fixed;
   top: 0;
@@ -538,6 +681,21 @@ hr {
   z-index: 1001;
 }
 
+
+/*Promjeni Lozinku*/
+input {
+  border-radius: 10px;
+  height: 25px;
+  background: none;
+  text-align: center;
+  border: 1px solid white;
+}
+
+input::placeholder {
+  font-size: 14px;
+  text-align: center;
+}
+
 .div2 {
   justify-content: center;
   place-self: center;
@@ -553,20 +711,9 @@ hr {
   animation: strana 2s infinite;
 }
 
-input {
-  border-radius: 10px;
-  height: 25px;
-  background: none;
-  color: white;
-  text-align: center;
-  border: 1px solid white;
-}
 
-input::placeholder {
-  font-size: 14px;
-  text-align: center;
-}
 
+/*logout*/
 
 .logout {
   background-color: rgb(255, 60, 60);
@@ -577,5 +724,8 @@ input::placeholder {
 .logout:hover {
   background-color: rgb(255, 0, 0);
 }
+
+
+
 
 

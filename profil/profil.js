@@ -36,6 +36,7 @@ onAuthStateChanged(auth, (user) => {
           document.getElementById('loggedUserFName').innerText = userData.firstName;
           document.getElementById('loggedUserEmail').innerText = userData.email;
           document.getElementById('loggedUserLName').innerText = userData.lastName;
+          document.getElementById('loggedUserposao').innerText = userData.posao;
         } else {
           console.log("No document found matching ID");
         }
@@ -70,10 +71,6 @@ onAuthStateChanged(auth, (user) => {
   logout.style.display = user ? 'true' : 'none';
 });
 
-onAuthStateChanged(auth, (user) => {
-  const resetPassword = document.getElementById('resetPassword');
-  resetPassword.style.display = user ? 'true' : 'none';
-});
 
 onAuthStateChanged(auth, (user) => {
   const Ime = document.getElementById('Ime');
@@ -88,6 +85,11 @@ onAuthStateChanged(auth, (user) => {
 onAuthStateChanged(auth, (user) => {
   const Ime2 = document.getElementById('Ime2');
   Ime2.style.display = user ? 'true' : 'none';
+});
+
+onAuthStateChanged(auth, (user) => {
+  const Ime3 = document.getElementById('Ime3');
+  Ime3.style.display = user ? 'true' : 'none';
 });
 
 onAuthStateChanged(auth, (user) => {
@@ -240,32 +242,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const resetBtn = document.getElementById('resetPassword');
-  if (!resetBtn) return;
 
-  resetBtn.addEventListener('click', (event) => {
-    event.preventDefault();
 
-    const emailInput = document.getElementById('resetEmail');
-    const messageDiv = document.getElementById('resetMessage');
+    const resetForm = document.getElementById("resetForm");
+    const messageDiv = document.getElementById("resetMessage");
 
-    if (!emailInput || !messageDiv) return;
+resetForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    const email = emailInput.value.trim();
+  const email = document.getElementById("resetEmail").value.trim();
+  messageDiv.style.color = "black";
+  messageDiv.textContent = "Slanje e-maila...";
 
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        messageDiv.style.display = 'block';
-        messageDiv.innerText = 'E-mail za ponovno postavljanje lozinke je poslan!';
-        messageDiv.style.color = 'green';
-      })
-      .catch((error) => {
-        messageDiv.style.display = 'block';
-        messageDiv.innerText = 'Error u slanju e-maila. Pogledaj jel dobro upisano.';
-        messageDiv.style.color = 'red';
-        console.error(error);
-      });
-  });
+  try {
+    await sendPasswordResetEmail(auth, email);
+    messageDiv.style.color = "green";
+    messageDiv.textContent = "Email za ponovo postavljanje lozinke je poslan! Provjeri svoj mail.";
+  } catch (error) {
+    messageDiv.style.color = "red";
+    messageDiv.textContent = error.message || "Error tokom salnja maila.";
+  }
 });
 
