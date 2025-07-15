@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html oncontextmenu="return false" lang="en">
 <head>
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <meta charset="UTF-8">
@@ -10,40 +10,51 @@
     <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
     <style>
-
     </style>
     <script type="module" src="profil/profil.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false">
     <div class="loader"></div>
-    <header>
-        <div class="logo">
-        <h4 class="title">Balkan Cops vs Robbers</h4>
-            <button class="menu-toggle">☰</button>
-        </div>
-        <nav class="side-menu">
-            <button class="close-menu">&times;</button>
-            <ul>
-                <li class="Pocetna"><h4 class="Pocetna">Profil</h4></li>
-                <li><a draggable="false" href="pocetna.html">Pocetna</a></li>
-                <li><a draggable="false" href="pravila.html">Pravila</a></li>
-                <li><a draggable="false" href="donacije.html">Donacije</a></li>
-                <li><a draggable="false" href="serverstatus.html">Status</a></li>
-                <li><a draggable="false" href="galerija.html">Slike</a></li>
-                <li id="admin-link1" style="display: none;"><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
+    <input type="checkbox" id="remove">
+    <label for="remove" class="remove-icon">
+        <span></span>
+    </label>
+
+    <input type="checkbox" id="menutoggle">
+    <label class="menutoggle-icon" for="menutoggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
     
-        <ul class="desktop-nav">
-            <li class="Pocetna"><h4>Profil</h4></li>
-            <li><a draggable="false" href="pocetna.html">Pocetna</a></li>
-            <li><a draggable="false" href="pravila.html">Pravila</a></li>
-            <li><a draggable="false" href="donacije.html">Donacije</a></li>
-            <li><a draggable="false" href="serverstatus.html">Status</a></li>
-            <li><a draggable="false" href="galerija.html">Slike</a></li>
-            <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+    <input type="checkbox" id="remove">
+    <label for="menutoggle" for="remove" class="remove-icon">
+        <span></span>
+    </label>
+    
+    <nav class="desktopnav">
+        <h3 class="title">Balkan Cops Vs Robbers</h3>
+        <ul>
+            <li class="pocetna">Profil</li>
+            <li><a href="pocetna.html">Pocetna</a></li>
+            <li><a href="pravila.html">Pravila</a></li>
+            <li><a href="donacije.html">Donacije</a></li>
+            <li><a href="serverstatus.html">Status</a></li>
+            <li><a href="galerija.html">Slike</a></li>
         </ul>
-    </header>
+    </nav>
+    
+    <nav class="nav">
+        <h3 class="title">Balkan Cops Vs Robbers</h3>
+        <ul>
+            <li class="pocetna">Profil</li>
+            <li><a href="pocetna.html">Pocetna</a></li>
+            <li><a href="pravila.html">Pravila</a></li>
+            <li><a href="donacije.html">Donacije</a></li>
+            <li><a href="serverstatus.html">Status</a></li>
+            <li><a href="galerija.html">Slike</a></li>
+        </ul>
+    </nav>
 
     <div class="buttons">
         <button id="profil1" class="btn4">profil</button>
@@ -55,6 +66,7 @@
        <div  id="Ime"><span  id="loggedUserFName"></span></div>
        <div  id="Ime1"><span  id="loggedUserLName"></span></div>
        <div  id="Ime2"><span  id="loggedUserEmail"></span></div>
+       <div  id="Ime2"><span  id="loggedUserposao"></span></div>
        <button id="link1"><a style="text-decoration: none;" href="index.html">Prijavi se</a></button>
        <button class="logout" id="logout">Izlogiraj se</button>
        <button class="promjenibtn" id="promjenibtn">Promjeni Lozinku</button>    
@@ -72,15 +84,13 @@
             </label>
         </div>
 
-        <div class="test" id="status1">
+        <div style="display: none;" class="test" id="status1">
             <h3 style="margin-left: -85px; margin-top: 5px;">Pokazi Igrace (status)</h3>
             <label class="switch1">
                 <input type="checkbox" id="status">
                 <span class="slider1"></span>
             </label>
         </div>
-
-
     
         <h3 id="lightnot">Moras Biti Prijavljen/a da bi mjenjao/la postavke</h3>
     </div>
@@ -91,9 +101,6 @@
             <button id="resetPassword">Posalji E-mail</button>
             <div id="resetMessage" style="color: green; display: none;"></div>
     </div>
-
-
-
 </body>
 <script type="module" src="/login/userSettings.js"></script>
 </html>

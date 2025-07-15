@@ -1,81 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Balkan Cops Vs Robbers | Eventi</title>
-  <link rel="stylesheet" href="eventi/eventi.css">
-          <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
-        <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
+  <title>Post Event - Admin Panel</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h4 class="title">Balkan Cops vs Robbers</h4>
-            <button class="menu-toggle">☰</button>
-        </div>
-        <nav class="side-menu">
-            <button class="close-menu">&times;</button>
-            <ul>
-                <li class="Pocetna"><h4 class="Pocetna">Eventi</h4></li>
-                <li><a draggable="false" href="index.html">Početna</a></li>
-                <li><a draggable="false" href="pravila.html">Pravila</a></li>
-                <li><a draggable="false" href="donacije.html">Donacije</a></li>
-                <li><a draggable="false" href="serverstatus.html">Status</a></li>
-                <li><a draggable="false" href="galerija.html">Slike</a></li>
-                <li><a draggable="false" href="profil.html">Postavke</a></li>
-                <li id="admin-link1" style="display: none;"><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
-    
-        <ul class="desktop-nav">
-            <li class="Pocetna"><h4>Eventi</h4></li>
-            <li><a draggable="false" href="index.html">Početna</a></li>
-            <li><a draggable="false" href="pravila.html">Pravila</a></li>
-            <li><a draggable="false" href="donacije.html">Donacije</a></li>
-            <li><a draggable="false" href="serverstatus.html">Status</a></li>
-            <li><a draggable="false" href="galerija.html">Slike</a></li>
-            <li><a draggable="false" href="profil.html">Postavke</a></li>
-            <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
-        </ul>
-    </header>
+  <h2>Post a New Server Event</h2>
+  <form id="eventForm">
+    <input type="text" id="title" placeholder="Event Title" required><br>
+    <textarea id="description" placeholder="Event Description" required></textarea><br>
+    <input type="datetime-local" id="event_time" required><br>
+    <button type="submit">Post Event</button>
+  </form>
 
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-<div class="kalendar">
-  <div class="kalendar-glavno">
-    <button class="strijelica-btn" onclick="changeWeek(-1)">←</button>
-    <h2 id="titel">Tjedan od 12-05-2025</h2>
-    <button class="strijelica-btn" onclick="changeWeek(1)">→</button>
-  </div>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDa-Gn5AtvCYwzC7GvArnDUrc6HQfdT-U4",
+      authDomain: "login-form-19883.firebaseapp.com",
+      projectId: "login-form-19883",
+      storageBucket: "login-form-19883.appspot.com",
+      messagingSenderId: "469023290458",
+      appId: "1:469023290458:web:d0d24d8e80ae5c557b5463"
+    };
 
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Vrijeme</th>
-          <th>Ponedjeljak</th>
-          <th>Utorak</th>
-          <th>Srijeda</th>
-          <th>Cetvrtak</th>
-          <th>Petak</th>
-          <th>Subota</th>
-          <th>Nedjelja</th>
-        </tr>
-      </thead>
-      <tbody id="kalendar">
-      </tbody>
-    </table>
-  </div>
-</div>
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore();
 
-<div id="event-info" style="margin-top: 30px; padding: 20px; border-top: 2px solid #ccc; display: none; text-align: center;">
-    <h3 style="color: black; background: white; height: 50px; padding: 20px;">Info</h3>
-    <p style="color: black; background-color: white; height: 80px;" id="event-deskripcija"></p>
-  </div>
+    document.getElementById("eventForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-<script src="eventi/eventi.js"></script>
-  
+      const title = document.getElementById("title").value;
+      const description = document.getElementById("description").value;
+      const event_time = document.getElementById("event_time").value;
 
+      await addDoc(collection(db, "events"), {
+        title,
+        description,
+        event_time: new Date(event_time),
+        createdAt: serverTimestamp()
+      });
+
+      alert("Event posted and emails will be sent automatically!");
+    });
+  </script>
 </body>
 </html>

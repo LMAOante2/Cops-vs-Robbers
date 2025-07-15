@@ -27,28 +27,51 @@
       <div class="input-group">
          <i class="fas fa-user"></i>
          <input autocomplete="off" type="text"  id="fName" placeholder="Ime" required>
-         <label for="fname">Ime</label>
+         <label class="input-text" for="fname">Ime</label>
       </div>
       <div class="input-group">
           <i class="fas fa-user"></i>
           <input autocomplete="off" type="text"  id="lName" placeholder="Prezime" required>
-          <label for="lName">Prezime</label>
+          <label class="input-text" for="lName">Prezime</label>
       </div>
       <div class="input-group">
           <i class="fas fa-envelope"></i>
           <input autocomplete="off" type="email"  id="rEmail" placeholder="Email" required>
-          <label for="rEmail">Email</label>
+          <label class="input-text" for="rEmail">Email</label>
       </div>
+
       <div class="input-group">
-          <i class="fas fa-lock"></i>
-          <input autocomplete="off" type="password" id="rPassword"  placeholder="Lozinka" required>
-          <label for="rPassword">Lozinka</label>
+        <i class="fas fa-lock"></i>
+        <input autocomplete="off" type="password" id="rPassword" placeholder="Lozinka" required>
+        <label class="input-text" for="rPassword">Lozinka</label>
+        <span class="toggle-password" toggle="#rPassword">
+          <i class="fa-solid fa-eye"></i>
+        </span>
       </div>
+
+      <div class="posao">
+        <i class="fa-solid fa-sun sunce"></i>
+        <i class="fa-solid fa-moon mjesec"></i>
+        <input type="checkbox" id="tamno">
+        <label class="tamno-text" for="tamno">Tamno</label>
+        <input type="checkbox" id="svijetlo">
+        <label class="svijetlo-text" for="svijetlo">Svijetlo</label>
+    </div>
+
+      <hr>
+      <h4 style="text-align: center;">ING</h4>
+      <div class="posao">
+        <i class="fa-solid fa-truck"></i>
+        <input type="checkbox" id="policija">
+        <label class="posao-text" for="policija">Policija</label>
+        <input type="checkbox" id="pljackas">
+        <label class="pljackas-text" for="pljackas">Pljackas</label>
+    </div>
      <button class="btn" id="submitSignUp" >Napravi Account</button>
     </form>
     <div class="links">
       <p style="text-align: center;">Vec imas account?</p>
-      <button style="margin-bottom: 10px; margin-left: 30px; margin-top: -15px;" id="signInButton">Prijavi se</button>
+      <button style="margin-bottom: 10px; margin-left:00px; margin-top: -5px;" id="signInButton">Prijavi se</button>
     </div>
   </div>
 
@@ -61,19 +84,24 @@
         <div class="input-group">
             <i class="fas fa-envelope"></i>
             <input autocomplete="off" type="email"  id="email" placeholder="Email" required>
-            <label for="email">Email</label>
+            <label class="input-text" for="email">Email</label>
         </div>
+
         <div class="input-group">
-            <i class="fas fa-lock"></i>
-          <input autocomplete="off" type="password" id="password"  placeholder="Lozinka" required>
-            <label for="password">Lozinka</label>
+          <i class="fas fa-lock"></i>
+          <input autocomplete="off" type="password" id="password" placeholder="Lozinka" required>
+          <label class="input-text" for="password">Lozinka</label>
+          <span class="toggle-password" toggle="#password">
+          <i class="fa-solid fa-eye"></i>
+          </span>
         </div>
+
        <button  class="btn"  id="submitSignIn">Prijavi se</button>
       </form>
       <div class="links">
         <p style="width: 350px; margin-left: 10px;">Jos nemas account?</p>
         <button id="signUpButton">Napravi Account</button>
-        <a class="a2" href="profil.html">Zaboravio si lozinku?</a>
+        <a class="a2" href="profil.html">Zaboravio/la si lozinku?</a>
         <a class="a1" href="pocetna.html">Nastavi Kao Gost</a>
       </div>
     </div>

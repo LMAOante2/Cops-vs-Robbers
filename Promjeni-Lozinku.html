@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Postavi novu lozinku</title>
+  <link rel="stylesheet" href="Promjeni-Lozinku/Promjeni-Lozinku.css">
+</head>
+<body>
+  <div class="lozinka">
+    <h2>Promjeni Lozinku</h2>
+    <p><strong id="email"></strong></p>
+    <form id="resetForm">
+      <label class="password" for="newPassword">Nova Lozinka</label><br />
+      <input type="password" id="newPassword" required minlength="6" /><br /><br />
+      <button type="submit">Postavi Novu Lozinku</button>
+    </form>
+  </div>
+
+  <div id="message" style="display: none;"></div>
+</body>
+<script type="module" src="Promjeni-Lozinku/Promjeni-Lozinku.js"></script>
+</html>

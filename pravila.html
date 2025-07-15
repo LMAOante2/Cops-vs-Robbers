@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html oncontextmenu="return false" lang="hr">
 <head>
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <meta charset="UTF-8">
@@ -21,49 +21,138 @@
     </style>
 </head>
 
-<body>
+<body oncontextmenu="return false">
 
-<header>
-    <div class="logo">
-        <h4 class="title">Balkan Cops vs Robbers</h4>
-        <button class="menu-toggle">☰</button>
-    </div>
-    <nav class="side-menu">
-        <button class="close-menu">&times;</button>
+    <input type="checkbox" id="remove">
+
+    <label for="remove" class="remove-icon">
+        <span></span>
+    </label>
+    
+    <input type="checkbox" id="menutoggle">
+    
+    <label class="menutoggle-icon" for="menutoggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    
+    <input type="checkbox" id="remove">
+    
+    <label for="menutoggle" for="remove" class="remove-icon">
+        <span></span>
+    </label>
+    
+    <nav class="desktopnav">
+        <h3 class="title">Balkan Cops Vs Robbers</h3>
         <ul>
-            <li class="Pocetna"><h4 class="Pocetna">Pravila</h4></li>
-            <li><a draggable="false" href="pocetna.html">Početna</a></li>
-            <li><a draggable="false" href="donacije.html">Donacije</a></li>
-            <li><a draggable="false" href="serverstatus.html">Status</a></li>
-            <li><a draggable="false" href="galerija.html">Slike</a></li>
-            <li><a draggable="false" href="profil.html">Profil</a></li>
-            <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+            <li class="pocetna">Pravila</li>
+            <li><a href="pocetna.html">Pocetna</a></li>
+            <li><a href="donacije.html">Donacije</a></li>
+            <li><a href="serverstatus.html">Status</a></li>
+            <li><a href="galerija.html">Slike</a></li>
+            <li><a href="profil.html">Profil</a></li>
         </ul>
     </nav>
-
-    <ul class="desktop-nav">
-        <li class="Pocetna"><h4 class="Pocetna">Pravila</h4></li>
-        <li><a draggable="false" href="pocetna.html">Početna</a></li>
-        <li><a draggable="false" href="donacije.html">Donacije</a></li>
-        <li><a draggable="false" href="serverstatus.html">Status</a></li>
-        <li><a draggable="false" href="galerija.html">Slike</a></li>
-        <li><a draggable="false" href="profil.html">Profil</a></li>
-        <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
-    </ul>
-</header>
-<div style="text-align: center; margin-top: 20px;">
-   <img decoding="async" style="text-align: center;" oncontextmenu="return false;" draggable="false" class="img" src="slike/Ucopsvsrobbers.png" alt="Ucopsvsrobbers"> 
+    
+    <nav class="nav">
+        <h3 class="title">Balkan Cops Vs Robbers</h3>
+        <ul>
+            <li class="pocetna">Pravila</li>
+            <li><a href="pocetna.html">Pocetna</a></li>
+            <li><a href="donacije.html">Donacije</a></li>
+            <li><a href="serverstatus.html">Status</a></li>
+            <li><a href="galerija.html">Slike</a></li>
+            <li><a href="profil.html">Profil</a></li>
+        </ul>
+    </nav>
+    <div>
+    <canvas class="ddd" id="Policajac" tabindex="-1"></canvas>
+    <canvas class="ddd" id="Pljackas" tabindex="-1"></canvas>
+    <div id="test" class="krug"></div>
+    <div id="test1" class="krug1"></div>
 </div>
 
 
-<h1 style=" text-align: center;">Pravila Servera</h1>
+<div class="wrapper">
+    <aside class="sidebar">
+      <img src="slike/Ucopsvsrobbers.png" alt="Ucopsvsrobbers" oncontextmenu="return false;" draggable="false" />
+      <h1>Pravila Servera</h1>
+      <button class="btn4" data-target="rule1">Pravila Policije</button>
+      <button class="btn4" data-target="rule2">Pravila Pljačkaša</button>
+      <button class="btn4" data-target="rule3">Općenita Pravila</button>
+      <button class="btn4" data-target="rule4">Safe Zone</button>
+      <button class="btn4" data-target="rule5">Uslovi</button>
+    </aside>
 
-<div class="rules-container" id="rules-container">
+    <main class="rules-container">
+      <section id="rule1" class="rule active">
+        <h2>Pravila Policije</h2>
+        <p>1. Heli se diže samo na pljačku zlatare i glavne banke</p>
+        <p>2. Zabranjeno prodavanje/davanje stvari iz PDA</p>
+        <p>3. Zabranjen dolazak na teritorije</p>
+        <p>4. Morate ispuniti sve realne uslove robbera</p>
+        <p>5. Ne pucate bez razloga</p>
+        <p>6. Zabranjeno respawnanje dok se pljačka ne završi</p>
+        <p>7. Kad se pljačka završi, ne tazejte, ne ubijajte pljačkaša dok pljačka bankomat!</p>
+        <p>8. Kada neko radi heist pljačke auta, on kada preda auto PD ga ne smije uhapsiti</p>
+        <p>9. PD ne smije uzimati novac iz inventorya igrača!</p>
+      </section>
 
-</div>
+      <section id="rule2" class="rule">
+        <h2>Pravila Pljačkaša</h2>
+        <p>1. Tokom potjere zabranjeno je open fire prvih pola sata, nakon pola sata dozvoljen</p>
+        <p>2. Zabranjeno pucanje u svim garažama, trgovinama, mjestima za presvlačenje, autosalonu, apartmanima, ...</p>
+        <p>3. Ako open fire pljačka traje više od 30 minuta morate se predati</p>
+        <p>4. Zabranjeno respawnanje dok se pljačka ne završi</p>
+        <p>5. Zabranjena krađa PD auta</p>
+        <p>6. Zabranjeno kempanje na lokacijama</p>
+        <p>7. Zabranjen RDM, VDM, RANDOM LOOT, VEZIVANJE PD-a</p>
+      </section>
 
+      <section id="rule3" class="rule">
+        <h2>Općenita Pravila</h2>
+        <p>1. Obavezan mikrofon</p>
+        <p>2. Zabranjeno puhanje u mikrofon</p>
+        <p>3. Strogo zabranjeno psovanje familije, psovanja po nacionalnoj ili vjerskoj osnovi</p>
+        <p>4. Zabranjeno Q peak, Radio peak, ...</p>
+        <p>5. Zabranjena toksičnost</p>
+        <p>6. Strogo zabranjeno iskorištavanje bugova i uzimanje aviona, helikoptera, tenkova itd. iz vojnih baza ili aerodroma</p>
+        <p>7. Zabranjeno izlaženje sa servera dok pljačkate ili bježite od policije (LTA)</p>
+      </section>
+
+      <section id="rule4" class="rule">
+        <h2>Safe Zone</h2>
+        <ul>
+          <li>Sve Garaze</li>
+          <li>Svi Legalni Shopovi</li>
+          <li>Mjesta Za Presvlacenje</li>
+          <li>Autosalon</li>
+          <li>Apartmani</li>
+        </ul>
+      </section>
+
+      <section id="rule5" class="rule">
+        <h2>Uslovi</h2>
+        <ul>
+          <li>Pljacka bankomata - 1 Uslov</li>
+          <li>Car Heist - 1 Uslov</li>
+          <li>Pljacka Jahte - 2 Uslova</li>
+          <li>Pljacka Vlaka - 2 Uslova</li>
+          <li>Pljacka Apple Stora - 2 Uslova</li>
+          <li>Pljacka Digital Dena - 2 Uslova</li>
+          <li>Pljacka Prodavnice - 2 Uslova</li>
+          <li>Pljacka Zlatare - 3 Uslova</li>
+          <li>Pljacka Banke - 3 Uslova</li>
+          <li>Pljacka Glavne Banke - 4 Uslova</li>
+        </ul>
+      </section>
+    </main>
+  </div>
 
 </body>
+<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="https://cdn.babylonjs.com/loaders/babylon.glTF2FileLoader.min.js"></script>
     <script src="pravila/pravila.js"></script>
     <script type="module" src="/login/userSettings.js"></script>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html oncontextmenu="return false" lang="hr">
 <head>
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <meta charset="UTF-8">
@@ -18,122 +18,168 @@
 
 
 </head>
-<body>
+<body oncontextmenu="return false">
 
-    <header>
-        <div class="logo">
-        <h4 class="title">Balkan Cops vs Robbers</h4>
-            <button class="menu-toggle">☰</button>
-        </div>
-        <nav class="side-menu">
-            <button class="close-menu">&times;</button>
-            <ul>
-                <li class="Pocetna"><h4 class="Pocetna">Donacije</h4></li>
-                <li><a draggable="false" href="pocetna.html">Početna</a></li>
-                <li><a draggable="false" href="pravila.html">Pravila</a></li>
-                <li><a draggable="false" href="serverstatus.html">Status</a></li>
-                <li><a draggable="false" href="galerija.html">Slike</a></li>
-                <li><a draggable="false" href="profil.html">Profil</a></li>
-                <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
+    <input type="checkbox" id="remove">
+
+    <label for="remove" class="remove-icon">
+        <span></span>
+    </label>
     
-        <ul class="desktop-nav">
-            <li class="Pocetna"><h4 class="Pocetna">Donacije</h4></li>
-            <li><a draggable="false" href="pocetna.html">Početna</a></li>
-            <li><a draggable="false" href="pravila.html">Pravila</a></li>
-            <li><a draggable="false" href="serverstatus.html">Status</a></li>
-            <li><a draggable="false" href="galerija.html">Slike</a></li>
-            <li><a draggable="false" href="profil.html">Profil</a></li>
-            <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+    <input type="checkbox" id="menutoggle">
+    
+    <label class="menutoggle-icon" for="menutoggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    
+    <input type="checkbox" id="remove">
+    
+    <label for="menutoggle" for="remove" class="remove-icon">
+        <span></span>
+    </label>
+    
+    <nav class="desktopnav">
+        <h3 class="title">Balkan Cops Vs Robbers</h3>
+        <ul>
+            <ul>
+                <li class="pocetna">Donacije</li>
+                <li><a href="pocetna.html">Pocetna</a></li>
+                <li><a href="pravila.html">Pravila</a></li>
+                <li><a href="serverstatus.html">Status</a></li>
+                <li><a href="galerija.html">Slike</a></li>
+                <li><a href="profil.html">Profil</a></li>
+            </ul>
         </ul>
-    </header>
-<div style="text-align: center; margin-top: 20px;">
-    <img oncontextmenu="return false;" draggable="false" class="img" src="slike/Ucopsvsrobbers.png" alt="Ucopsvsrobbers">
-</div>
+    </nav>
+    
+    <nav class="nav">
+        <h3 class="title">Balkan Cops Vs Robbers</h3>
+        <ul>
+            <ul>
+                <li class="pocetna">Donacije</li>
+                <li><a href="pocetna.html">Pocetna</a></li>
+                <li><a href="pravila.html">Pravila</a></li>
+                <li><a href="serverstatus.html">Status</a></li>
+                <li><a href="galerija.html">Slike</a></li>
+                <li><a href="profil.html">Profil</a></li>
+            </ul>
+        </ul>
+    </nav>
 
-<h1 style="text-align: center;">Donacije</h1>
+    <div class="wrapper">
+        <aside class="sidebar">
+          <img src="slike/Ucopsvsrobbers.png" alt="Ucopsvsrobbers" oncontextmenu="return false;" draggable="false" />
+          <h1>Donacije</h1>
+          <button class="btn4" data-target="rule1">Organizacije</button>
+          <button class="btn4" data-target="rule2">Tx i Staff</button>
+          <button class="btn4" data-target="rule3">Automobili</button>
+          <button class="btn4" data-target="rule4">Novac</button>
+          <button class="btn4" data-target="rule5">Ostalo</button>
+          <button class="btn4" data-target="rule6">Nacini Placanja</button>
+          <a class="btn4" href="https://discord.com/channels/1084108590668845197/1131574483593986138" target="_blank">Otvori Tiket</a></button>
+        </aside>
 
-<div class="rules-container"><div class="rule"><h2 style="text-align: center; ">Nacini Placanja su: Aircash, Paysafe, Paypal i Uplata Na Racun</h2></div></div>
 
-<div class="rules-container">
-    <div class="rule">
+<main class="rules-container">
+    <section id="rule1" class="rule">
         <div style="text-align: center;"><h2>Organizacije</h2></div>
         <hr>
+        <p>‎</p>
+        <p>‎</p>
         <p>- Organizacija lvl.1 (sef, custom ime, bez interijera i auta po našem odabiru) - €7 </p>
         <p>‎ </p>
         <p>- Organizacija lvl.2 (interijer, sef, i auta po vašoj želji, custom ime) - €15 </p>
         <p>‎</p>
         <p>- Organizacija lvl.3 (Custom ime, napunjen sef, Interijer, custom auta po vasoj želji (koji nije na serveru),helikopter) - €30</p>
         <p>(bez helikoptera €25)</p>
+        <p>‎</p>
         <p>(fulltune svih auta u org) - €5 </p>
-    </div>
+    </section>
 
-    <div class="rule">
+    <section id="rule2" class="rule">
         <div style="text-align: center;"><h2>Tx i Staff</h2></div>
         <hr>
+        <p>‎</p>
+        <p>‎</p>
         <p>- tx low - €7 </p>
+        <p>‎</p>
         <p>- tx mid - €15 </p>
-        <p>- tx full - €20 </p>
+        <p>‎</p>
+        <p>- tx full -€20 </p>
         <p>‎</p>
         <p>- Staff Ivl.1 - €10 </p>
+        <p>‎</p>
         <p>- Staff Ivl.2 - €20 </p>
+        <p>‎</p>
         <p>- Staff Ivl.3 - €40 </p>
-    </div>
+    </section>
 
-    <div class="rule">
+    <section id="rule3" class="rule">
         <div style="text-align: center;"><h2>Automobili</h2></div>
         <hr>
+        <p>‎</p>
         <p style="font-size: medium;">- Auto da se ubaci na server i da vama - €15 </p>
+        <p>‎</p>
         <p>- Bilo koji auto iz salona - €10 </p>
+        <p>‎</p>
         <p>- Dodavanje auta iz salona u vasu organizaciju - €10 </p>
+        <p>‎</p>
         <p>- Dodavanje custom u vasu organizaciju - €15 </p>
+        <p>‎</p>
         <p>- Custom Handling na autu da ide dosta brze - €7 </p>
+        <p>‎</p>
         <p>- FullTune vozila - €5 </p>
+        <p>‎</p>
         <p>- Custom zvuk vozila - €5 </p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </div>
-</div>
-<div class="rules-container">
-    <div class="rule">
+    </section>
+    <section id="rule4" class="rule">
         <div style="text-align: center;"><h2>Novac</h2></div>
         <hr>
+        <p>‎</p>
+        <p>‎</p>
+        <p>‎</p>
+        <p>‎</p>
         <p>- Sliver kutija - €5 </p>
+        <p>‎</p>
         <p>- Gold kutija - €10 </p>
+        <p>‎</p>
         <p>- Diamond kutija - €15 </p>
+        <p>‎</p>
         <p>- Novac 100k - €5 </p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </div>
-    <div class="rule">
+    </section>
+    <section id="rule5" class="rule">
         <div style="text-align: center;"><h2>Ostalo</h2></div>
         <hr>
-        <p>- Priority Ivl.1 - €10 </p>
-        <p>- Priority Ivl.2 - €20</p>
-        <p>- Ped - €10</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </div>
-</div>
+        <div class="test">
+            <p>‎</p>
+            <p>‎</p>
+            <p>‎</p>
+            <p>‎</p>
+            <p>‎</p>
+            <p>- Priority Ivl.1 - €10 </p>
+            <p>‎</p>
+            <p>- Priority Ivl.2 - €20</p>
+            <p>‎</p>
+            <p>- Ped - €10</p>
+        </div>
 
-<div class="rules-container">
-    <div class="rule">
-        <h1>Ako Zelite Podrzati Server Otvorite Tiket Na Nasem Discordu</h1>
-    </div>
+    </section>
+
+        <section id="rule6" class="rule">
+            <p>‎</p>
+            <p>‎</p>
+            <p>‎</p>
+            <p>‎</p>
+            <p>‎</p>
+            <p>‎</p>
+            <p>‎</p>
+            <h2 style="text-align: center; ">Nacini Placanja su: Aircash, Paysafe, Paypal i Uplata Na Racun</h2>
+        </section>
+
+</main>
+</div>
     
 </div>
 <script src="Donacije/donacije.js"></script>

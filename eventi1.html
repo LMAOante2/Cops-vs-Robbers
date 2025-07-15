@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Balkan Cops Vs Robbers | Eventi</title>
+  <link rel="stylesheet" href="eventi/eventi.css">
+          <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
+</head>
+<body>
+  <input type="checkbox" id="remove">
+
+  <label for="menutoggle" for="remove" class="remove-icon">
+      <span></span>
+  </label>
+  
+  <nav class="desktopnav">
+      <h3 class="title">Balkan Cops Vs Robbers</h3>
+      <ul>
+          <li class="pocetna">Pocetna</li>
+          <li><a href="pravila.html">Pravila</a></li>
+          <li><a href="donacije.html">Donacije</a></li>
+          <li><a href="serverstatus.html">Status</a></li>
+          <li><a href="serverstatus.html">Slike</a></li>
+          <li><a href="profil.html">Profil</a></li>
+      </ul>
+  </nav>
+  
+  <nav class="nav">
+      <h3 class="title">Balkan Cops Vs Robbers</h3>
+      <ul>
+          <li class="pocetna">Pocetna</li>
+          <li><a href="pravila.html">Pravila</a></li>
+          <li><a href="donacije.html">Donacije</a></li>
+          <li><a href="serverstatus.html">Status</a></li>
+          <li><a href="serverstatus.html">Slike</a></li>
+          <li><a href="profil.html">Profil</a></li>
+      </ul>
+  </nav>
+
+
+<div class="kalendar">
+  <div class="kalendar-glavno">
+    <button class="strijelica-btn" onclick="changeWeek(-1)">←</button>
+    <h2 id="titel">Tjedan od 12-05-2025</h2>
+    <button class="strijelica-btn" onclick="changeWeek(1)">→</button>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Vrijeme</th>
+          <th>Ponedjeljak</th>
+          <th>Utorak</th>
+          <th>Srijeda</th>
+          <th>Cetvrtak</th>
+          <th>Petak</th>
+          <th>Subota</th>
+          <th>Nedjelja</th>
+        </tr>
+      </thead>
+      <tbody id="kalendar">
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="event-info" style="margin-top: 30px; padding: 20px; border-top: 2px solid #ccc; display: none; text-align: center;">
+    <h3 style="color: black; background: white; height: 50px; padding: 20px;">Info</h3>
+    <p style="color: black; background-color: white; height: 80px;" id="event-deskripcija"></p>
+  </div>
+
+<script src="eventi/eventi.js"></script>
+  
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html oncontextmenu="return false" lang="hr">
 <head>
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <meta charset="UTF-8">
@@ -18,36 +18,51 @@
 
 
 </head>
-<body>
+<body oncontextmenu="return false">
 
-    <header>
-        <div class="logo">
-            <h4 class="title">Balkan Cops vs Robbers</h4>
-            <button class="menu-toggle">☰</button>
-        </div>
-        <nav class="side-menu">
-            <button class="close-menu">&times;</button>
-            <ul>
-                <li class="Pocetna"><h4 class="Pocetna">Slike</h4></li>
-                <li><a draggable="false" href="pocetna.html">Početna</a></li>
-                <li><a draggable="false" href="donacije.html">Donacije</a></li>
-                <li><a draggable="false" href="serverstatus.html">Status</a></li>
-                <li><a draggable="false" href="pravila.html">Pravila</a></li>
-                <li><a draggable="false" href="profil.html">Profil</a></li>
-                <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
+    <input type="checkbox" id="remove">
+
+    <label for="remove" class="remove-icon">
+        <span></span>
+    </label>
     
-        <ul class="desktop-nav">
-            <li class="Pocetna"><h4 class="Pocetna">Slike</h4></li>
-            <li><a draggable="false" href="pocetna.html">Početna</a></li>
-            <li><a draggable="false" href="donacije.html">Donacije</a></li>
-            <li><a draggable="false" href="serverstatus.html">Status</a></li>
-            <li><a draggable="false" href="pravila.html">Pravila</a></li>
-            <li><a draggable="false" href="profil.html">Profil</a></li>
-            <li id="admin-link" style="display: none;"><a href="admin.html">Admin</a></li>
+    <input type="checkbox" id="menutoggle">
+    
+    <label class="menutoggle-icon" for="menutoggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    
+    <input type="checkbox" id="remove">
+    
+    <label for="menutoggle" for="remove" class="remove-icon">
+        <span></span>
+    </label>
+    
+    <nav class="desktopnav">
+        <h3 class="title">Balkan Cops Vs Robbers</h3>
+        <ul>
+            <li class="pocetna">Slike</li>
+            <li><a href="pocetna.html">Pocetna</a></li>
+            <li><a href="pravila.html">Pravila</a></li>
+            <li><a href="donacije.html">Donacije</a></li>
+            <li><a href="serverstatus.html">Status</a></li>
+            <li><a href="profil.html">Profil</a></li>
         </ul>
-    </header>
+    </nav>
+    
+    <nav class="nav">
+        <h3 class="title">Balkan Cops Vs Robbers</h3>
+        <ul>
+            <li class="pocetna">Slike</li>
+            <li><a href="pravila.html">Pocetna</a></li>
+            <li><a href="donacije.html">Pravila</a></li>
+            <li><a href="serverstatus.html">Donacije</a></li>
+            <li><a href="galerija.html">Status</a></li>
+            <li><a href="profil.html">Profil</a></li>
+        </ul>
+    </nav>
 <div style="text-align: center; margin-top: 20px;">
     <img oncontextmenu="return false;" draggable="false" src="slike/Ucopsvsrobbers.png" alt="Ucopsvsrobbers">
 </div>
