@@ -95,12 +95,14 @@
         <h3 id="lightnot">Moras Biti Prijavljen/a da bi mjenjao/la postavke</h3>
     </div>
 
-    <div class="div2" id="promjenidiv" style="display: none;">
-            <h1>Promjeni Lozinku</h1>
-            <input type="email" id="resetEmail" placeholder="e-mail (Mora biti vas!!)" />
-            <button id="resetPassword">Posalji E-mail</button>
-            <div id="resetMessage" style="color: green; display: none;"></div>
-    </div>
+<div class="div2" id="promjenidiv" style="display: none;">
+  <h1>Promjeni Lozinku</h1>
+  <form id="resetForm">
+    <input type="email" id="resetEmail" placeholder="e-mail (Mora biti vas!!)" required />
+    <button type="submit" class="reset" id="resetPassword">Pošalji E-mail</button>
+  </form>
+  <div id="resetMessage" style="color: green; display: none;"></div>
+</div>
 </body>
 <script type="module" src="/login/userSettings.js"></script>
 </html>
