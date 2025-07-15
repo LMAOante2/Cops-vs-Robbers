@@ -493,14 +493,14 @@
 }
 
 .naprijed {
-    background-size: 275px;
+    background-size: 265px;
     background-position: center;
     background-color: #333;
 }
 
 .iza {
     transform: rotateY(180deg);
-    background-size: 275px;
+    background-size: 265px;
     background-position: center;
 }
 
