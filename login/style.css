@@ -3,6 +3,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
+      
     }
 
     body, html {
@@ -12,10 +13,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      touch-action: manipulation;
+      -ms-touch-action: manipulation;
+      touch-action: pan-y;
+      -ms-touch-action: pan-y;
     }
 
     .container {
-      background: #fff;
+      background: linear-gradient(to right bottom,rgb(221, 239, 255), rgb(199, 191, 255));
       width: 100%;
       max-width: 450px;
       padding: 2rem;
@@ -48,20 +53,21 @@
       color: #000;
     }
 
-    input {
+    .input-group input {
       width: 100%;
       padding: 0.8rem 1.5rem 0.8rem 2.5rem;
       border: none;
       border-bottom: 1px solid #757575;
+      background: none;
       font-size: 16px;
     }
 
-    input:focus {
+    .input-group input:focus {
       outline: none;
       border-bottom: 2px solid #007bff;
     }
 
-    label {
+    .input-group label {
       position: absolute;
       left: 2.5rem;
       top: 0.8rem;
@@ -71,16 +77,138 @@
       transition: 0.3s ease;
     }
 
-    input:focus + label,
-    input:not(:placeholder-shown) + label {
+    .input-group input:focus + .input-text,
+    .input-group input:not(:placeholder-shown) + .input-text {
       top: -1.2rem;
       font-size: 16px;
       color: #007bff;
     }
 
-    input::placeholder {
+    .input-group input::placeholder {
       visibility: hidden;
     }
+
+
+    .posao {
+      position: relative;
+    }
+
+    .posao i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #000;
+    }
+
+    #policija {
+      margin-left: 40px;
+      border: none;
+      border-bottom: 1px solid #757575;
+      font-size: 16px;
+    }
+
+    #tamno {
+      margin-left: 40px;
+      border: none;
+      border-bottom: 1px solid #757575;
+      font-size: 16px;
+    }
+
+    #svijetlo {
+      margin-left: 40px;
+      border: none;
+      border-bottom: 1px solid #757575;
+      font-size: 16px;
+    }
+
+    #posao:checked {
+      outline: none;
+      border-bottom: 2px solid #007bff;
+    }
+
+    .policija label {
+      position: absolute;
+      left: 2.5rem;
+      color: #757575;
+      font-size: 0.9rem;
+      pointer-events: none;
+      transition: 0.2s ease;
+    }
+
+    #policija:checked + .posao-text,
+    .posao input:not(:placeholder-shown) + .posao label {
+      color: #007bff;
+    }
+
+    #policija {
+      margin-left: 40px;
+      border: none;
+      border-bottom: 1px solid #757575;
+      font-size: 16px;
+    }
+
+    #pljackas {
+      margin-left: 40px;
+      border: none;
+      border-bottom: 1px solid #757575;
+      font-size: 16px;
+    }
+
+    #pljackas:checked {
+      outline: none;
+      border-bottom: 2px solid #007bff;
+    }
+
+    #pljackas:checked + .pljackas-text,
+    .posao input:not(:placeholder-shown) + .posao label {
+      color: #007bff;
+    }
+
+    #tamno:checked {
+      outline: none;
+      border-bottom: 2px solid #007bff;
+    }
+
+    #tamno:checked + .tamno-text,
+    .posao input:not(:placeholder-shown) + .posao label {
+      color: #007bff;
+    }
+
+    #svijetlo:checked {
+      outline: none;
+      border-bottom: 2px solid #007bff;
+    }
+
+    #svijetlo:checked + .svijetlo-text,
+    .posao input:not(:placeholder-shown) + .posao label {
+      color: #007bff;
+    }
+
+    .posao input::placeholder {
+      visibility: hidden;
+    }
+
+    .mjesec {
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    .sunce {
+      transition: all 0.3s ease;
+    }
+
+    .posao:has(#tamno:checked) .mjesec {
+      display: inline;
+      transition: all 0.3s ease;
+    }
+    
+    .posao:has(#tamno:checked) .sunce {
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+
 
     .messageDiv, .messageDiv1 {
       padding: 10px;
@@ -156,3 +284,12 @@
         font-size: 0.8rem;
       }
     }
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+}

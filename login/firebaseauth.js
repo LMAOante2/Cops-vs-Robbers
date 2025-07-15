@@ -15,7 +15,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDa-Gn5AtvCYwzC7GvArnDUrc6HQfdT-U4",
   authDomain: "login-form-19883.firebaseapp.com",
   projectId: "login-form-19883",
-  storageBucket: "login-form-19883.firebaseapp.com",
+  storageBucket: "login-form-19883.appspot.com",
   messagingSenderId: "469023290458",
   appId: "1:469023290458:web:d0d24d8e80ae5c557b5463"
 };
@@ -41,6 +41,29 @@ signUp.addEventListener('click', (event) => {
   const password = document.getElementById('rPassword').value;
   const firstName = document.getElementById('fName').value;
   const lastName = document.getElementById('lName').value;
+  let job = '';
+  if (document.getElementById('pljackas').checked) {
+    job = 'Pljackas';
+  } else if (document.getElementById('policija').checked) {
+    job = 'Policajac';
+  }
+
+  if (job === '') {
+    showMessage('Molimo odaberite posao: Policija ili Pljačkaš.', 'signUpMessage');
+    return;
+  }
+  let theme = '';
+  if (document.getElementById('tamno').checked) {
+    theme = 'dark';
+  } else if (document.getElementById('svijetlo').checked) {
+    theme = 'light';
+  }
+
+  if (theme === '') {
+    showMessage('Molimo odaberite temu: Tamno ili Svijetlo.', 'signUpMessage');
+    return;
+  }
+
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -48,7 +71,9 @@ signUp.addEventListener('click', (event) => {
       const userData = {
         email: email,
         firstName: firstName,
-        lastName: lastName
+        lastName: lastName,
+        posao: job,
+        theme: theme
       };
 
       showMessage('Račun je uspješno kreiran!', 'signUpMessage');
