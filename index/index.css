@@ -453,8 +453,8 @@
 }
 
 .card {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     position: relative;
     border-radius: 50%;
     background-size: cover;
