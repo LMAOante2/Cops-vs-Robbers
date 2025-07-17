@@ -167,7 +167,7 @@
         .desktopnav .title {
           font-weight: bold;
           font-size: 22px;
-          animation: Sirenapol 0.9s infinite steps(1, end);
+          animation: Sirenapol 0.7s infinite steps(1, end);
           display: inline-block;
           text-transform: uppercase;
           letter-spacing: 1px;
