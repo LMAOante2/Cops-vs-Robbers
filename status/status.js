@@ -6,7 +6,7 @@
 const igraci = document.getElementById('igraci');
 async function updateServerStatus() {
     try {
-        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/857mlm');
+        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const serverData = await response.json();
         const playerCount = serverData?.Data?.players.length || 0;
@@ -21,7 +21,7 @@ async function updateServerStatus() {
 
 async function fetchPlayers() {
     try {
-        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/857mlm');
+        const response = await fetch('https://servers-frontend.fivem.net/api/servers/single/g9k35o');
         const data = await response.json();
 
         let igraclista = document.getElementById("igraclista");
