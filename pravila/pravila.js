@@ -1,31 +1,3 @@
-    document.addEventListener("DOMContentLoaded", function () {
-
-        fetch('https://raw.githubusercontent.com/LMAOante2/Cops-vs-Robbers/main/pravila/pravila.json')
-            .then(response => response.json())
-            .then(data => {
-                const rulesContainer = document.getElementById('rules-container');
-                data.rules.forEach(ruleCategory => {
-                    const categoryDiv = document.createElement('div');
-                    categoryDiv.classList.add('rule');
-                    
-                    const categoryTitle = document.createElement('h2');
-                    categoryTitle.textContent = ruleCategory.category;
-                    categoryDiv.appendChild(categoryTitle);
-                    
-                    const ruleList = document.createElement('ul');
-                    ruleCategory.items.forEach(item => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = item;
-                        ruleList.appendChild(listItem);
-                    });
-
-                    categoryDiv.appendChild(ruleList);
-                    rulesContainer.appendChild(categoryDiv);
-                });
-            })
-            .catch(error => console.error('Error:', error));
-    });
-
     //3D modeli
 
     function setupScene(canvasId, modelPath, rotationAxis, rotationSpeed, positionVector) {
