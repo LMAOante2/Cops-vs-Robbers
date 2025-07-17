@@ -256,7 +256,7 @@ span {
           animation: Sirenapol 0.9s infinite steps(1, end);
           display: inline-block;
           text-transform: uppercase;
-          letter-spacing: 2px;
+          letter-spacing: 1px;
           transition: all 0.2s ease-in-out;
         }
 
