@@ -144,6 +144,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("status");
+  let savedStatus = localStorage.getItem("status");
+
+  if (savedStatus === null) {
+    savedStatus = "true";
+    localStorage.setItem("status", savedStatus);
+  }
+
+  toggle.checked = savedStatus === "true";
+
+  toggle.addEventListener("change", () => {
+    const newStatus = toggle.checked ? "true" : "false";
+    localStorage.setItem("status", newStatus);
+
+    const content = document.getElementById("igraci");
+    content.style.display = toggle.checked ? "block" : "none";
+
+    const loggedInUserId = localStorage.getItem("loggedInUserId");
+    if (loggedInUserId) {
+      const userRef = doc(db, "users", loggedInUserId);
+      updateDoc(userRef, { status: newStatus }).catch((error) => {
+        console.error("Error saving status to Firestore:", error);
+      });
+    }
+  });
+
+  const content = document.getElementById("igraci");
+  content.style.display = savedStatus === "true" ? "block" : "none";
+});
+
 const buttons = document.querySelectorAll('.btn4');
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
