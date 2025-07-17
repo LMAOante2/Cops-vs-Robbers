@@ -165,9 +165,32 @@
         }
 
         .desktopnav .title {
-            color: rgb(0, 152, 223);
-            font-weight: bold;
-            font-size: 22px;
+          font-weight: bold;
+          font-size: 22px;
+          animation: Sirenapol 0.9s infinite steps(1, end);
+          display: inline-block;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          transition: all 0.2s ease-in-out;
+        }
+
+                @keyframes Sirenapol {
+          0%, 5% {
+            color: red;
+            text-shadow: 0 0 5px red, 0 0 15px red, 2px 0 20px red;
+          }
+          10%, 15% {
+            color: red;
+            text-shadow: 0 0 5px red, 0 0 15px red, 2px 0 20px red;
+          }
+          20%, 25% {
+            color: blue;
+            text-shadow: 0 0 5px blue, 0 0 15px blue, -2px 0 20px blue;
+          }
+          30%, 35% {
+            color: blue;
+            text-shadow: 0 0 5px blue, 0 0 15px blue, -2px 0 20px blue;
+          }
         }
 
         .pocetna {
