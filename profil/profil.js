@@ -108,6 +108,10 @@ onAuthStateChanged(auth, (user) => {
 });
 
 
+setTimeout(() => {
+  document.getElementById('cursor').classList.add('fade-out');
+}, 3000);
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("modeToggle");
   let savedTheme = localStorage.getItem("theme");
