@@ -85,12 +85,12 @@ onAuthStateChanged(auth, (user) => {
 
 onAuthStateChanged(auth, (user) => {
   const Ime1 = document.getElementById('Ime1');
-  Ime1.style.display = user ? 'true' : 'none';
+  Ime1.style.display = user ? 'none' : 'true';
 });
 
 onAuthStateChanged(auth, (user) => {
-  const Ime2 = document.getElementById('Ime2');
-  Ime2.style.display = user ? 'true' : 'none';
+  const postavke = document.getElementById('postavke');
+  postavke.style.display = user ? 'true' : 'none';
 });
 
 onAuthStateChanged(auth, (user) => {
