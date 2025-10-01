@@ -217,7 +217,7 @@ nav ul li a:hover {
           }
           
           .rule {
-            background-color: rgb(0, 0, 0);
+            background-color: #0f172a;
             backdrop-filter: blur(3px);
             border-radius: 10px;
             padding: 20px;
