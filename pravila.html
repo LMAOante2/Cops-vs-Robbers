@@ -14,71 +14,45 @@
     <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
-
-    <style>
-
-
-    </style>
 </head>
 
 <body oncontextmenu="return false">
 
-    <input type="checkbox" id="remove">
+<input type="checkbox" id="menutoggle">
+<label for="menutoggle" class="menutoggle-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
 
-    <label for="remove" class="remove-icon">
-        <span></span>
-    </label>
-    
-    <input type="checkbox" id="menutoggle">
-    
-    <label class="menutoggle-icon" for="menutoggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    
-    <input type="checkbox" id="remove">
-    
-    <label for="menutoggle" for="remove" class="remove-icon">
-        <span></span>
-    </label>
-    
-    <nav class="desktopnav">
-        <h3 class="title">Balkan Cops Vs Robbers</h3>
-        <ul>
-            <li class="pocetna">Pravila</li>
-            <li><a href="pocetna.html">Pocetna</a></li>
-            <li><a href="donacije.html">Donacije</a></li>
-            <li><a href="serverstatus.html">Status</a></li>
-            <li><a href="galerija.html">Slike</a></li>
-            <li><a href="profil.html">Profil</a></li>
-        </ul>
-    </nav>
-    
-    <nav class="nav">
-        <h3 class="title">Balkan Cops Vs Robbers</h3>
-        <ul>
-            <li class="pocetna">Pravila</li>
-            <li><a href="pocetna.html">Pocetna</a></li>
-            <li><a href="donacije.html">Donacije</a></li>
-            <li><a href="serverstatus.html">Status</a></li>
-            <li><a href="galerija.html">Slike</a></li>
-            <li><a href="profil.html">Profil</a></li>
-        </ul>
-    </nav>
-    <div>
-    <canvas class="ddd" id="Policajac" tabindex="-1"></canvas>
-    <canvas class="ddd" id="Pljackas" tabindex="-1"></canvas>
-    <div id="test" class="krug"></div>
-    <div id="test1" class="krug1"></div>
-</div>
+<nav>
+    <div class="title">Balkan Cops Vs Robbers</div>
+    <ul class="desktop">
+        <li><a href="pocetna.html">Početna</a></li>
+        <li><a href="pravila.html">Pravila</a></li>
+        <li><a href="donacije.html">Donacije</a></li>
+        <li><a href="#">Uskoro</a></li>
+        <li><a href="profil.html">Profil</a></li>
+    </ul>
+</nav>
+
+
+<nav class="nav">
+    <ul>
+        <li><a href="pocetna.html">Početna</a></li>
+        <li><a href="pravila.html">Pravila</a></li>
+        <li><a href="donacije.html">Donacije</a></li>
+        <li><a href="#">Uskoro</a></li>
+        <li><a href="profil.html">Profil</a></li>
+    </ul>
+</nav>
 
 
 <div class="wrapper">
     <aside class="sidebar">
       <img src="slike/Ucopsvsrobbers.png" alt="Ucopsvsrobbers" oncontextmenu="return false;" draggable="false" />
       <h1>Pravila Servera</h1>
-      <button class="btn4" data-target="rule1">Pravila Policije</button>
+      <button class="btn4 active" data-target="rule1">Pravila Policije</button>
       <button class="btn4" data-target="rule2">Pravila Pljačkaša</button>
       <button class="btn4" data-target="rule3">Općenita Pravila</button>
       <button class="btn4" data-target="rule4">Safe Zone</button>
@@ -86,65 +60,65 @@
     </aside>
 
     <main class="rules-container">
-      <section id="rule1" class="rule active">
+      <section id="rule1" class="rule show">
         <h2>Pravila Policije</h2>
-        <p>1. Heli se diže samo na pljačku zlatare i glavne banke</p>
-        <p>2. Zabranjeno prodavanje/davanje stvari iz PDA</p>
-        <p>3. Zabranjen dolazak na teritorije</p>
-        <p>4. Morate ispuniti sve realne uslove robbera</p>
-        <p>5. Ne pucate bez razloga</p>
-        <p>6. Zabranjeno respawnanje dok se pljačka ne završi</p>
-        <p>7. Kad se pljačka završi, ne tazejte, ne ubijajte pljačkaša dok pljačka bankomat!</p>
-        <p>8. Kada neko radi heist pljačke auta, on kada preda auto PD ga ne smije uhapsiti</p>
-        <p>9. PD ne smije uzimati novac iz inventorya igrača!</p>
+        <p class="pravilo">1. Heli se diže samo na pljačku zlatare i glavne banke</p>
+        <p class="pravilo">2. Zabranjeno prodavanje/davanje stvari iz PDA</p>
+        <p class="pravilo">3. Zabranjen dolazak na teritorije</p>
+        <p class="pravilo">4. Morate ispuniti sve realne uslove robbera</p>
+        <p class="pravilo">5. Ne pucate bez razloga</p>
+        <p class="pravilo">6. Zabranjeno respawnanje dok se pljačka ne završi</p>
+        <p class="pravilo">7. Kad se pljačka završi, ne tazejte, ne ubijajte pljačkaša dok pljačka bankomat!</p>
+        <p class="pravilo">8. Kada neko radi heist pljačke auta, on kada preda auto PD ga ne smije uhapsiti</p>
+        <p class="pravilo">9. PD ne smije uzimati novac iz inventorya igrača!</p>
       </section>
 
       <section id="rule2" class="rule">
         <h2>Pravila Pljačkaša</h2>
-        <p>1. Tokom potjere zabranjeno je open fire prvih pola sata, nakon pola sata dozvoljen</p>
-        <p>2. Zabranjeno pucanje u svim garažama, trgovinama, mjestima za presvlačenje, autosalonu, apartmanima, ...</p>
-        <p>3. Ako open fire pljačka traje više od 30 minuta morate se predati</p>
-        <p>4. Zabranjeno respawnanje dok se pljačka ne završi</p>
-        <p>5. Zabranjena krađa PD auta</p>
-        <p>6. Zabranjeno kempanje na lokacijama</p>
-        <p>7. Zabranjen RDM, VDM, RANDOM LOOT, VEZIVANJE PD-a</p>
+        <p class="pravilo">1. Tokom potjere zabranjeno je open fire prvih pola sata, nakon pola sata dozvoljen</p>
+        <p class="pravilo">2. Zabranjeno pucanje u svim garažama, trgovinama, mjestima za presvlačenje, autosalonu, apartmanima, ...</p>
+        <p class="pravilo">3. Ako open fire pljačka traje više od 30 minuta morate se predati</p>
+        <p class="pravilo">4. Zabranjeno respawnanje dok se pljačka ne završi</p>
+        <p class="pravilo">5. Zabranjena krađa PD auta</p>
+        <p class="pravilo">6. Zabranjeno kempanje na lokacijama</p>
+        <p class="pravilo">7. Zabranjen RDM, VDM, RANDOM LOOT, VEZIVANJE PD-a</p>
       </section>
 
       <section id="rule3" class="rule">
         <h2>Općenita Pravila</h2>
-        <p>1. Obavezan mikrofon</p>
-        <p>2. Zabranjeno puhanje u mikrofon</p>
-        <p>3. Strogo zabranjeno psovanje familije, psovanja po nacionalnoj ili vjerskoj osnovi</p>
-        <p>4. Zabranjeno Q peak, Radio peak, ...</p>
-        <p>5. Zabranjena toksičnost</p>
-        <p>6. Strogo zabranjeno iskorištavanje bugova i uzimanje aviona, helikoptera, tenkova itd. iz vojnih baza ili aerodroma</p>
-        <p>7. Zabranjeno izlaženje sa servera dok pljačkate ili bježite od policije (LTA)</p>
+        <p class="pravilo">1. Obavezan mikrofon</p>
+        <p class="pravilo">2. Zabranjeno puhanje u mikrofon</p>
+        <p class="pravilo">3. Strogo zabranjeno psovanje familije, psovanja po nacionalnoj ili vjerskoj osnovi</p>
+        <p class="pravilo">4. Zabranjeno Q peak, Radio peak, ...</p>
+        <p class="pravilo">5. Zabranjena toksičnost</p>
+        <p class="pravilo">6. Strogo zabranjeno iskorištavanje bugova i uzimanje aviona, helikoptera, tenkova itd. iz vojnih baza ili aerodroma</p>
+        <p class="pravilo">7. Zabranjeno izlaženje sa servera dok pljačkate ili bježite od policije (LTA)</p>
       </section>
 
       <section id="rule4" class="rule">
         <h2>Safe Zone</h2>
         <ul>
-          <li>Sve Garaze</li>
-          <li>Svi Legalni Shopovi</li>
-          <li>Mjesta Za Presvlacenje</li>
-          <li>Autosalon</li>
-          <li>Apartmani</li>
+          <li class="pravilo">Sve Garaze</li>
+          <li class="pravilo">Svi Legalni Shopovi</li>
+          <li class="pravilo">Mjesta Za Presvlacenje</li>
+          <li class="pravilo">Autosalon</li>
+          <li class="pravilo">Apartmani</li>
         </ul>
       </section>
 
       <section id="rule5" class="rule">
         <h2>Uslovi</h2>
         <ul>
-          <li>Pljacka bankomata - 1 Uslov</li>
-          <li>Car Heist - 1 Uslov</li>
-          <li>Pljacka Jahte - 2 Uslova</li>
-          <li>Pljacka Vlaka - 2 Uslova</li>
-          <li>Pljacka Apple Stora - 2 Uslova</li>
-          <li>Pljacka Digital Dena - 2 Uslova</li>
-          <li>Pljacka Prodavnice - 2 Uslova</li>
-          <li>Pljacka Zlatare - 3 Uslova</li>
-          <li>Pljacka Banke - 3 Uslova</li>
-          <li>Pljacka Glavne Banke - 4 Uslova</li>
+          <li class="pravilo">Pljacka bankomata - 1 Uslov</li>
+          <li class="pravilo">Car Heist - 1 Uslov</li>
+          <li class="pravilo">Pljacka Jahte - 2 Uslova</li>
+          <li class="pravilo">Pljacka Vlaka - 2 Uslova</li>
+          <li class="pravilo">Pljacka Apple Stora - 2 Uslova</li>
+          <li class="pravilo">Pljacka Digital Dena - 2 Uslova</li>
+          <li class="pravilo">Pljacka Prodavnice - 2 Uslova</li>
+          <li class="pravilo">Pljacka Zlatare - 3 Uslova</li>
+          <li class="pravilo">Pljacka Banke - 3 Uslova</li>
+          <li class="pravilo">Pljacka Glavne Banke - 4 Uslova</li>
         </ul>
       </section>
     </main>

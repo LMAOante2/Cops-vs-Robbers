@@ -1,109 +1,85 @@
 <!DOCTYPE html>
-<html oncontextmenu="return false" lang="en">
+<html lang="en">
 <head>
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profil/profil.css">
-    <title>Balkan Cops Vs Robbers | Profil</title>
-    <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
-    <style>
-    </style>
-    <script type="module" src="profil/profil.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil | Balkan Cops Vs Robbers</title>
+  <link rel="stylesheet" href="profil/profil.css">
+  <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
 </head>
-<body oncontextmenu="return false">
-    <div class="loader"></div>
-    <input type="checkbox" id="remove">
-    <label for="remove" class="remove-icon">
-        <span></span>
-    </label>
+<body>
+  <div class="loader"></div>
 
-    <input type="checkbox" id="menutoggle">
-    <label class="menutoggle-icon" for="menutoggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    
-    <input type="checkbox" id="remove">
-    <label for="menutoggle" for="remove" class="remove-icon">
-        <span></span>
-    </label>
-    
-    <nav class="desktopnav">
-        <h3 class="title">Balkan Cops Vs Robbers</h3>
-        <ul>
-            <li class="pocetna">Profil</li>
-            <li><a href="pocetna.html">Pocetna</a></li>
-            <li><a href="pravila.html">Pravila</a></li>
-            <li><a href="donacije.html">Donacije</a></li>
-            <li><a href="serverstatus.html">Status</a></li>
-            <li><a href="galerija.html">Slike</a></li>
-        </ul>
-    </nav>
-    
-    <nav class="nav">
-        <h3 class="title">Balkan Cops Vs Robbers</h3>
-        <ul>
-            <li class="pocetna">Profil</li>
-            <li><a href="pocetna.html">Pocetna</a></li>
-            <li><a href="pravila.html">Pravila</a></li>
-            <li><a href="donacije.html">Donacije</a></li>
-            <li><a href="serverstatus.html">Status</a></li>
-            <li><a href="galerija.html">Slike</a></li>
-        </ul>
-    </nav>
+<input type="checkbox" id="menutoggle">
+<label for="menutoggle" class="menutoggle-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
 
-    <div class="buttons">
-        <button id="profil1" class="btn4">profil</button>
-        <button id="postavke1" class="btn4">postavke</button>
+<nav>
+    <div class="title">Balkan Cops Vs Robbers</div>
+    <ul class="desktop">
+        <li><a href="pocetna.html">Početna</a></li>
+        <li><a href="pravila.html">Pravila</a></li>
+        <li><a href="donacije.html">Donacije</a></li>
+        <li><a href="#">Uskoro</a></li>
+        <li><a href="profil.html">Profil</a></li>
+    </ul>
+</nav>
+
+
+<nav class="nav">
+    <ul>
+        <li><a href="pocetna.html">Početna</a></li>
+        <li><a href="pravila.html">Pravila</a></li>
+        <li><a href="donacije.html">Donacije</a></li>
+        <li><a href="#">Uskoro</a></li>
+        <li><a href="profil.html">Profil</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+
+  <section id="profil" class="section">
+    <h2>Profil korisnika</h2>
+    <div class="info">
+      <div><strong>Ime:</strong> <span id="loggedUserFName"></span></div>
+      <div><strong>Prezime:</strong> <span id="loggedUserLName"></span></div>
+      <div><strong>Email:</strong> <span id="loggedUserEmail"></span></div>
+      <div><strong>Posao:</strong> <span id="loggedUserposao"></span></div>
     </div>
-    <div id="profil" style="margin-top: 10px;" class="div">
-       <h1>Profil</h1>
-       <hr>
-       <div  id="Ime"><span  id="loggedUserFName"></span></div>
-       <div  id="Ime1"><span  id="loggedUserLName"></span></div>
-       <div  id="Ime2"><span  id="loggedUserEmail"></span></div>
-       <div  id="Ime3"><span  id="loggedUserposao"></span></div>
-       <button id="link1"><a style="text-decoration: none;" href="index.html">Prijavi se</a></button>
-       <button class="logout" id="logout">Izlogiraj se</button>
-       <button class="promjenibtn" id="promjenibtn">Promjeni Lozinku</button>    
+    <div class="actions">
+      <button class="btn logout" id="logout">Izlogiraj se</button>
     </div>
+  </section>
 
-    <div id="postavke" style="margin-top: 30px; width: 360px; display: none;" class="div div1">
-        <h1 style="margin-bottom: 30px;">Postavke</h1>
-        <hr style="margin-top: -30px;">
-        
-        <div class="test" id="light">
-            <h3 style="margin-left: -85px; margin-top: 5px;">Svjetlost</h3>
-            <label class="switch">
-                <input type="checkbox" id="modeToggle">
-                <span class="slider"></span>
-            </label>
-        </div>
-
-        <div style="display: none;" class="test" id="status1">
-            <h3 style="margin-left: -85px; margin-top: 5px;">Pokazi Igrace (status)</h3>
-            <label class="switch1">
-                <input type="checkbox" id="status">
-                <span class="slider1"></span>
-            </label>
-        </div>
-    
-        <h3 id="lightnot">Moras Biti Prijavljen/a da bi mjenjao/la postavke</h3>
+  <section id="postavke" class="section">
+    <h2>Postavke</h2>
+    <div class="setting">
+        <input type="checkbox" id="modeToggle">
+        <div><strong>Svijetli način rada</strong></div>
+      <label class="tema" for="modeToggle">
+        <li></li>
+      </label>
     </div>
+  </section>
 
-    <div class="div2" id="promjenidiv" style="display: none;">
-      <h1>Promjeni Lozinku</h1>
-      <form id="resetForm">
-        <input type="email" id="resetEmail" placeholder="e-mail (Mora biti vas!!)" required />
-        <button type="submit" class="reset" id="resetPassword">Pošalji E-mail</button>
-      </form>
-      <div id="resetMessage" style="color: green; display: none;"></div>
-    </div>
+  <section id="promjenidiv" class="section">
+    <h2>Promjena lozinke</h2>
+    <form id="resetForm">
+      <label for="resetEmail">E-mail adresa</label>
+      <input type="email" id="resetEmail" placeholder="Vaš E-mail" required>
+      <button type="submit" class="btn">Pošalji e-mail</button>
+    </form>
+    <div id="resetMessage"></div>
+  </section>
 
+</main>
+
+<script type="module" src="profil/profil.js"></script>
+<script type="module" src="login/userSettings.js" defer></script>
 </body>
-<script type="module" src="/login/userSettings.js"></script>
 </html>
