@@ -494,7 +494,7 @@ nav ul li a:hover {
 }
 
 .light-mode .btn4.active {
-  background-color: blue;
+  background-color: rgba(2, 231, 201);
   color: white;
 }
 
@@ -556,7 +556,7 @@ nav ul li a:hover {
 }
 
 .dark-mode .btn4.active {
-  background-color: blue;
+  background-color: rgba(2, 231, 201);
   color: black;
 }
 
