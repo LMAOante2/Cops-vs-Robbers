@@ -472,7 +472,7 @@ nav ul li a:hover {
 
 .dark-mode section {
   background: #0f172a9f;
-  color: black;
+  color: white;
   backdrop-filter: blur(5px);
 }
 
