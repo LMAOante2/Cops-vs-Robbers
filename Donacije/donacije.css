@@ -177,7 +177,7 @@ nav ul li a:hover {
             background-color: #bbb;
           }
           .btn4.active {
-            background-color: blue;
+            background-color: rgba(2, 231, 201);
             color: white;
             transform: translateX(20px);
           }
