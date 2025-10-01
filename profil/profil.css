@@ -1,3 +1,4 @@
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -234,13 +235,16 @@ input[type="email"], input[type="text"], input[type="password"] {
 }
 
 .light-mode nav,
-.light-mode nav a,
-.light-mode nav .title,
 .light-mode section,
 .light-mode .setting,
 .light-mode .info div {
   background: #ffffff;
   color: #111111;
+}
+
+.light-mode nav a,
+.light-mode nav .title {
+    color: black;
 }
 
 .light-mode .menutoggle-icon span {
