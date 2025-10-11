@@ -272,7 +272,9 @@ input[type="email"], input[type="text"], input[type="password"] {
 .dark-mode nav a,
 .dark-mode nav.title,
 .dark-mode section,
-.dark-mode .setting {
+.dark-mode .setting,
+.dark-mode .section h2
+{
     background-color: #0f172a;
     color: white;
 }
