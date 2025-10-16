@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Prvi Cops Vs Robbers Fivem Server Na Balkanu">
@@ -9,35 +11,40 @@
   <meta name="author" content="Balkan Cops Vs Robbers">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="HGvKcQ3b0bT5SE0yGNMlDwvYMaLh_PgTC2DnKvqywRo" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="login/style.css">
-    <script type="module" src="login/firebaseauth.js"></script>
-    <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="login/style.css">
+  <script type="module" src="login/firebaseauth.js"></script>
+  <link rel="icon" href="slike/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
 
-    <title>Balkan Cops Vs Robbers | Prijava</title>
+  <title>Balkan Cops Vs Robbers | Prijava</title>
 </head>
+
 <body>
+  <div id="info" class="info">
+    <h3><i class="fa-solid fa-circle-info" style="margin-right: 10px;"></i>Obrisani Su Svi Accounti Zbog Nove Databaze
+    </h3>
+  </div>
   <div class="container" id="signup" style="display:none;">
     <h1 class="form-title">Napravi Account</h1>
     <form method="post" action="">
       <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
       <div id="signUpMessage1" class="messageDiv1" style="display:none;"></div>
       <div class="input-group">
-         <i class="fas fa-user"></i>
-         <input autocomplete="off" type="text"  id="fName" placeholder="Ime" required>
-         <label class="input-text" for="fname">Ime</label>
+        <i class="fas fa-user"></i>
+        <input autocomplete="off" type="text" id="fName" placeholder="Ime" required>
+        <label class="input-text" for="fname">Ime</label>
       </div>
       <div class="input-group">
-          <i class="fas fa-user"></i>
-          <input autocomplete="off" type="text"  id="lName" placeholder="Prezime" required>
-          <label class="input-text" for="lName">Prezime</label>
+        <i class="fas fa-user"></i>
+        <input autocomplete="off" type="text" id="lName" placeholder="Prezime" required>
+        <label class="input-text" for="lName">Prezime</label>
       </div>
       <div class="input-group">
-          <i class="fas fa-envelope"></i>
-          <input autocomplete="off" type="email"  id="rEmail" placeholder="Email" required>
-          <label class="input-text" for="rEmail">Email</label>
+        <i class="fas fa-envelope"></i>
+        <input autocomplete="off" type="email" id="rEmail" placeholder="Email" required>
+        <label class="input-text" for="rEmail">Email</label>
       </div>
 
       <div class="input-group">
@@ -56,7 +63,7 @@
         <label class="tamno-text" for="tamno">Tamno</label>
         <input type="checkbox" id="svijetlo">
         <label class="svijetlo-text" for="svijetlo">Svijetlo</label>
-    </div>
+      </div>
 
       <hr>
       <h4 style="text-align: center;">ING</h4>
@@ -66,8 +73,8 @@
         <label class="posao-text" for="policija">Policija</label>
         <input type="checkbox" id="pljackas">
         <label class="pljackas-text" for="pljackas">Pljackas</label>
-    </div>
-     <button class="btn" id="submitSignUp" >Napravi Account</button>
+      </div>
+      <button class="btn" id="submitSignUp">Napravi Account</button>
     </form>
     <div class="links">
       <p style="text-align: center;">Vec imas account?</p>
@@ -75,37 +82,38 @@
     </div>
   </div>
 
-<div class="container" id="signIn">
-      <h1 class="form-title">Prijavi se</h1>
-      <form method="post" action="">
-        <div id="signInMessage" class="messageDiv" style="display:none;"></div>
-        <div id="signInMessage1" class="messageDiv1" style="display:none;"></div>
+  <div class="container" id="signIn">
+    <h1 class="form-title">Prijavi se</h1>
+    <form method="post" action="">
+      <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+      <div id="signInMessage1" class="messageDiv1" style="display:none;"></div>
 
-        <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input autocomplete="off" type="email"  id="email" placeholder="Email" required>
-            <label class="input-text" for="email">Email</label>
-        </div>
-
-        <div class="input-group">
-          <i class="fas fa-lock"></i>
-          <input autocomplete="off" type="password" id="password" placeholder="Lozinka" required>
-          <label class="input-text" for="password">Lozinka</label>
-          <span class="toggle-password" toggle="#password">
-          <i class="fa-solid fa-eye"></i>
-          </span>
-        </div>
-
-       <button  class="btn"  id="submitSignIn">Prijavi se</button>
-      </form>
-      <div class="links">
-        <p style="width: 350px; margin-left: 10px;">Jos nemas account?</p>
-        <button id="signUpButton">Napravi Account</button>
-        <a class="a2" href="profil.html">Zaboravio/la si lozinku?</a>
-        <a class="a1" href="pocetna.html">Nastavi Kao Gost</a>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input autocomplete="off" type="email" id="email" placeholder="Email" required>
+        <label class="input-text" for="email">Email</label>
       </div>
+
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input autocomplete="off" type="password" id="password" placeholder="Lozinka" required>
+        <label class="input-text" for="password">Lozinka</label>
+        <span class="toggle-password" toggle="#password">
+          <i class="fa-solid fa-eye"></i>
+        </span>
+      </div>
+
+      <button class="btn" id="submitSignIn">Prijavi se</button>
+    </form>
+    <div class="links">
+      <p style="width: 350px; margin-left: 10px;">Jos nemas account?</p>
+      <button id="signUpButton">Napravi Account</button>
+      <a class="a2" href="profil.html">Zaboravio/la si lozinku?</a>
+      <a class="a1" href="pocetna.html">Nastavi Kao Gost</a>
     </div>
-    <script src="login/script.js"></script>
-    <script type="module" src="/login/userSettings.js"></script>
+  </div>
+  <script src="login/script.js"></script>
+  <script type="module" src="/login/userSettings.js"></script>
 </body>
+
 </html>

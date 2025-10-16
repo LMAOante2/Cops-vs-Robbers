@@ -3,10 +3,11 @@
       padding: 0;
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
-      
+
     }
 
-    body, html {
+    body,
+    html {
       background: url('/slike/background.png') no-repeat center center;
       background-size: cover;
       min-height: 100vh;
@@ -20,13 +21,14 @@
     }
 
     .container {
-      background: linear-gradient(to right bottom,rgb(221, 239, 255), rgb(199, 191, 255));
+      background: linear-gradient(to right bottom, rgb(221, 239, 255), rgb(199, 191, 255));
       width: 100%;
       max-width: 450px;
       padding: 2rem;
       margin: 1rem;
       border-radius: 10px;
       box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9);
+      transition: all 0.3s ease;
     }
 
     .form-title {
@@ -77,8 +79,8 @@
       transition: 0.3s ease;
     }
 
-    .input-group input:focus + .input-text,
-    .input-group input:not(:placeholder-shown) + .input-text {
+    .input-group input:focus+.input-text,
+    .input-group input:not(:placeholder-shown)+.input-text {
       top: -1.2rem;
       font-size: 16px;
       color: #007bff;
@@ -136,8 +138,8 @@
       transition: 0.2s ease;
     }
 
-    #policija:checked + .posao-text,
-    .posao input:not(:placeholder-shown) + .posao label {
+    #policija:checked+.posao-text,
+    .posao input:not(:placeholder-shown)+.posao label {
       color: #007bff;
     }
 
@@ -160,8 +162,8 @@
       border-bottom: 2px solid #007bff;
     }
 
-    #pljackas:checked + .pljackas-text,
-    .posao input:not(:placeholder-shown) + .posao label {
+    #pljackas:checked+.pljackas-text,
+    .posao input:not(:placeholder-shown)+.posao label {
       color: #007bff;
     }
 
@@ -170,8 +172,8 @@
       border-bottom: 2px solid #007bff;
     }
 
-    #tamno:checked + .tamno-text,
-    .posao input:not(:placeholder-shown) + .posao label {
+    #tamno:checked+.tamno-text,
+    .posao input:not(:placeholder-shown)+.posao label {
       color: #007bff;
     }
 
@@ -180,8 +182,8 @@
       border-bottom: 2px solid #007bff;
     }
 
-    #svijetlo:checked + .svijetlo-text,
-    .posao input:not(:placeholder-shown) + .posao label {
+    #svijetlo:checked+.svijetlo-text,
+    .posao input:not(:placeholder-shown)+.posao label {
       color: #007bff;
     }
 
@@ -202,7 +204,7 @@
       display: inline;
       transition: all 0.3s ease;
     }
-    
+
     .posao:has(#tamno:checked) .sunce {
       display: none;
       transition: all 0.3s ease;
@@ -210,7 +212,8 @@
 
 
 
-    .messageDiv, .messageDiv1 {
+    .messageDiv,
+    .messageDiv1 {
       padding: 10px;
       color: #fff;
       border-radius: 5px;
@@ -220,8 +223,13 @@
       animation: fadeOut 7s forwards;
     }
 
-    .messageDiv { background: red; }
-    .messageDiv1 { background: green; }
+    .messageDiv {
+      background: red;
+    }
+
+    .messageDiv1 {
+      background: green;
+    }
 
     .btn {
       padding: 0.8rem;
@@ -247,7 +255,8 @@
       text-align: center;
     }
 
-    .links a, .links button {
+    .links a,
+    .links button {
       background: none;
       border: none;
       color: #007bff;
@@ -256,15 +265,24 @@
       font-size: 0.9rem;
     }
 
-    .links a:hover, .links button:hover {
+    .links a:hover,
+    .links button:hover {
       text-decoration: underline;
       color: #0056b3;
     }
 
     @keyframes fadeOut {
-      0% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { opacity: 0; }
+      0% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
     }
 
     @media (max-width: 480px) {
@@ -285,11 +303,28 @@
       }
     }
 
-.toggle-password {
-  position: absolute;
-  top: 50%;
-  right: 40px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #999;
-}
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #999;
+    }
+
+    .info {
+      position: absolute;
+      width: 100%;
+      max-width: 450px;
+      padding: 0;
+      margin-top: 445px;
+      border-radius: 10px;
+      background: red;
+      padding: 3px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      transition: all 0.2s ease;
+    }
