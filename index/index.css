@@ -270,9 +270,9 @@ nav ul li a:hover {
 .dark-mode .nav
 .dark-mode nav a,
 .dark-mode nav.title,
-.dark-mode .features,
+.dark-mode .funkcije,
 .dark-mode .setting,
-.dark-mode .features {
+.dark-mode .funkcija {
     background-color: #0f172a;
     color: white;
 }
