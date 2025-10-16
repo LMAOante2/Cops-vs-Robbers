@@ -22,233 +22,103 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const db = getFirestore();
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-const input = document.getElementById("resetEmail");
-const extraText = " - extra";
-
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, async (user) => {
   const loggedInUserId = localStorage.getItem('loggedInUserId');
-  if (loggedInUserId) {
-    const docRef = doc(db, "users", loggedInUserId);
-    getDoc(docRef)
-      .then((docSnap) => {
-        if (docSnap.exists()) {
-          const userData = docSnap.data();
-          document.getElementById('loggedUserFName').innerText = userData.firstName;
-          document.getElementById('loggedUserEmail').innerText = userData.email;
-          document.getElementById('loggedUserLName').innerText = userData.lastName;
-          document.getElementById('loggedUserposao').innerText = userData.posao;
-          const input = document.getElementById("resetEmail");
-          const extraText = userData.email;
-          input.value = input.value + extraText;
-        } else {
-          console.log("No document found matching ID");
-        }
-      })
-      .catch((error) => {
-        console.log("Error getting document:", error);
-      });
-  } else {
-    console.log("User ID not found in local storage");
-  }
-});
+  const link1 = document.getElementById('link1');
+  const logoutBtn = document.getElementById('logout');
+  const Ime = document.getElementById('Ime');
+  const Ime1 = document.getElementById('Ime1');
+  const postavke = document.getElementById('postavke');
+  const Ime3 = document.getElementById('Ime3');
+  const light = document.getElementById('light');
+  const status1 = document.getElementById('status1');
+  const lightnot = document.getElementById('lightnot');
 
-const logoutButton = document.getElementById('logout');
-logoutButton.addEventListener('click', () => {
-  localStorage.removeItem('loggedInUserId');
-  signOut(auth)
-    .then(() => {
-      window.location.href = 'index.html';
-    })
-    .catch((error) => {
-      console.error('Error signing out:', error);
-    });
+  if (user && loggedInUserId) {
+
+    try {
+      const docRef = doc(db, "users", loggedInUserId);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        document.getElementById('loggedUserFName').innerText = data.firstName;
+        document.getElementById('loggedUserEmail').innerText = data.email;
+        document.getElementById('loggedUserLName').innerText = data.lastName;
+        document.getElementById('loggedUserposao').innerText = data.posao;
+        document.getElementById("resetEmail").value = data.email;
+      }
+    } catch (err) {
+      console.error("Greška pri dohvaćanju dokumenta:", err);
+    }
+
+    link1.style.display = "none";
+    logoutBtn.style.display = "block";
+    Ime.style.display = "block";
+    Ime1.style.display = "none";
+    postavke.style.display = "block";
+    Ime3.style.display = "block";
+    light.style.display = "block";
+    status1.style.display = "block";
+    lightnot.style.display = "none";
+  } else {
+    link1.style.display = "block";
+    logoutBtn.style.display = "none";
+    Ime.style.display = "none";
+    Ime1.style.display = "block";
+    postavke.style.display = "none";
+    Ime3.style.display = "none";
+    light.style.display = "none";
+    status1.style.display = "none";
+    lightnot.style.display = "block";
+  }
 });
 
 onAuthStateChanged(auth, (user) => {
   const link1 = document.getElementById('link1');
   link1.style.display = user ? 'none' : 'true';
 });
-
 onAuthStateChanged(auth, (user) => {
   const logout = document.getElementById('logout');
   logout.style.display = user ? 'true' : 'none';
 });
-
-
 onAuthStateChanged(auth, (user) => {
   const Ime = document.getElementById('Ime');
   Ime.style.display = user ? 'true' : 'none';
 });
-
 onAuthStateChanged(auth, (user) => {
   const Ime1 = document.getElementById('Ime1');
   Ime1.style.display = user ? 'none' : 'true';
 });
-
 onAuthStateChanged(auth, (user) => {
   const postavke = document.getElementById('postavke');
   postavke.style.display = user ? 'true' : 'none';
 });
-
 onAuthStateChanged(auth, (user) => {
   const Ime3 = document.getElementById('Ime3');
   Ime3.style.display = user ? 'true' : 'none';
 });
-
 onAuthStateChanged(auth, (user) => {
   const light = document.getElementById('light');
   light.style.display = user ? 'true' : 'none';
 });
-
 onAuthStateChanged(auth, (user) => {
   const light = document.getElementById('status1');
   light.style.display = user ? 'true' : 'none';
 });
-
 onAuthStateChanged(auth, (user) => {
   const lightnot = document.getElementById('lightnot');
   lightnot.style.display = user ? 'none' : 'true';
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const closeMenu = document.querySelector(".close-menu");
-  const sideMenu = document.querySelector(".side-menu");
-
-  menuToggle.addEventListener("click", function () {
-    sideMenu.classList.add("active");
-  });
-
-  closeMenu.addEventListener("click", function () {
-    sideMenu.classList.remove("active");
-  });
-
-  document.addEventListener("click", function (event) {
-    if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-      sideMenu.classList.remove("active");
-    }
-  });
+document.getElementById('logout').addEventListener('click', () => {
+  localStorage.removeItem('loggedInUserId');
+  signOut(auth)
+    .then(() => (window.location.href = 'index.html'))
+    .catch(err => console.error("Greška pri odjavi:", err));
 });
-
-setTimeout(() => {
-  document.getElementById('cursor').classList.add('fade-out');
-}, 3000);
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("modeToggle");
-  let savedTheme = localStorage.getItem("theme");
-
-  if (!savedTheme) {
-    savedTheme = "dark";
-    localStorage.setItem("theme", "dark");
-  }
-
-  document.body.classList.add(savedTheme + "-mode");
-  toggle.checked = savedTheme === "light";
-
-  toggle.addEventListener("change", () => {
-    const newTheme = toggle.checked ? "light" : "dark";
-    document.body.classList.remove("dark-mode", "light-mode");
-    document.body.classList.add(newTheme + "-mode");
-    localStorage.setItem("theme", newTheme);
-
-    const loggedInUserId = localStorage.getItem("loggedInUserId");
-    if (loggedInUserId) {
-      const userRef = doc(db, "users", loggedInUserId);
-      updateDoc(userRef, { theme: newTheme }).catch((error) => {
-        console.error("Error saving theme to Firestore:", error);
-      });
-    }
-  });
-
-  document.getElementById("logout").addEventListener("click", () => {
-    location.reload();
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("status");
-  let savedStatus = localStorage.getItem("status");
-
-  if (savedStatus === null) {
-    savedStatus = "true";
-    localStorage.setItem("status", savedStatus);
-  }
-
-  toggle.checked = savedStatus === "true";
-
-  toggle.addEventListener("change", () => {
-    const newStatus = toggle.checked ? "true" : "false";
-    localStorage.setItem("status", newStatus);
-
-    const content = document.getElementById("igraci");
-    content.style.display = toggle.checked ? "block" : "none";
-
-    const loggedInUserId = localStorage.getItem("loggedInUserId");
-    if (loggedInUserId) {
-      const userRef = doc(db, "users", loggedInUserId);
-      updateDoc(userRef, { status: newStatus }).catch((error) => {
-        console.error("Error saving status to Firestore:", error);
-      });
-    }
-  });
-
-  const content = document.getElementById("igraci");
-  content.style.display = savedStatus === "true" ? "block" : "none";
-});
-
-const buttons = document.querySelectorAll('.btn4');
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("profil1").addEventListener("click", function () {
-    if (document.getElementById("postavke").style.display = "none") {
-      document.getElementById("profil").style.display = "block";
-    } else {
-      document.getElementById("postavke").style.display = "none";
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("postavke1").addEventListener("click", function () {
-    if (document.getElementById("profil").style.display = "none") {
-      document.getElementById("postavke").style.display = "block";
-      document.getElementById("profil").style.display = "none";
-      document.getElementById("promjenidiv").style.display = "none";
-    } else {
-      document.getElementById("profil").style.display = "none";
-    }
-  });
-});
-
-window.addEventListener("load", () => {
-  const loader = document.querySelector(".loader");
-  loader.classList.add("loader--hidden");
-  loader.addEventListener("transitionend", () => {
-    document.body.removeChild(loader);
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("promjenibtn").addEventListener("click", function () {
-    if (document.getElementById("promjenidiv").style.display = "none") {
-      document.getElementById("promjenidiv").style.display = "block";
-    } else {
-      document.getElementById("profil").style.display = "none";
-    }
-  });
-});
-
-
 
 const resetForm = document.getElementById("resetForm");
 const messageDiv = document.getElementById("resetMessage");
@@ -267,8 +137,26 @@ resetForm.addEventListener("submit", async (e) => {
     messageDiv.textContent = "Email za ponovo postavljanje lozinke je poslan! Provjeri svoj mail.";
   } catch (error) {
     messageDiv.style.color = "red";
-    messageDiv.textContent = error.message || "Error tokom slanja maila.";
+    messageDiv.textContent = error.message || "Greška tokom slanja maila.";
   }
 });
 
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  if (!loader) return;
 
+  loader.classList.add("loader--hidden");
+
+
+  loader.addEventListener("transitionend", () => {
+    if (loader && loader.parentNode) {
+      loader.parentNode.removeChild(loader);
+    }
+  });
+
+  setTimeout(() => {
+    if (loader && loader.parentNode) {
+      loader.parentNode.removeChild(loader);
+    }
+  }, 2000);
+});
