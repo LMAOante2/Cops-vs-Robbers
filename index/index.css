@@ -241,7 +241,8 @@ nav ul li a:hover {
 .light-mode section,
 .light-mode .setting,
 .light-mode .info div,
-.light-mode .features {
+.light-mode .funkcije,
+.light-mode .funkcija {
   background: #ffffff;
   color: #111111;
 }
