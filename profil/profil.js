@@ -8,8 +8,7 @@ import {
 import {
   getFirestore,
   getDoc,
-  doc,
-  updateDoc
+  doc
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -27,6 +26,7 @@ const db = getFirestore(app);
 
 onAuthStateChanged(auth, async (user) => {
   const loggedInUserId = localStorage.getItem('loggedInUserId');
+
   const link1 = document.getElementById('link1');
   const logoutBtn = document.getElementById('logout');
   const Ime = document.getElementById('Ime');
@@ -38,10 +38,10 @@ onAuthStateChanged(auth, async (user) => {
   const lightnot = document.getElementById('lightnot');
 
   if (user && loggedInUserId) {
-
     try {
       const docRef = doc(db, "users", loggedInUserId);
       const docSnap = await getDoc(docRef);
+
       if (docSnap.exists()) {
         const data = docSnap.data();
         document.getElementById('loggedUserFName').innerText = data.firstName;
@@ -63,7 +63,9 @@ onAuthStateChanged(auth, async (user) => {
     light.style.display = "block";
     status1.style.display = "block";
     lightnot.style.display = "none";
+
   } else {
+
     link1.style.display = "block";
     logoutBtn.style.display = "none";
     Ime.style.display = "none";
@@ -76,47 +78,11 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
-onAuthStateChanged(auth, (user) => {
-  const link1 = document.getElementById('link1');
-  link1.style.display = user ? 'none' : 'true';
-});
-onAuthStateChanged(auth, (user) => {
-  const logout = document.getElementById('logout');
-  logout.style.display = user ? 'true' : 'none';
-});
-onAuthStateChanged(auth, (user) => {
-  const Ime = document.getElementById('Ime');
-  Ime.style.display = user ? 'true' : 'none';
-});
-onAuthStateChanged(auth, (user) => {
-  const Ime1 = document.getElementById('Ime1');
-  Ime1.style.display = user ? 'none' : 'true';
-});
-onAuthStateChanged(auth, (user) => {
-  const postavke = document.getElementById('postavke');
-  postavke.style.display = user ? 'true' : 'none';
-});
-onAuthStateChanged(auth, (user) => {
-  const Ime3 = document.getElementById('Ime3');
-  Ime3.style.display = user ? 'true' : 'none';
-});
-onAuthStateChanged(auth, (user) => {
-  const light = document.getElementById('light');
-  light.style.display = user ? 'true' : 'none';
-});
-onAuthStateChanged(auth, (user) => {
-  const light = document.getElementById('status1');
-  light.style.display = user ? 'true' : 'none';
-});
-onAuthStateChanged(auth, (user) => {
-  const lightnot = document.getElementById('lightnot');
-  lightnot.style.display = user ? 'none' : 'true';
-});
 
 document.getElementById('logout').addEventListener('click', () => {
   localStorage.removeItem('loggedInUserId');
   signOut(auth)
-    .then(() => (window.location.href = 'index.html'))
+    .then(() => window.location.href = 'index.html')
     .catch(err => console.error("Greška pri odjavi:", err));
 });
 
@@ -125,8 +91,8 @@ const messageDiv = document.getElementById("resetMessage");
 
 resetForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-
   const email = document.getElementById("resetEmail").value.trim();
+
   messageDiv.style.display = "block";
   messageDiv.style.color = "black";
   messageDiv.textContent = "Slanje e-maila...";
@@ -141,25 +107,22 @@ resetForm.addEventListener("submit", async (e) => {
   }
 });
 
+
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
   if (!loader) return;
 
   loader.classList.add("loader--hidden");
 
-
   loader.addEventListener("transitionend", () => {
-    if (loader && loader.parentNode) {
-      loader.parentNode.removeChild(loader);
-    }
+    if (loader.parentNode) loader.parentNode.removeChild(loader);
   });
 
   setTimeout(() => {
-    if (loader && loader.parentNode) {
-      loader.parentNode.removeChild(loader);
-    }
+    if (loader.parentNode) loader.parentNode.removeChild(loader);
   }, 2000);
 });
 
-  const savedTheme = localStorage.getItem("theme") || "dark";
-  document.body.classList.add(`${savedTheme}-mode`);
+
+const savedTheme = localStorage.getItem("theme") || "dark";
+document.body.classList.add(`${savedTheme}-mode`);
