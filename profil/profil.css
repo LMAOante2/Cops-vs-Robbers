@@ -251,7 +251,6 @@ input[type="password"] {
 }
 
 #modeToggle:checked~.tema {
-  left: 40px;
   background: rgb(0, 255, 13);
 }
 
