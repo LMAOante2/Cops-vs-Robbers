@@ -160,3 +160,6 @@ window.addEventListener("load", () => {
     }
   }, 2000);
 });
+
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  document.body.classList.add(`${savedTheme}-mode`);
