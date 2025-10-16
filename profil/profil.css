@@ -20,102 +20,121 @@ body {
 }
 
 nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    z-index: 100;
-    border-bottom: 1px solid #334155;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 100;
+  border-bottom: 1px solid #334155;
 }
+
 nav .title {
-    font-size: 22px;
-    font-weight: bold;
-    color: #e2e8f0;
-    margin-left: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #e2e8f0;
+  margin-left: 20px;
 }
+
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+  display: flex;
+  list-style: none;
+  gap: 25px;
 }
+
 nav ul li a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #e2e8f0;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 16px;
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
+
 nav ul li a:hover {
-    color: #2563eb;
+  color: #2563eb;
 }
 
 #menutoggle {
-    display: none;
+  display: none;
 }
+
 .menutoggle-icon {
-    display: none;
-    position: fixed;
-    top: 18px;
-    left: 20px;
-    width: 30px;
-    height: 22px;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 101;
+  display: none;
+  position: fixed;
+  top: 18px;
+  left: 20px;
+  width: 30px;
+  height: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 101;
 }
+
 .menutoggle-icon span {
-    display: block;
-    height: 3px;
-    background: #e2e8f0;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+  display: block;
+  height: 3px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
+
 .nav {
-    position: fixed;
-    left: -100%;
-    top: 0;
-    height: 100%;
-    width: 220px;
-    background: rgba(15, 23, 42, 0.95);
-    padding: 70px 20px;
-    box-shadow: 2px 0 15px rgba(0,0,0,0.5);
-    transition: left 0.3s ease;
-    z-index: 99;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 220px;
+  background: rgba(15, 23, 42, 0.95);
+  padding: 70px 20px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 99;
 }
 
 @media screen and (max-width: 768px) {
-    .menutoggle-icon { display: flex; }
-    nav ul.desktop { display: none; }
+  .menutoggle-icon {
+    display: flex;
+  }
+
+  nav ul.desktop {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 769px) {
-    .nav {display: none;}
+  .nav {
+    display: none;
+  }
 }
 
 .nav ul {
-    flex-direction: column;
+  flex-direction: column;
 }
+
 .nav li {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
-#menutoggle:checked ~ .nav {
-    left: 0;
+
+#menutoggle:checked~.nav {
+  left: 0;
 }
-#menutoggle:checked + .menutoggle-icon span:nth-child(1) {
-    transform: rotate(45deg) translateY(13px);
+
+#menutoggle:checked+.menutoggle-icon span:nth-child(1) {
+  transform: rotate(45deg) translateY(13px);
 }
-#menutoggle:checked + .menutoggle-icon span:nth-child(2) {
-    opacity: 0;
+
+#menutoggle:checked+.menutoggle-icon span:nth-child(2) {
+  opacity: 0;
 }
-#menutoggle:checked + .menutoggle-icon span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-14px);
+
+#menutoggle:checked+.menutoggle-icon span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-14px);
 }
 
 /* Sekcije */
@@ -166,7 +185,9 @@ nav ul li a:hover {
 }
 
 /* Input */
-input[type="email"], input[type="text"], input[type="password"] {
+input[type="email"],
+input[type="text"],
+input[type="password"] {
   padding: 8px;
   width: 100%;
   border: 1px solid #ccc;
@@ -182,7 +203,7 @@ input[type="email"], input[type="text"], input[type="password"] {
   color: white;
 }
 
-.section:nth-child(1){
+.section:nth-child(1) {
   margin-top: 150px;
 }
 
@@ -224,7 +245,7 @@ input[type="email"], input[type="text"], input[type="password"] {
   transition: all 0.3s ease;
 }
 
-#modeToggle:checked ~ .tema li {
+#modeToggle:checked~.tema li {
   left: 40px;
   background: green;
 }
@@ -244,7 +265,7 @@ input[type="email"], input[type="text"], input[type="password"] {
 
 .light-mode nav a,
 .light-mode nav .title {
-    color: black;
+  color: black;
 }
 
 .light-mode .menutoggle-icon span {
@@ -257,8 +278,8 @@ input[type="email"], input[type="text"], input[type="password"] {
 }
 
 .dark-mode {
-    background-color: #121212;
-    color: white;
+  background-color: #121212;
+  color: white;
 }
 
 .dark-mode input {
@@ -268,15 +289,13 @@ input[type="email"], input[type="text"], input[type="password"] {
 }
 
 .dark-mode nav,
-.dark-mode .nav
-.dark-mode nav a,
+.dark-mode .nav .dark-mode nav a,
 .dark-mode nav.title,
 .dark-mode section,
 .dark-mode .setting,
-.dark-mode .section h2
-{
-    background-color: #0f172a;
-    color: white;
+.dark-mode .section h2 {
+  background-color: #0f172a;
+  color: white;
 }
 
 .dark-mode .menutoggle-icon span {
@@ -284,7 +303,7 @@ input[type="email"], input[type="text"], input[type="password"] {
 }
 
 .loader {
-   position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -293,40 +312,51 @@ input[type="email"], input[type="text"], input[type="password"] {
   align-items: center;
   justify-content: center;
   background: black;
-  transition: visibility 1.5s; z-index: 200;
+  transition: visibility 1.5s;
+  z-index: 200;
 }
 
 .loader--hidden {
-   visibility: hidden; 
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #7e7e7e;
+  border-top-color: #0011ff;
+  border-radius: 50%;
+  animation: loading 2s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
   }
 
-  .loader::after {
-    content: "";
-    width: 75px;
-    height: 75px;
-    border: 15px solid #7e7e7e;
-    border-top-color: #0011ff;
-    border-radius: 50%; animation: loading 2s ease infinite; 
-  } 
-  @keyframes loading {
-    from { transform: rotate(0turn); } 
-    to { transform: rotate(1turn); } } 
-     
-  .loading { z-index: 1001; }
-
-  .login {
-    background: rgba(2, 231, 201);
-    border: none;
+  to {
+    transform: rotate(1turn);
   }
+}
 
-  .login:hover {
-    background: rgb(1, 255, 221);
-    border: none;
-  }
+.loading {
+  z-index: 1001;
+}
 
-  .login a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: white;
-  }
+.login {
+  background: rgba(2, 231, 201);
+  border: none;
+}
+
+.login:hover {
+  background: rgb(1, 255, 221);
+  border: none;
+}
+
+.login a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,78 +10,80 @@
   <link rel="icon" href="slike/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="slike/android-chrome-192x192.png" sizes="96x96" type="image/png">
 </head>
+
 <body>
   <div class="loader"></div>
 
-<input type="checkbox" id="menutoggle">
-<label for="menutoggle" class="menutoggle-icon">
+  <input type="checkbox" id="menutoggle">
+  <label for="menutoggle" class="menutoggle-icon">
     <span></span>
     <span></span>
     <span></span>
-</label>
+  </label>
 
-<nav>
+  <nav>
     <div class="title">Balkan Cops Vs Robbers</div>
     <ul class="desktop">
-        <li><a href="pocetna.html">Početna</a></li>
-        <li><a href="pravila.html">Pravila</a></li>
-        <li><a href="donacije.html">Donacije</a></li>
-        <li><a href="#">Uskoro</a></li>
-        <li><a href="profil.html">Profil</a></li>
+      <li><a href="pocetna.html">Početna</a></li>
+      <li><a href="pravila.html">Pravila</a></li>
+      <li><a href="donacije.html">Donacije</a></li>
+      <li><a href="#">Uskoro</a></li>
+      <li><a href="profil.html">Profil</a></li>
     </ul>
-</nav>
+  </nav>
 
 
-<nav class="nav">
+  <nav class="nav">
     <ul>
-        <li><a href="pocetna.html">Početna</a></li>
-        <li><a href="pravila.html">Pravila</a></li>
-        <li><a href="donacije.html">Donacije</a></li>
-        <li><a href="#">Uskoro</a></li>
-        <li><a href="profil.html">Profil</a></li>
+      <li><a href="pocetna.html">Početna</a></li>
+      <li><a href="pravila.html">Pravila</a></li>
+      <li><a href="donacije.html">Donacije</a></li>
+      <li><a href="#">Uskoro</a></li>
+      <li><a href="profil.html">Profil</a></li>
     </ul>
-</nav>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-  <section id="profil" class="section">
-    <h2>Profil korisnika</h2>
-    <div id="Ime" class="info">
-      <div><strong>Ime:</strong> <span id="loggedUserFName"></span></div>
-      <div><strong>Prezime:</strong> <span id="loggedUserLName"></span></div>
-      <div><strong>Email:</strong> <span id="loggedUserEmail"></span></div>
-      <div><strong>Posao:</strong> <span id="loggedUserposao"></span></div>
-    </div>
-    <div class="actions">
-      <button class="btn logout" id="logout">Izlogiraj se</button>
-      <button id="Ime1" class="btn login"><a href="index.html">Ulogiraj se</a></button>
-    </div>
-  </section>
+    <section id="profil" class="section">
+      <h2>Profil korisnika</h2>
+      <div id="Ime" class="info">
+        <div><strong>Ime:</strong> <span id="loggedUserFName"></span></div>
+        <div><strong>Prezime:</strong> <span id="loggedUserLName"></span></div>
+        <div><strong>Email:</strong> <span id="loggedUserEmail"></span></div>
+        <div><strong>Posao:</strong> <span id="loggedUserposao"></span></div>
+      </div>
+      <div class="actions">
+        <button class="btn logout" id="logout">Izlogiraj se</button>
+        <button id="Ime1" class="btn login"><a href="index.html">Ulogiraj se</a></button>
+      </div>
+    </section>
 
-  <section id="postavke" class="section">
-    <h2>Postavke</h2>
-    <div class="setting">
+    <section id="postavke" class="section">
+      <h2>Postavke</h2>
+      <div class="setting">
         <input type="checkbox" id="modeToggle">
         <div><strong>Svijetli način rada</strong></div>
-      <label class="tema" for="modeToggle">
-        <li></li>
-      </label>
-    </div>
-  </section>
+        <label class="tema" for="modeToggle">
+          <li></li>
+        </label>
+      </div>
+    </section>
 
-  <section id="promjenidiv" class="section">
-    <h2>Promjena lozinke</h2>
-    <form id="resetForm">
-      <label for="resetEmail">E-mail adresa</label>
-      <input type="email" id="resetEmail" placeholder="Vaš E-mail" required>
-      <button type="submit" class="btn">Pošalji e-mail</button>
-    </form>
-    <div id="resetMessage"></div>
-  </section>
+    <section id="promjenidiv" class="section">
+      <h2>Promjena lozinke</h2>
+      <form id="resetForm">
+        <label for="resetEmail">E-mail adresa</label>
+        <input type="email" id="resetEmail" placeholder="Vaš E-mail" required>
+        <button type="submit" class="btn">Pošalji e-mail</button>
+      </form>
+      <div id="resetMessage"></div>
+    </section>
 
-</main>
+  </main>
 
-<script type="module" src="profil/profil.js"></script>
-<script type="module" src="login/userSettings.js" defer></script>
+  <script type="module" src="profil/profil.js"></script>
+  <script type="module" src="login/userSettings.js" defer></script>
 </body>
+
 </html>
