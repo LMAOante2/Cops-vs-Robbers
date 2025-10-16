@@ -240,7 +240,8 @@ nav ul li a:hover {
 .light-mode nav .title,
 .light-mode section,
 .light-mode .setting,
-.light-mode .info div {
+.light-mode .info div,
+.light-mode .features {
   background: #ffffff;
   color: #111111;
 }
@@ -270,7 +271,8 @@ nav ul li a:hover {
 .dark-mode nav a,
 .dark-mode nav.title,
 .dark-mode .features,
-.dark-mode .setting {
+.dark-mode .setting,
+.dark-mode .features {
     background-color: #0f172a;
     color: white;
 }
