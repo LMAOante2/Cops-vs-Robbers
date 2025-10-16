@@ -80,11 +80,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const icon = this.querySelector('i');
 
       if (input.type === 'text') {
-        input.type = 'text';
+        input.type = 'password';
         icon.classList.remove('fa-eye');
         icon.classList.add('fa-eye-slash');
       } else {
-        input.type = 'text';
+        input.type = 'password';
         icon.classList.remove('fa-eye-slash');
         icon.classList.add('fa-eye');
       }
