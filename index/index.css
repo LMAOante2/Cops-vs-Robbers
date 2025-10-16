@@ -145,7 +145,7 @@ nav ul li a:hover {
 .green-btn { background-color: #16a34a; }
 .green-btn:hover { background-color: #15803d; }
 
-.features {
+.funkcije {
     max-width: 1100px;
     margin: 80px auto;
     display: grid;
@@ -153,7 +153,7 @@ nav ul li a:hover {
     gap: 25px;
     padding: 0 20px;
 }
-.feature {
+.funkcija {
     background: rgba(15,23,42,0.95);
     padding: 30px;
     border-radius: 8px;
@@ -161,20 +161,20 @@ nav ul li a:hover {
     text-align: center;
     transition: transform 0.3s ease;
 }
-.feature:hover { transform: translateY(-5px); }
-.feature h3 { font-size: 1.2rem; margin-bottom: 10px; color: #e2e8f0; }
-.feature p { font-size: 0.95rem; color: #cbd5e1; }
+.funkcija:hover { transform: translateY(-5px); }
+.funkcija h3 { font-size: 1.2rem; margin-bottom: 10px; color: #e2e8f0; }
+.funkcija p { font-size: 0.95rem; color: #cbd5e1; }
 
 
-.steps {
+.koraci {
     padding: 80px 20px;
     text-align: center;
 }
-.steps h2 {
+.koraci h2 {
     font-size: 2rem;
     margin-bottom: 40px;
 }
-.steps .container {
+.koraci .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
