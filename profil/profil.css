@@ -229,7 +229,7 @@ input[type="password"] {
   position: relative;
   width: 70px;
   height: 35px;
-  background: black;
+  background: rgb(255, 0, 0);
   list-style: none;
   border-radius: 50px;
 }
@@ -240,14 +240,19 @@ input[type="password"] {
   height: 25px;
   top: 5px;
   left: 5px;
-  background: red;
+  background: rgb(139, 139, 139);
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 #modeToggle:checked~.tema li {
   left: 40px;
-  background: green;
+  background: rgb(139, 139, 139);
+}
+
+#modeToggle:checked~.tema {
+  left: 40px;
+  background: rgb(0, 255, 13);
 }
 
 .light-mode body {
