@@ -281,4 +281,34 @@ nav ul li a:hover {
   background: white;
 }
 
+.sakriven:nth-child(1){
+    transform: translateX(305px);
+    transition: transform 1s ease;
+}
+
+.sakriven:nth-child(3){
+    transform: translateX(-305px);
+    transition: transform 1s ease;
+}
+
+.sakriven1 {
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.show1 {
+    opacity: 1;
+}
+
+
+.show:nth-child(3),
+.show:nth-child(1) {
+    transform: translateX(0);
+}
+
+.show:nth-child(3):hover,
+.show:nth-child(1):hover {
+    transform: translateY(-10px);
+}
+
 
