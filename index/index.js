@@ -44,18 +44,22 @@ setTimeout(() => {
 }, 3000);
 
 document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show', 'show1');
-            } else {
-                entry.target.classList.remove('show', 'show1');
-            }
-        });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show', 'show1');
+      } else {
+        entry.target.classList.remove('show', 'show1');
+      }
     });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -10% 0px'
+  });
 
-    document.querySelectorAll('.sakriven, .sakriven1').forEach((el) => observer.observe(el));
+  document.querySelectorAll('.sakriven, .sakriven1').forEach((el) => observer.observe(el));
 });
+
 
 
 
