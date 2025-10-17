@@ -232,6 +232,7 @@ input[type="password"] {
   background: rgb(255, 0, 0);
   list-style: none;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .tema li {
@@ -243,6 +244,7 @@ input[type="password"] {
   background: rgb(139, 139, 139);
   border-radius: 50%;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 #modeToggle:checked~.tema li {
