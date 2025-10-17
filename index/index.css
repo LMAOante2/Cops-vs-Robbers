@@ -10,6 +10,7 @@ body, html {
     overflow-x: hidden;
 }
 
+/* Navigacija/Meni */
 nav {
     position: fixed;
     width: 100%;
@@ -99,6 +100,7 @@ nav ul li a:hover {
     transform: rotate(-45deg) translateY(-14px);
 }
 
+/* Hero Sekcija */
 .hero {
     min-height: 80vh;
     display: flex;
@@ -145,6 +147,8 @@ nav ul li a:hover {
 .green-btn { background-color: #16a34a; }
 .green-btn:hover { background-color: #15803d; }
 
+
+/* Funkcije */
 .funkcije {
     max-width: 1100px;
     margin: 80px auto;
@@ -166,6 +170,7 @@ nav ul li a:hover {
 .funkcija p { font-size: 0.95rem; color: #cbd5e1; }
 
 
+/* Koraci/ Kako Igrati */
 .koraci {
     padding: 80px 20px;
     text-align: center;
@@ -204,6 +209,7 @@ nav ul li a:hover {
 .card a.button:hover { background: #1e40af; }
 
 
+/* Mobitel */
 @media screen and (max-width: 768px) {
     .menutoggle-icon { display: flex; }
     nav ul.desktop { display: none; }
@@ -214,6 +220,8 @@ nav ul li a:hover {
     .nav {display: none;}
 }
 
+
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 3.5px;
 }
@@ -230,6 +238,8 @@ nav ul li a:hover {
     border-radius: 20px;
 }
 
+
+/* Svijetli Mod */
 .light-mode {
   background-color: #f5f5f5;
   color: black;
@@ -255,6 +265,8 @@ nav ul li a:hover {
   background: white;
 }
 
+
+/* Tamni Mod */
 .dark-mode {
     background-color: #0f172a;
     color: white;
@@ -281,6 +293,7 @@ nav ul li a:hover {
   background: white;
 }
 
+/* Scroll Animacije */
 .sakriven:nth-child(1){
     transform: translateX(305px);
     transition: transform 1s ease;
