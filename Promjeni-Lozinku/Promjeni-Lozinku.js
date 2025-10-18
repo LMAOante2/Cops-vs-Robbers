@@ -13,6 +13,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+const zatvoribtn = document.getElementById('zatvori');
+const ulogirajbtn = document.getElementById('ulogiraj');
 window.addEventListener('DOMContentLoaded', async () => {
   const params = new URLSearchParams(window.location.search);
   const oobCode = params.get('oobCode');
@@ -20,8 +22,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   const kopirano = document.getElementById('kopirano');
   const cijelo = document.getElementById('cijelo');
   const infotxt = document.getElementById('infotxt');
-  const zatvoribtn = document.getElementById('zatvori');
-  const ulogirajbtn = document.getElementById('ulogiraj');
 
   if (mode !== 'resetPassword' || !oobCode) {
     kopirano.style.display = 'block';
