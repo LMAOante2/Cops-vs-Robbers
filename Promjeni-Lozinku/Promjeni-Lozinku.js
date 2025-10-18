@@ -24,6 +24,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   if (mode !== 'resetPassword' || !oobCode) {
     kopirano.style.display = 'block';
     cijelo.style.display = 'block';
+    zatvoribtn.style.display = 'block';
+    ulogirajbtn.style.display = 'none';
     document.body.classList.add('no-scroll');
     infotxt.innerHTML = `Nepostojeći ili istekli link`;
     return; 
@@ -68,6 +70,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   } catch (error) {
     kopirano.style.display = 'block';
     cijelo.style.display = 'block';
+    zatvoribtn.style.display = 'block';
+    ulogirajbtn.style.display = 'none';
     document.body.classList.add('no-scroll');
     infotxt.innerHTML = `Nepostojeći ili istekli link`;
   }
