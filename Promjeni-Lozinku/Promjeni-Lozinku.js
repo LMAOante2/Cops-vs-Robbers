@@ -28,35 +28,42 @@ window.addEventListener('DOMContentLoaded', async () => {
     infotxt.innerHTML = `Nepostojeći ili Istekli Link`;
   }
 
-  try {
-    const email = await verifyPasswordResetCode(auth, oobCode);
-    document.getElementById('email').innerText = email;
+try {
+  const email = await verifyPasswordResetCode(auth, oobCode);
+  document.getElementById('email').innerText = email;
 
-    const form = document.getElementById('resetForm');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const newPassword = document.getElementById('newPassword').value;
-      const potvrdi = document.getElementById('potvrdi').value;
+  const form = document.getElementById('resetForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-      try {
-        await confirmPasswordReset(auth, oobCode, newPassword, potvrdi);
-        if (newPassword.value == potvrdi.value) {
-          kopirano.style.display = 'block';
-          cijelo.style.display = 'block';
-          document.body.classList.add('no-scroll');
-          infotxt.innerHTML = `Lozinka je promijenjena! Sada se možete ulogirati s novom lozinkom.`;
-          window.location.href = 'index.html';
-        }
-        else {
-          kopirano.style.display = 'block';
-          cijelo.style.display = 'block';
-          document.body.classList.add('no-scroll');
-          infotxt.innerHTML = `Lozinke Nisu Iste`;
-        }
-      } catch (error) {
-        alert("Error: " + error.message);
-      }
-    });
+    const newPassword = document.getElementById('newPassword').value;
+    const potvrdi = document.getElementById('potvrdi').value;
+    const zatvoribtn = document.getElementById('zatvori');
+    const ulogirajbtn = document.getElementById('ulogiraj');
+    if (newPassword !== potvrdi) {
+      kopirano.style.display = 'block';
+      cijelo.style.display = 'block';
+      document.body.classList.add('no-scroll');
+      infotxt.innerHTML = `Lozinke nisu iste!`;
+      return;
+    }
+
+    try {
+      await confirmPasswordReset(auth, oobCode, newPassword);
+
+      kopirano.style.display = 'block';
+      cijelo.style.display = 'block';
+      zatvoribtn.style.display = 'none';
+      ulogirajbtn.style.display = 'block';
+      document.body.classList.add('no-scroll');
+      infotxt.innerHTML = `Lozinka je promijenjena! Sada se možete ulogirati s novom lozinkom.`;
+      
+
+    } catch (error) {
+      alert("Greška: " + error.message);
+    }
+  });
+
 
   } catch (error) {
     kopirano.style.display = 'block';
@@ -89,6 +96,10 @@ function zatvoriesc(event) {
 }
 
 window.addEventListener('keydown', zatvoriesc);
+
+function ulogiraj() {
+  window.location.href = 'index.html';
+}
 
 
 
