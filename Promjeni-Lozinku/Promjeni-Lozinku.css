@@ -124,8 +124,10 @@ html {
 
 .info button {
   padding: 10px 20px 10px;
-  margin-bottom: -190px;
+  margin-bottom: -130px;
   margin-top: 40px;
+  place-self: center;
+  text-align: center;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -133,7 +135,7 @@ html {
 }
 
 #infotxt {
-  padding: 20px 30px;
+  padding: 10px 30px;
 }
 
 .cijelo {
