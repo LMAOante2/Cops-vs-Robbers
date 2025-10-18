@@ -30,7 +30,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     ulogiraj.style.display = 'none';
     document.body.classList.add('no-scroll');
     infotxt.innerHTML = `Nepostojeći ili istekli link`;
-    return; 
   }
 
   try {
