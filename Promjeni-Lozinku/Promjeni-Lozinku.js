@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   if (mode !== 'resetPassword' || !oobCode) {
     kopirano.style.display = 'block';
     cijelo.style.display = 'block';
-    zatvoribtn.style.display = 'block';
-    ulogirajbtn.style.display = 'none';
+    zatvori.style.display = 'block';
+    ulogiraj.style.display = 'none';
     document.body.classList.add('no-scroll');
     infotxt.innerHTML = `Nepostojeći ili istekli link`;
     return; 
@@ -41,8 +41,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 
       const newPassword = document.getElementById('newPassword').value;
       const potvrdi = document.getElementById('potvrdi').value;
-      const zatvoribtn = document.getElementById('zatvori');
-      const ulogirajbtn = document.getElementById('ulogiraj');
+      const zatvori = document.getElementById('zatvori');
+      const ulogiraj = document.getElementById('ulogiraj');
 
       if (newPassword !== potvrdi) {
         kopirano.style.display = 'block';
@@ -54,11 +54,12 @@ window.addEventListener('DOMContentLoaded', async () => {
 
       try {
         await confirmPasswordReset(auth, oobCode, newPassword);
-
+        const zatvori = document.getElementById('zatvori');
+        const ulogiraj = document.getElementById('ulogiraj');
         kopirano.style.display = 'block';
         cijelo.style.display = 'block';
-        zatvoribtn.style.display = 'none';
-        ulogirajbtn.style.display = 'block';
+        zatvori.style.display = 'none';
+        ulogiraj.style.display = 'block';
         document.body.classList.add('no-scroll');
         infotxt.innerHTML = `Lozinka je promijenjena! Sada se možete ulogirati s novom lozinkom.`;
 
@@ -68,10 +69,12 @@ window.addEventListener('DOMContentLoaded', async () => {
     });
 
   } catch (error) {
+    const zatvoribtn = document.getElementById('zatvori');
+    const ulogirajbtn = document.getElementById('ulogiraj');
     kopirano.style.display = 'block';
     cijelo.style.display = 'block';
-    zatvoribtn.style.display = 'block';
-    ulogirajbtn.style.display = 'none';
+    zatvori.style.display = 'block';
+    ulogiraj.style.display = 'none';
     document.body.classList.add('no-scroll');
     infotxt.innerHTML = `Nepostojeći ili istekli link`;
   }
