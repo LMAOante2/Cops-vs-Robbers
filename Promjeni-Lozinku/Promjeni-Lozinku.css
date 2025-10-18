@@ -49,6 +49,7 @@ html {
   margin-top: 30px;
   margin-bottom: -25px;
   transition: all 0.3s ease;
+  cursor: text;
 }
 
 .lozinka label.active {
