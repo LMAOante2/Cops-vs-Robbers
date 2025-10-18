@@ -1,6 +1,8 @@
+// ✅ Firebase importi
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import { getAuth, verifyPasswordResetCode, confirmPasswordReset } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
+// ✅ Firebase konfiguracija
 const firebaseConfig = {
   apiKey: "AIzaSyDa-Gn5AtvCYwzC7GvArnDUrc6HQfdT-U4",
   authDomain: "login-form-19883.firebaseapp.com",
@@ -13,134 +15,127 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-const zatvoribtn = document.getElementById('zatvori');
-const ulogirajbtn = document.getElementById('ulogiraj');
+// ✅ Glavni kod nakon što se DOM učita
 window.addEventListener('DOMContentLoaded', async () => {
   const params = new URLSearchParams(window.location.search);
   const oobCode = params.get('oobCode');
   const mode = params.get('mode');
+
   const kopirano = document.getElementById('kopirano');
   const cijelo = document.getElementById('cijelo');
   const infotxt = document.getElementById('infotxt');
+  const zatvoriBtn = document.getElementById('zatvori');
+  const ulogirajBtn = document.getElementById('ulogiraj');
 
+  // ✅ Ako link nije validan
   if (mode !== 'resetPassword' || !oobCode) {
-    kopirano.style.display = 'block';
-    cijelo.style.display = 'block';
-    zatvori.style.display = 'block';
-    ulogiraj.style.display = 'none';
-    document.body.classList.add('no-scroll');
-    infotxt.innerHTML = `Nepostojeći ili istekli link`;
+    prikaziModal('Nepostojeći ili istekli link', true);
+    return;
   }
 
   try {
+    // ✅ Provjera koda (ako vrijedi, dohvaća se email)
     const email = await verifyPasswordResetCode(auth, oobCode);
     document.getElementById('email').innerText = email;
 
+    // ✅ Slušanje forme
     const form = document.getElementById('resetForm');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const newPassword = document.getElementById('newPassword').value;
       const potvrdi = document.getElementById('potvrdi').value;
-      const zatvori = document.getElementById('zatvori');
-      const ulogiraj = document.getElementById('ulogiraj');
 
       if (newPassword !== potvrdi) {
-        kopirano.style.display = 'block';
-        cijelo.style.display = 'block';
-        document.body.classList.add('no-scroll');
-        infotxt.innerHTML = `Lozinke nisu iste!`;
+        prikaziModal('Lozinke nisu iste!', true);
         return;
       }
 
       try {
         await confirmPasswordReset(auth, oobCode, newPassword);
-        const zatvori = document.getElementById('zatvori');
-        const ulogiraj = document.getElementById('ulogiraj');
-        kopirano.style.display = 'block';
-        cijelo.style.display = 'block';
-        zatvori.style.display = 'none';
-        ulogiraj.style.display = 'block';
-        document.body.classList.add('no-scroll');
-        infotxt.innerHTML = `Lozinka je promijenjena! Sada se možete ulogirati s novom lozinkom.`;
-
+        prikaziModal('Lozinka je promijenjena! Sada se možete ulogirati s novom lozinkom.', false);
       } catch (error) {
         alert("Greška: " + error.message);
       }
     });
 
   } catch (error) {
-    kopirano.style.display = 'block';
-    cijelo.style.display = 'block';
-    zatvori.style.display = 'block';
-    ulogiraj.style.display = 'none';
-    document.body.classList.add('no-scroll');
-    infotxt.innerHTML = `Nepostojeći ili istekli link`;
+    prikaziModal('Nepostojeći ili istekli link', true);
   }
+
+  // ✅ Aktivni labeli za unos lozinke
+  const input = document.getElementById('newPassword');
+  const label = document.querySelector('label[for="newPassword"]');
+  const potvrdi = document.getElementById('potvrdi');
+  const labell = document.querySelector('label[for="potvrdi"]');
+
+  function updateLabel(input, label, activeClass) {
+    if (input.value.trim() !== '' || document.activeElement === input) {
+      label.classList.add(activeClass);
+    } else {
+      label.classList.remove(activeClass);
+    }
+  }
+
+  input.addEventListener('focus', () => updateLabel(input, label, 'active'));
+  input.addEventListener('blur', () => updateLabel(input, label, 'active'));
+  input.addEventListener('input', () => updateLabel(input, label, 'active'));
+
+  potvrdi.addEventListener('focus', () => updateLabel(potvrdi, labell, 'active1'));
+  potvrdi.addEventListener('blur', () => updateLabel(potvrdi, labell, 'active1'));
+  potvrdi.addEventListener('input', () => updateLabel(potvrdi, labell, 'active1'));
+
+  updateLabel(input, label, 'active');
+  updateLabel(potvrdi, labell, 'active1');
 });
 
+// ✅ Pomoćna funkcija za prikaz modala
+function prikaziModal(poruka, samoZatvori) {
+  const cijelo = document.getElementById('cijelo');
+  const kopirano = document.getElementById('kopirano');
+  const infotxt = document.getElementById('infotxt');
+  const zatvori = document.getElementById('zatvori');
+  const ulogiraj = document.getElementById('ulogiraj');
+
+  if (!infotxt) {
+    console.error("⚠️ Element #infotxt nije pronađen u HTML-u!");
+    return;
+  }
+
+  infotxt.innerHTML = poruka;
+  cijelo.style.display = 'block';
+  kopirano.style.display = 'block';
+  document.body.classList.add('no-scroll');
+
+  if (samoZatvori) {
+    zatvori.style.display = 'block';
+    ulogiraj.style.display = 'none';
+  } else {
+    zatvori.style.display = 'none';
+    ulogiraj.style.display = 'block';
+  }
+}
+
+// ✅ Funkcija zatvaranja modala
 function zatvori() {
-  console.log("Zatvori kliknut!");
   const cijelo = document.getElementById('cijelo');
   const kopirano = document.getElementById('kopirano');
   cijelo.style.display = 'none';
   kopirano.style.display = 'none';
   document.body.classList.remove('no-scroll');
 }
-
 window.zatvori = zatvori;
 
+// ✅ Zatvaranje ESC ili Backspace tipkom
 function zatvoriesc(event) {
   if (event.key === "Escape" || event.key === "Backspace") {
-    const cijelo = document.getElementById('cijelo');
-    const kopirano = document.getElementById('kopirano');
-    cijelo.style.display = 'none';
-    kopirano.style.display = 'none';
-    document.body.classList.remove('no-scroll');
+    zatvori();
   }
 }
-
 window.addEventListener('keydown', zatvoriesc);
 
+// ✅ Preusmjeravanje nakon uspješne promjene lozinke
 function ulogiraj() {
   window.location.href = 'index.html';
 }
 window.ulogiraj = ulogiraj;
-
-document.addEventListener('DOMContentLoaded', () => {
-  const input = document.getElementById('newPassword');
-  const label = document.querySelector('label[for="newPassword"]');
-
-  function updateLabel() {
-    if (input.value.trim() !== '' || document.activeElement === input) {
-      label.classList.add('active');
-    } else {
-      label.classList.remove('active');
-    }
-  }
-
-  input.addEventListener('focus', updateLabel);
-  input.addEventListener('blur', updateLabel);
-  input.addEventListener('input', updateLabel);
-
-  updateLabel();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const potvrdi = document.getElementById('potvrdi');
-  const labell = document.querySelector('label[for="potvrdi"]');
-
-  function updateLabel() {
-    if (potvrdi.value.trim() !== '' || document.activeElement === potvrdi) {
-      labell.classList.add('active1');
-    } else {
-      labell.classList.remove('active1');
-    }
-  }
-
-  potvrdi.addEventListener('focus', updateLabel);
-  potvrdi.addEventListener('blur', updateLabel);
-  potvrdi.addEventListener('input', updateLabel);
-
-  updateLabel();
-});
