@@ -20,6 +20,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   const kopirano = document.getElementById('kopirano');
   const cijelo = document.getElementById('cijelo');
   const infotxt = document.getElementById('infotxt');
+  const zatvoribtn = document.getElementById('zatvori');
+  const ulogirajbtn = document.getElementById('ulogiraj');
 
   if (mode !== 'resetPassword' || !oobCode) {
     kopirano.style.display = 'block';
@@ -69,8 +71,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     });
 
   } catch (error) {
-    const zatvoribtn = document.getElementById('zatvori');
-    const ulogirajbtn = document.getElementById('ulogiraj');
     kopirano.style.display = 'block';
     cijelo.style.display = 'block';
     zatvori.style.display = 'block';
