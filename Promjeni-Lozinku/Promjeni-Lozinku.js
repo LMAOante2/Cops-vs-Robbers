@@ -50,7 +50,8 @@ try {
 
     try {
       await confirmPasswordReset(auth, oobCode, newPassword);
-
+      const zatvoribtn = document.getElementById('zatvori');
+      const ulogirajbtn = document.getElementById('ulogiraj');
       kopirano.style.display = 'block';
       cijelo.style.display = 'block';
       zatvoribtn.style.display = 'none';
