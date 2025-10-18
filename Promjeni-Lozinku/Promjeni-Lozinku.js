@@ -11,7 +11,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+const auth = getAuth(app);
 
 window.addEventListener('DOMContentLoaded', async () => {
   const params = new URLSearchParams(window.location.search);
@@ -25,52 +25,51 @@ window.addEventListener('DOMContentLoaded', async () => {
     kopirano.style.display = 'block';
     cijelo.style.display = 'block';
     document.body.classList.add('no-scroll');
-    infotxt.innerHTML = `Nepostojeći ili Istekli Link`;
+    infotxt.innerHTML = `Nepostojeći ili istekli link`;
+    return; 
   }
 
-try {
-  const email = await verifyPasswordResetCode(auth, oobCode);
-  document.getElementById('email').innerText = email;
+  try {
+    const email = await verifyPasswordResetCode(auth, oobCode);
+    document.getElementById('email').innerText = email;
 
-  const form = document.getElementById('resetForm');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    const form = document.getElementById('resetForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-    const newPassword = document.getElementById('newPassword').value;
-    const potvrdi = document.getElementById('potvrdi').value;
-    const zatvoribtn = document.getElementById('zatvori');
-    const ulogirajbtn = document.getElementById('ulogiraj');
-    if (newPassword !== potvrdi) {
-      kopirano.style.display = 'block';
-      cijelo.style.display = 'block';
-      document.body.classList.add('no-scroll');
-      infotxt.innerHTML = `Lozinke nisu iste!`;
-      return;
-    }
-
-    try {
-      await confirmPasswordReset(auth, oobCode, newPassword);
+      const newPassword = document.getElementById('newPassword').value;
+      const potvrdi = document.getElementById('potvrdi').value;
       const zatvoribtn = document.getElementById('zatvori');
       const ulogirajbtn = document.getElementById('ulogiraj');
-      kopirano.style.display = 'block';
-      cijelo.style.display = 'block';
-      zatvoribtn.style.display = 'none';
-      ulogirajbtn.style.display = 'block';
-      document.body.classList.add('no-scroll');
-      infotxt.innerHTML = `Lozinka je promijenjena! Sada se možete ulogirati s novom lozinkom.`;
-      
 
-    } catch (error) {
-      alert("Greška: " + error.message);
-    }
-  });
+      if (newPassword !== potvrdi) {
+        kopirano.style.display = 'block';
+        cijelo.style.display = 'block';
+        document.body.classList.add('no-scroll');
+        infotxt.innerHTML = `Lozinke nisu iste!`;
+        return;
+      }
 
+      try {
+        await confirmPasswordReset(auth, oobCode, newPassword);
+
+        kopirano.style.display = 'block';
+        cijelo.style.display = 'block';
+        zatvoribtn.style.display = 'none';
+        ulogirajbtn.style.display = 'block';
+        document.body.classList.add('no-scroll');
+        infotxt.innerHTML = `Lozinka je promijenjena! Sada se možete ulogirati s novom lozinkom.`;
+
+      } catch (error) {
+        alert("Greška: " + error.message);
+      }
+    });
 
   } catch (error) {
     kopirano.style.display = 'block';
     cijelo.style.display = 'block';
     document.body.classList.add('no-scroll');
-    infotxt.innerHTML = `Nepostojeći ili Istekli Link`;
+    infotxt.innerHTML = `Nepostojeći ili istekli link`;
   }
 });
 
@@ -84,7 +83,6 @@ function zatvori() {
 }
 
 window.zatvori = zatvori;
-
 
 function zatvoriesc(event) {
   if (event.key === "Escape" || event.key === "Backspace") {
@@ -101,8 +99,7 @@ window.addEventListener('keydown', zatvoriesc);
 function ulogiraj() {
   window.location.href = 'index.html';
 }
-
-
+window.ulogiraj = ulogiraj;
 
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('newPassword');
@@ -116,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
   input.addEventListener('focus', updateLabel);
   input.addEventListener('blur', updateLabel);
   input.addEventListener('input', updateLabel);
@@ -127,8 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const potvrdi = document.getElementById('potvrdi');
   const labell = document.querySelector('label[for="potvrdi"]');
-
-
 
   function updateLabel() {
     if (potvrdi.value.trim() !== '' || document.activeElement === potvrdi) {
@@ -144,4 +138,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateLabel();
 });
-
