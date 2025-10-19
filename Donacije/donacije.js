@@ -101,7 +101,7 @@ const PRODUCTS = {
   'full': {
     id: 'full',
     title: 'TX FULL',
-    price: '€15',
+    price: '€20',
     img: 'slike/txfull.png',
     desc: 'Ukoliko Radite TX Abuse Vam TX Moze Biti Oduzet Cak Iako Je Kupljen!'
   },
